@@ -47,6 +47,20 @@ try { [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::
 try { [Console]::OutputEncoding = [Text.Encoding]::UTF8 } catch {}
 Add-Type -AssemblyName System.IO.Compression.FileSystem -ErrorAction SilentlyContinue
 
+# gh PATH'te degilse bilinen kurulum yerlerini dene (yeni kabuklarda PATH eksik olabilir).
+if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+    foreach ($adayGh in @(
+            (Join-Path $env:ProgramFiles 'GitHub CLI\gh.exe'),
+            (Join-Path ${env:ProgramFiles(x86)} 'GitHub CLI\gh.exe'),
+            (Join-Path $env:LOCALAPPDATA 'GitHubCLI\gh.exe'),
+            (Join-Path $env:LOCALAPPDATA 'Microsoft\WinGet\Links\gh.exe'))) {
+        if ($adayGh -and (Test-Path -LiteralPath $adayGh)) {
+            $env:PATH = (Split-Path -Parent $adayGh) + ';' + $env:PATH
+            break
+        }
+    }
+}
+
 $script:Kok = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
 if (-not $Yapilandirma) { $Yapilandirma = Join-Path $PSScriptRoot 'config\distribution.json' }
 
