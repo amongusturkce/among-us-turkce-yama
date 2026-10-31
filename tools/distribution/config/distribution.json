@@ -1,0 +1,47 @@
+{
+  "semasi": 1,
+  "urun": {
+    "ad": "Among Us Türkçe Yama",
+    "surum_etiketi": "v2.3"
+  },
+  "site": {
+    "kok": "website",
+    "guncelleme_klasoru": "updates"
+  },
+  "kanallar": {
+    "beta": {
+      "acik": true,
+      "aciklama": "Yeni doğrulanmış adayların test kanalı."
+    },
+    "stable": {
+      "acik": false,
+      "neden": "Kararlı kanal, Steam desteği tamamlanana kadar kilitlidir. Beta değişiklikleri otomatik olarak stable'a taşınmaz."
+    }
+  },
+  "github": {
+    "owner": "amongusturkce",
+    "repo": "among-us-turkce-yama",
+    "dal": "main",
+    "pages_url": "https://amongusturkce.github.io/among-us-turkce-yama",
+    "surum_etiketi_oneki": "beta"
+  },
+  "platformlar": {
+    "epic": {
+      "ad": "Epic Games Store",
+      "aday": "BUYUK_I/duzeltme4_20261031/paket",
+      "manifest": "latest.json"
+    },
+    "msix": {
+      "ad": "Microsoft Store / Xbox (MSIX)",
+      "aday": "MSIX/cikti/aday-18dosya-20261031-duzeltme4/paket",
+      "manifest": "latest.json"
+    },
+    "steam": {
+      "ad": "Steam",
+      "aday": null,
+      "manifest": "latest.json"
+    }
+  },
+  "minimum_atr": "5.0.0",
+  "yerel_paket_deposu": "website/updates/beta/packages"
+}

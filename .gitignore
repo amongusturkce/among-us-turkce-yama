@@ -1,0 +1,7 @@
+# Buyuk paketler depoda tutulmaz; yalnizca GitHub Releases kullanilir.
+website/updates/*/packages/
+*.zip
+*.7z
+*.rar
+*.tar
+*.gz

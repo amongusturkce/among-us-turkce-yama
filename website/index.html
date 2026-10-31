@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Among Us Türkçe — Among Us'ı Türkçe oyna</title>
+  <meta name="description" content="Among Us Türkçe, oyunun arayüzünü Türkçeleştiren bağımsız bir topluluk projesidir. Kurulum, güncelleme geçmişi, sıkça sorulan sorular ve destek — tek sayfada.">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=hero100">
+</head>
+<body>
+
+  <!-- Arka plan ışık efektleri: tüm sayfa boyunca tek ve kesintisiz uzay zemini -->
+  <div class="bg-effects" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+  <!-- Üst menü: en tepede gizli, kaydırınca görünür (bkz. main.js initNavVisibility) -->
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/img/logo-turkce.png" alt="Among Us Türkçe logosu" width="1020" height="212">
+      </a>
+
+      <nav aria-label="Ana menü">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#ust">Ana Sayfa</a></li>
+          <li><a href="#kurulum">Kurulum</a></li>
+          <li><a href="#guncelleme">Güncelleme Geçmişi</a></li>
+          <li><a href="#sss">SSS</a></li>
+          <li><a href="#destek">Destek</a></li>
+          <li><a href="bagis.html">Bağış Yap</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         1) ANA TANITIM ALANI
+         ============================================================ -->
+    <section class="hero" id="ust">
+      <div class="container">
+        <span class="hero-badge">
+          <span class="dot" aria-hidden="true"></span>
+          Bağımsız topluluk projesi
+        </span>
+
+        <h1><img class="hero-logo" src="assets/img/among-us-logo.png" alt="Among Us" width="570" height="155">'ı <span class="gradient-text">Türkçe</span> oyna.</h1>
+
+        <p class="hero-lead">
+          Among Us'ın menülerini ve oyun içi metinlerini Türkçeye çeviren
+          gönüllü bir topluluk çalışması. Orijinal dosyaların yedeklenmesiyle
+          kurulur, istediğin an geri dönebilirsin.
+        </p>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://t.me/amongusturkce" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 2 11 13"></path>
+              <path d="M22 2 15 22 11 13 2 9 22 2z"></path>
+            </svg>
+            Telegram · AU: Türkçe
+          </a>
+          <button class="btn btn-ghost btn-disabled" type="button" disabled aria-disabled="true" title="İndirme bağlantısı henüz yayınlanmadı">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            Türkçe Yamayı İndir
+          </button>
+        </div>
+
+        <p class="hero-note">Ücretsiz · Resmî olmayan bir çalışmadır · Geri dönebilir kurulum</p>
+
+        <!-- Uzay atmosferi: ortada kırmızı gezegen + etrafında süzülen ekip arkadaşları -->
+        <div class="hero-scene" aria-hidden="true">
+          <svg class="crew crew-1" viewBox="0 0 64 64">
+            <rect x="5" y="24" width="12" height="20" rx="6" fill="#ff6b6b"/>
+            <rect x="14" y="8" width="38" height="38" rx="18" fill="#ff6b6b"/>
+            <rect x="18" y="38" width="12" height="18" rx="5.5" fill="#ff6b6b"/>
+            <rect x="36" y="38" width="12" height="18" rx="5.5" fill="#ff6b6b"/>
+            <rect x="24" y="16" width="27" height="16" rx="8" fill="#ffe4e4"/>
+          </svg>
+          <svg class="crew crew-2" viewBox="0 0 64 64">
+            <rect x="5" y="24" width="12" height="20" rx="6" fill="#7f1d1d"/>
+            <rect x="14" y="8" width="38" height="38" rx="18" fill="#7f1d1d"/>
+            <rect x="18" y="38" width="12" height="18" rx="5.5" fill="#7f1d1d"/>
+            <rect x="36" y="38" width="12" height="18" rx="5.5" fill="#7f1d1d"/>
+            <rect x="24" y="16" width="27" height="16" rx="8" fill="#fecaca"/>
+          </svg>
+          <svg class="crew crew-3" viewBox="0 0 64 64">
+            <rect x="5" y="24" width="12" height="20" rx="6" fill="#fca5a5"/>
+            <rect x="14" y="8" width="38" height="38" rx="18" fill="#fca5a5"/>
+            <rect x="18" y="38" width="12" height="18" rx="5.5" fill="#fca5a5"/>
+            <rect x="36" y="38" width="12" height="18" rx="5.5" fill="#fca5a5"/>
+            <rect x="24" y="16" width="27" height="16" rx="8" fill="#fff1f2"/>
+          </svg>
+          <svg class="crew crew-4" viewBox="0 0 64 64">
+            <rect x="5" y="24" width="12" height="20" rx="6" fill="#e11d2e"/>
+            <rect x="14" y="8" width="38" height="38" rx="18" fill="#e11d2e"/>
+            <rect x="18" y="38" width="12" height="18" rx="5.5" fill="#e11d2e"/>
+            <rect x="36" y="38" width="12" height="18" rx="5.5" fill="#e11d2e"/>
+            <rect x="24" y="16" width="27" height="16" rx="8" fill="#ffe4e4"/>
+          </svg>
+          <div class="planet"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gerçek oyun içi ekran görüntüleri: yapılandırmalı dönen galeri.
+         Slaytlar ve önizlemeler assets/js/main.js içindeki GALERI
+         listesinden kurulur; yeni görsel eklemek için listeye satır eklenir.
+         Galeri ana tanıtım bölümünün DIŞINDA durur: hero ilk ekranı (100svh)
+         tamamen kapladığı için galeri fold'un altında başlar; gizleme hilesi
+         yok, aşağı kaydırınca doğal biçimde görünür. -->
+    <section class="gallery-band">
+      <div class="container">
+        <div class="hero-gallery" id="heroGallery"
+             role="region" aria-roledescription="galeri"
+             aria-label="Oyun içi ekran görüntüleri galerisi"
+             tabindex="0">
+          <div class="gallery-stage"><!-- Slaytlar betikle doldurulur --></div>
+
+          <button class="gallery-arrow arrow-left" type="button" aria-label="Önceki ekran görüntüsü">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <button class="gallery-arrow arrow-right" type="button" aria-label="Sonraki ekran görüntüsü">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+
+          <div class="gallery-thumbs" id="galleryThumbs">
+            <div class="thumbs-head">
+              <span>Tüm ekran görüntüleri</span>
+              <button class="thumbs-close" type="button" aria-label="Önizlemeyi kapat" aria-expanded="false" aria-controls="galleryThumbs">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+              </button>
+            </div>
+            <div class="thumbs-track"><!-- Önizlemeler betikle doldurulur --></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2) KURULUM VE İNDİRME
+         ============================================================ -->
+    <section class="section section-alt" id="kurulum">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Kurulum</span>
+          <h2>Yamayı güvenle kur</h2>
+          <p>
+            Kurulumdan önce oyun dosyalarının yedeği alınır. İstediğin an
+            yedeği geri yükleyerek orijinal oyununa dönebilirsin.
+          </p>
+        </div>
+
+        <div class="download-box reveal">
+          <div class="download-main">
+            <h3>Türkçe yama paketi</h3>
+            <p>
+              Paket henüz yayımlanmadı. Hazır olduğunda indirme bağlantısı
+              doğrudan buraya eklenecek.
+            </p>
+            <button class="btn btn-primary btn-disabled" type="button" disabled aria-disabled="true" title="İndirme bağlantısı henüz yayınlanmadı">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              İndirme bağlantısı yakında
+            </button>
+          </div>
+
+          <dl class="download-specs">
+            <div>
+              <dt>Yama sürümü</dt>
+              <dd>Kesinleşmedi</dd>
+            </div>
+            <div>
+              <dt>Oyun sürümü</dt>
+              <dd>Doğrulama sürüyor</dd>
+            </div>
+            <div>
+              <dt>Platform</dt>
+              <dd>PC hedefleniyor; test edilmemiş platformlar listelenmez</dd>
+            </div>
+            <div>
+              <dt>İndirme boyutu</dt>
+              <dd>Belirlenmedi</dd>
+            </div>
+            <div>
+              <dt>Yayın tarihi</dt>
+              <dd>Belirlenmedi</dd>
+            </div>
+            <div>
+              <dt>Dosya doğrulama</dt>
+              <dd>Paket yayımlanınca eklenecek (özet değeri)</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="section-head section-head-tight reveal">
+          <h3 class="steps-title">Kurulum rehberi</h3>
+          <p>Paket hazır olduğunda izlenecek adımlar. Her adımın ayrıntısı açılabilir açıklamalarda.</p>
+        </div>
+
+        <div class="faq-list guide-list">
+          <details class="faq-item reveal">
+            <summary>Oyunun sürümünü kontrol et</summary>
+            <div class="faq-body">
+              Among Us'ı aç ve ana menüde ya da mağaza istemcisinde sürüm
+              numarasını gör. Yama yalnızca belirli oyun sürümleriyle çalışır;
+              sürümün desteklenip desteklenmediği paketle birlikte
+              <a href="#guncelleme">Güncelleme Geçmişi</a> bölümünde paylaşılır.
+            </div>
+          </details>
+
+          <details class="faq-item reveal" id="geri-donus">
+            <summary>Oyunun kurulu olduğu klasörü bul</summary>
+            <div class="faq-body">
+              Steam'de: Kütüphane → Among Us üzerinde sağ tıkla →
+              <strong>Yönet → Dosyalara göz at</strong>. Kurulum aracını bu
+              klasördeki oyun dosyalarıyla çalıştırırsın. Emin değilsen
+              klasör yolunu mağaza istemcisindeki oyun sayfasından
+              kontrol edebilirsin.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Yedekleme ve kurulum</summary>
+            <div class="faq-body">
+              Kurulum aracını çalıştırmadan önce oyun tamamen kapalı olmalı.
+              Araç, hedef dosyaların yedeğini alır ve yamayı uygular.
+              Yedek klasörünü silmediğin sürece istediğin an geri
+              dönebilirsin.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Kurulum sonrası doğrulama</summary>
+            <div class="faq-body">
+              Oyunu başlat; menülerin ve ayarların Türkçe olduğunu, Türkçe
+              karakterlerin (ş, ğ, ı, İ) bozuk görünmediğini kontrol et.
+              Sorun görürsen geri dönüş adımını uygula.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Yamayı kaldırma ve geri dönme</summary>
+            <div class="faq-body">
+              Kurulum aracındaki <strong>Geri al</strong> seçeneği, yedeklenen
+              orijinal dosyaları eski yerine koyar ve oyunu yamasız hâle
+              getirir. Alternatif olarak yedek klasörünü elle geri
+              yükleyebilirsin.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Oyun güncellendiğinde ne yapılmalı?</summary>
+            <div class="faq-body">
+              Oyun güncellemeleri metin dosyalarını değiştirebilir; bu durumda
+              yama geçici olarak çalışmayabilir. Yamanın yeni oyun sürümüne
+              uyarlanmasını bekle. Güncel uyumluluk durumu
+              <a href="#guncelleme">Güncelleme Geçmişi</a> bölümünde tutulur.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3) GÜNCELLEME GEÇMİŞİ
+         ============================================================ -->
+    <section class="section" id="guncelleme">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Sürümler</span>
+          <h2>Güncelleme Geçmişi</h2>
+          <p>
+            Sürümlerde nelerin eklendiğini, nelerin düzeltildiğini ve hangi
+            oyun sürümleriyle uyumlu olduğunu buradan görebilirsin.
+          </p>
+        </div>
+
+        <div class="notice reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 9v4M12 17h.01"></path>
+            <path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path>
+          </svg>
+          <div>
+            <strong>Not:</strong> Aşağıdaki sürüm kayıtları henüz kesinleşmemiş
+            <strong>taslak/örnek</strong> verilerdir. Yama şu anda resmî olarak
+            yayınlanmamıştır; "Taslak" etiketli sürümler gerçek sürüm olarak
+            değerlendirilmemelidir.
+          </div>
+        </div>
+
+        <div class="changelog-layout changelog-in-section">
+          <!-- Sürüm listesi -->
+          <aside class="version-panel">
+            <div class="panel-title">
+              <span>Sürümler</span>
+              <span id="surumSayisi" style="color: var(--text-2); font-weight: 400; font-size: 0.82rem;"></span>
+            </div>
+            <ul class="version-list" id="surumListesi" role="tablist" aria-label="Sürüm listesi">
+              <!-- Sürümler betikle doldurulur -->
+            </ul>
+          </aside>
+
+          <!-- Detay -->
+          <section class="version-detail" id="surumDetay" role="tabpanel" aria-live="polite">
+            <!-- Detay betikle doldurulur -->
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4) SIKÇA SORULAN SORULAR
+         ============================================================ -->
+    <section class="section section-alt" id="sss">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">SSS</span>
+          <h2>Sıkça sorulan sorular</h2>
+          <p>
+            Yama hakkında merak edilenleri burada topladık. Aradığını
+            bulamazsan <a href="#destek">destek</a> bölümünden yazabilirsin.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary>Bu proje resmî bir InnerSloth ürünü mü?</summary>
+            <div class="faq-body">
+              Hayır. Among Us Türkçe bağımsız, gönüllü bir topluluk projesidir.
+              InnerSloth ile bağlantılı, onaylı veya desteklenen bir çalışma
+              değildir. Among Us ve ilgili markalar InnerSloth'a aittir.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Yama oyunu bozar mı?</summary>
+            <div class="faq-body">
+              Yama yalnızca metin dosyalarını hedefler; oyunun işleyişini,
+              sunucu bağlantısını veya oynanışı değiştirmez. Kurulum öncesi
+              orijinal dosyaların yedeği alındığı için istersen tek adımda
+              eskisine dönebilirsin.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Hangi platformlarda çalışır?</summary>
+            <div class="faq-body">
+              İlk hedef PC sürümüdür. Mobil ve diğer platformlar için çalışmalar
+              araştırma aşamasındadır; kesin bir uyumluluk sözü verilmemiştir.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Ücretli mi?</summary>
+            <div class="faq-body">
+              Hayır, yama ücretsizdir. Hiçbir koşulda ödeme talep edilmez.
+              Dosyaları yalnızca bu sitedeki bağlantılardan indir; üçüncü
+              kişilerin paylaştığı bağlantılara güvenme.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Güncelleme geçmişindeki sürümler gerçek mi?</summary>
+            <div class="faq-body">
+              Hayır. Yama henüz resmî olarak yayınlanmadı; bölümdeki sürüm
+              kayıtları tasarım amaçlı <strong>taslak/örnek</strong> verilerdir.
+              Kesinleşen sürümler "Yayında" etiketiyle işaretlenecektir.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Çeviriye nasıl katkı verebilirim?</summary>
+            <div class="faq-body">
+              Topluluk katkısıyla çeviriler hazırlanır. Gönüllü olmak istiyorsan
+              <a href="https://t.me/amongusturkce" target="_blank" rel="noopener noreferrer">Telegram topluluğumuza</a>
+              katılabilir; Türkçe dil bilgisine hakimiyetin ve Among Us'a olan
+              aşinalığın yeterlidir.
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Kurulum sonrası Türkçe karakterler bozuk görünüyor, ne yapmalıyım?</summary>
+            <div class="faq-body">
+              Bu tür durumlar font kaynaklı olabilir. Öncelikle oyunu yeniden
+              başlat. Sorun sürerse geri dönüş adımını uygula ve yamanın
+              desteklenen oyun sürümünü kullandığından emin ol.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5) DESTEK VE İLETİŞİM
+         ============================================================ -->
+    <section class="section" id="destek">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Destek</span>
+          <h2>Bize ulaşın</h2>
+          <p>
+            Kurulumda takıldıysan, bir hata gördüysen veya katkı vermek
+            istiyorsan yaz. Elimizden geldiğince dönüş yapmaya çalışırız.
+          </p>
+        </div>
+
+        <form class="contact-form reveal" id="destekForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="ad">Ad</label>
+              <input type="text" id="ad" name="ad" autocomplete="name" maxlength="80" placeholder="Adını yaz" required>
+              <p class="field-error" id="adError" hidden></p>
+            </div>
+            <div class="field">
+              <label for="eposta">E-posta</label>
+              <input type="email" id="eposta" name="eposta" autocomplete="email" maxlength="120" placeholder="ornek@eposta.com" required>
+              <p class="field-error" id="epostaError" hidden></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="konu">Konu</label>
+            <select id="konu" name="konu" required>
+              <option value="">Konu seç</option>
+              <option value="kurulum">Kurulum yardımı</option>
+              <option value="hata">Hata bildirimi</option>
+              <option value="ceviri">Çeviri hatası / öneri</option>
+              <option value="katki">Çeviriye katkı</option>
+              <option value="diger">Diğer</option>
+            </select>
+            <p class="field-error" id="konuError" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="mesaj">Mesaj</label>
+            <textarea id="mesaj" name="mesaj" rows="6" maxlength="5000" placeholder="Mesajını buraya yaz…" required></textarea>
+            <span class="char-count" id="mesajSayac" aria-hidden="true">0 / 5000</span>
+            <p class="field-error" id="mesajError" hidden></p>
+          </div>
+
+          <p class="form-status" id="formDurum" role="status" hidden></p>
+
+          <button class="btn btn-primary" type="submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 2 11 13"></path>
+              <path d="M22 2 15 22 11 13 2 9 22 2z"></path>
+            </svg>
+            Gönder
+          </button>
+
+          <p class="form-note">
+            <strong>Not:</strong> Gönderim altyapısı henüz bağlanmadı. Şu an
+            form yalnızca alanların doğruluğunu kontrol eder; mesajın bir
+            sunucuya iletilmez. Altyapı bağlandığında bu not kaldırılacaktır.
+          </p>
+        </form>
+      </div>
+    </section>
+    <!-- ============================================================
+         6) YASAL BİLDİRİM VE ÜÇÜNCÜ TARAF BİLEŞENLER
+         ============================================================ -->
+    <section class="section section-alt" id="yasal">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Yasal</span>
+          <h2>Bildirimler ve üçüncü taraf bileşenler</h2>
+          <p>
+            Bu bölüm, dağıtılan pakette yer alan üçüncü taraf bileşenlerin
+            lisans bildirimlerini ve Innersloth'un mod politikası gereği
+            yayımlanması gereken metni içerir.
+          </p>
+        </div>
+
+        <div class="faq-list guide-list">
+          <details class="faq-item reveal" open>
+            <summary>Innersloth bildirimi (birebir metin)</summary>
+            <div class="faq-body">
+              <blockquote lang="en">
+                <p>
+                  This mod is not affiliated with Among Us or Innersloth LLC,
+                  and the content contained therein is not endorsed or
+                  otherwise sponsored by Innersloth LLC. Portions of the
+                  materials contained herein are property of Innersloth LLC.
+                  © Innersloth LLC.
+                </p>
+              </blockquote>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>BepInEx ve UnityDoorstop (LGPL-2.1)</summary>
+            <div class="faq-body">
+              <p>
+                Mod damgası eklentisi BepInEx üzerinde çalışır. BepInEx ve
+                UnityDoorstop, GNU Lesser General Public License 2.1
+                (LGPL-2.1) altında dağıtılır.
+              </p>
+              <ul>
+                <li>
+                  BepInEx 6.0.0-be.785+6abdba4 — kaynak:
+                  <a href="https://github.com/BepInEx/BepInEx/tree/6abdba47eeebe08552282e7a58ef0f4a9ab60b62" target="_blank" rel="noopener noreferrer">github.com/BepInEx/BepInEx</a>
+                  (commit <code>6abdba4</code>)
+                </li>
+                <li>
+                  UnityDoorstop — kaynak:
+                  <a href="https://github.com/NeighTools/UnityDoorstop" target="_blank" rel="noopener noreferrer">github.com/NeighTools/UnityDoorstop</a>
+                </li>
+              </ul>
+              <p>
+                Resmî BepInEx derlemesi değiştirilmeden dağıtılır; lisans
+                metinleri pakette <code>ek/lisanslar/</code> altında bulunur.
+                LGPL-2.1 tam metni:
+                <a href="https://www.gnu.org/licenses/old-licenses/lgpl-2.1.html" target="_blank" rel="noopener noreferrer">gnu.org</a>.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>İndirme boyutları</summary>
+            <div class="faq-body">
+              <p>Hazırlanan test paketinin ölçülen boyutları (henüz yayımlanmadı):</p>
+              <ul>
+                <li>Yama delta paketi: <strong>127.546.786 bayt</strong> (121,64 MiB) — her zaman indirilir.</li>
+                <li>BepInEx resmî ZIP: <strong>34.335.572 bayt</strong> (32,74 MiB) — yalnızca BepInEx kurulu değilse indirilir.</li>
+                <li>Toplam (en kötü durum): <strong>161.882.358 bayt</strong> (154,38 MiB).</li>
+              </ul>
+              <p>
+                BepInEx uyumlu biçimde zaten kuruluysa yalnızca delta paketi
+                indirilir.
+              </p>
+            </div>
+          </details>
+
+          <details class="faq-item reveal">
+            <summary>Mod damgası ve doğrulama durumu</summary>
+            <div class="faq-body">
+              <p>
+                Paket, oyunun kendi
+                <code>ModManager.Instance.ShowModStamp()</code> çağrısını yapan
+                küçük bir eklenti içerir. Kurulum aracı bileşenlerin dosya
+                bütünlüğünü doğrular; damganın oyun içinde göründüğü kurulum
+                sırasında otomatik test edilmez, ayrı ve elle çalıştırılan
+                geliştirici testiyle kontrol edilir.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Alt bilgi -->
+  <footer class="footer">
+    <!-- Animasyonlu dalga ayıracı: footer'ın üst sınırında, tüm genişlikte,
+         iki özdeş SVG kopyasının kaydırılmasıyla kesintisiz hareket eder. -->
+    <div class="footer-wave" aria-hidden="true">
+      <div class="wave-track">
+        <svg class="wave-svg" viewBox="0 0 1440 52" preserveAspectRatio="none">
+          <path class="wave-line wave-line-soft" d="M0 34 q90 -12 180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0"/>
+          <path class="wave-line" d="M0 24 q90 -12 180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0"/>
+        </svg>
+        <svg class="wave-svg" viewBox="0 0 1440 52" preserveAspectRatio="none">
+          <path class="wave-line wave-line-soft" d="M0 34 q90 -12 180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0"/>
+          <path class="wave-line" d="M0 24 q90 -12 180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0 t180 0"/>
+        </svg>
+      </div>
+    </div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand-row" href="#ust">
+            <img src="assets/img/logo-turkce.png" alt="Among Us Türkçe logosu" width="1020" height="212">
+          </a>
+          <p class="footer-about">
+            Among Us'ı Türkçe oynamak isteyen oyuncular için hazırlanmış bağımsız,
+            gönüllü bir topluluk projesidir. Resmî bir InnerSloth ürünü değildir.
+          </p>
+        </div>
+        <div>
+          <h4>Bölümler</h4>
+          <ul>
+            <li><a href="#ust">Ana Sayfa</a></li>
+            <li><a href="#kurulum">Kurulum</a></li>
+            <li><a href="#guncelleme">Güncelleme Geçmişi</a></li>
+            <li><a href="#sss">SSS</a></li>
+            <li><a href="#destek">Destek</a></li>
+            <li><a href="bagis.html">Bağış Yap</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topluluk</h4>
+          <ul>
+            <li><a href="https://t.me/amongusturkce" target="_blank" rel="noopener noreferrer">Telegram topluluğu</a></li>
+            <li><a href="#destek">Destek formu</a></li>
+            <li><a href="bagis.html">Bağış Yap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="yil">2026</span> Among Us Türkçe — bağımsız topluluk çalışması</span>
+        <span>Among Us, Innersloth markasıdır; bu proje InnerSloth ile bağlantılı değildir.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Büyük görüntüleme penceresi (lightbox): merkez görsele tıklayınca açılır.
+       Seçili görsel galeriyle senkrondur; klavye, ok düğmeleri ve mobil
+       kaydırma (swipe) ile gezinilir. -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true"
+       aria-label="Ekran görüntüsü görüntüleyici" hidden>
+    <div class="lightbox-backdrop" data-lb-close></div>
+    <figure class="lightbox-figure">
+      <img class="lightbox-img" src="" alt="">
+      <figcaption class="lightbox-caption">
+        <span class="lightbox-title"></span>
+        <span class="lightbox-count" aria-hidden="true"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox-btn lightbox-prev" type="button" aria-label="Önceki ekran görüntüsü">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <button class="lightbox-btn lightbox-next" type="button" aria-label="Sonraki ekran görüntüsü">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
+    <button class="lightbox-btn lightbox-close" type="button" aria-label="Büyük görüntülemeyi kapat">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <script src="assets/js/main.js?v=wave"></script>
+  <script src="assets/js/versions.js?v=scene"></script>
+  <script src="assets/js/changelog.js?v=scene"></script>
+  <script src="assets/js/destek.js?v=scene"></script>
+  <script>
+    document.getElementById("yil").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

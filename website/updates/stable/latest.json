@@ -1,0 +1,22 @@
+{
+  "semasi": 1,
+  "urun": {
+    "ad": "Among Us Türkçe Yama",
+    "surum_etiketi": "v2.3"
+  },
+  "kanal": "stable",
+  "kilitli": true,
+  "kilitli_neden": "Kararlı kanal, Steam desteği tamamlanana kadar kilitlidir. Beta kanalındaki değişiklikler otomatik olarak buraya taşınmaz.",
+  "yama": {
+    "surum": "2.4.0",
+    "tarih": "2026-10-27",
+    "notlar": "Henüz kararlı bir yayın yok.",
+    "minimum_atr": "5.0.0"
+  },
+  "oyun": {
+    "surumler": [
+      "2026.9.29"
+    ]
+  },
+  "paketler": []
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bağış Yap — Among Us Türkçe</title>
+  <meta name="description" content="Among Us Türkçe projesini desteklemek hakkında kısa bilgi ve bağış alanı. Henüz bir bağış platformu bağlanmamıştır.">
+  <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="stylesheet" href="assets/css/style.css?v=hero100">
+</head>
+<body>
+
+  <div class="bg-effects" aria-hidden="true">
+    <div class="stars"></div>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+    <div class="glow glow-3"></div>
+  </div>
+
+  <header class="nav">
+    <div class="container">
+      <a class="nav-brand" href="index.html">
+        <img src="assets/img/logo-turkce.png" alt="Among Us Türkçe logosu" width="1020" height="212">
+      </a>
+
+      <nav aria-label="Ana menü">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="index.html#kurulum">Kurulum</a></li>
+          <li><a href="index.html#guncelleme">Güncelleme Geçmişi</a></li>
+          <li><a href="index.html#sss">SSS</a></li>
+          <li><a href="index.html#destek">Destek</a></li>
+          <li><a href="bagis.html" class="active">Bağış Yap</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="nav-toggle" type="button" aria-label="Menüyü aç/kapat" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <h1>Bağış Yap</h1>
+        <p>
+          Projeyi desteklemek isteyenler için kısa bir bilgi notu.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+      <div class="container donate-wrap">
+        <div class="donate-text reveal">
+          <p>
+            Among Us Türkçe, hiçbir kazanç beklentisi olmadan yürütülen
+            gönüllü bir çalışmadır. Çeviri, test ve tasarım işleri kendi
+            zamanımızla yapılır.
+          </p>
+          <p>
+            Destek olmak istersen kısa bir not: Bağış tamamen isteğe bağlıdır.
+            Yama ücretsiz kalır ve bağış hiçbir ayrıcalık satmaz. İleride
+            alan adı veya barındırma gibi giderler çıkarsa toplanan kaynak
+            yalnızca o giderler için kullanılır ve burada paylaşılır.
+          </p>
+        </div>
+
+        <div class="donate-card reveal">
+          <h2>Bağış bağlantıları hazırlanıyor</h2>
+          <p>
+            Henüz bir bağış platformu seçilmedi. Güvenilir bir platform
+            belirlendiğinde gerçek bağlantı buraya eklenecek; şimdilik hiçbir
+            ödeme alınmaz.
+          </p>
+          <button class="btn btn-primary btn-disabled" type="button" disabled aria-disabled="true" title="Bağış platformu henüz belirlenmedi">
+            Bağış bağlantısı yakında
+          </button>
+          <p class="donate-hint">Yama her zaman ücretsiz kalacak.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand-row" href="index.html">
+            <img src="assets/img/logo-turkce.png" alt="Among Us Türkçe logosu" width="1020" height="212">
+          </a>
+          <p class="footer-about">
+            Among Us'ı Türkçe oynamak isteyen oyuncular için hazırlanmış bağımsız,
+            gönüllü bir topluluk projesidir. Resmî bir InnerSloth ürünü değildir.
+          </p>
+        </div>
+        <div>
+          <h4>Bölümler</h4>
+          <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="index.html#kurulum">Kurulum</a></li>
+            <li><a href="index.html#guncelleme">Güncelleme Geçmişi</a></li>
+            <li><a href="index.html#sss">SSS</a></li>
+            <li><a href="index.html#destek">Destek</a></li>
+            <li><a href="bagis.html">Bağış Yap</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Topluluk</h4>
+          <ul>
+            <li><a href="https://t.me/amongusturkce" target="_blank" rel="noopener noreferrer">Telegram topluluğu</a></li>
+            <li><a href="index.html#destek">Destek formu</a></li>
+            <li><a href="bagis.html">Bağış Yap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="yil">2026</span> Among Us Türkçe — bağımsız topluluk çalışması</span>
+        <span>Among Us, Innersloth markasıdır; bu proje InnerSloth ile bağlantılı değildir.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=wave"></script>
+  <script>
+    document.getElementById("yil").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

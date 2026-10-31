@@ -1,0 +1,1436 @@
+/* ==========================================================================
+   Among Us Türkçe — Ana Stil Dosyası
+   Siyah/kırmızı uzay teması, koyu bordo vurgular, açık/koyu tema desteği
+   Performans notu: süregelen animasyonlar yalnızca transform/opacity kullanır;
+   pahalı filter (blur/drop-shadow) ve backdrop-filter bilinçli olarak kaldırıldı.
+   ========================================================================== */
+
+/* --- Değişkenler (varsayılan: koyu tema) --- */
+:root {
+  --bg-0: #060406;          /* en koyu zemin (siyah, hafif sıcak) */
+  --bg-1: #0b070a;          /* bölüm zemini */
+  --bg-2: #120a0e;          /* kart zemini */
+  --bg-3: #1a0d13;          /* vurgulu kart */
+  --border: rgba(255, 94, 94, 0.14);
+  --border-strong: rgba(255, 110, 110, 0.30);
+
+  --text-0: #f6f0f0;        /* başlık */
+  --text-1: #cbc3c5;        /* gövde */
+  --text-2: #978a8d;        /* ikincil */
+
+  --accent: #e11d2e;        /* ana kırmızı */
+  --accent-strong: #ff6b6b; /* metin/vurgu için açık kırmızı */
+  --accent-glow: #ff8a8a;   /* parlak kırmızı (gradyan) */
+  --accent-deep: #7f1d1d;   /* koyu bordo */
+  --accent-soft: rgba(225, 29, 46, 0.13);
+
+  --btn-glow: rgba(225, 29, 46, 0.40);
+  --btn-glow-hi: rgba(225, 29, 46, 0.55);
+
+  --success: #34d399;
+  --warn: #fbbf24;
+
+  --radius-s: 10px;
+  --radius-m: 16px;
+  --radius-l: 24px;
+  --radius-xl: 32px;
+
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 60px rgba(225, 29, 46, 0.20);
+
+  --maxw: 1120px;
+  --nav-h: 68px;
+
+  --font-sans: "Segoe UI", "Inter", "Roboto", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
+
+  color-scheme: dark;
+}
+
+/* --- Temel sıfırlama --- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg-0);
+  color: var(--text-1);
+  font-family: var(--font-sans);
+  font-size: 16.5px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+a { color: var(--accent-strong); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--text-0);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+  letter-spacing: -0.02em;
+}
+
+p { margin: 0 0 1em; }
+
+.container {
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* --- Arka plan ışık efektleri ---
+   Not: blur filtresi yok; radial-gradient'in kendisi yumuşak geçişi verir.
+   Animasyon yok → sürekli çalışan iş bırakmaz. */
+.bg-effects {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bg-effects .glow {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.55;
+}
+.bg-effects .glow-1 {
+  width: 620px; height: 620px;
+  top: -220px; left: -160px;
+  background: radial-gradient(circle, rgba(225, 29, 46, 0.30), transparent 68%);
+}
+.bg-effects .glow-2 {
+  width: 560px; height: 560px;
+  top: 32%; right: -220px;
+  background: radial-gradient(circle, rgba(127, 29, 29, 0.55), transparent 68%);
+}
+.bg-effects .glow-3 {
+  width: 480px; height: 480px;
+  bottom: -200px; left: 30%;
+  background: radial-gradient(circle, rgba(153, 27, 27, 0.42), transparent 70%);
+}
+
+/* Yıldız noktacıkları (statik) */
+.bg-effects .stars {
+  position: absolute;
+  inset: 0;
+  opacity: 0.9;
+  background-image:
+    radial-gradient(1.4px 1.4px at 20% 30%, rgba(255,255,255,0.5), transparent),
+    radial-gradient(1.2px 1.2px at 70% 12%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1.6px 1.6px at 45% 70%, rgba(255,190,190,0.45), transparent),
+    radial-gradient(1.2px 1.2px at 85% 55%, rgba(255,255,255,0.35), transparent),
+    radial-gradient(1.3px 1.3px at 12% 82%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1.1px 1.1px at 60% 92%, rgba(255,200,200,0.35), transparent),
+    radial-gradient(1.4px 1.4px at 92% 80%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(1.2px 1.2px at 33% 46%, rgba(255,255,255,0.3), transparent);
+}
+
+/* --- Üst menü (TikTok You tarzı) ---
+   Üstte: şeffaf — logo ve bağlantılar görünür, arkada panel yok.
+   Kaydırınca: ::before ile koyu panel üstten aşağı iner; logo ve
+   bağlantılar sabit kalır. Yalnızca transform animasyonu → sıçrama olmaz. */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  background: transparent;
+}
+/* Kaydırınca beliren koyu arka plan paneli (arka plan katmanı) */
+.nav::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--bg-0);
+  background: color-mix(in srgb, var(--bg-0) 94%, transparent);
+  border-bottom: 1px solid var(--border);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+.nav.nav-visible::before { transform: translateY(0); }
+
+/* Logo solda · bağlantılar sayfada tam ortada · kontroller sağda
+   Nav kapsayıcısı TAM EKRAN genişliğindedir (ana içerik konteynerinin
+   max-width/margin ortalaması burada geçersiz kılınır): logo sol kenardan
+   28px içeride, menü bağlantıları 1fr auto 1fr sayesinde tüm ekranın
+   yatay merkezinde kalır; sağdaki 1fr kontroller için alan bırakır. */
+.nav .container {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 28px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  color: var(--text-0);
+  justify-self: start;
+}
+.nav-brand:hover { text-decoration: none; }
+/* Logo en-boy oranı korunur (width: auto); yükseklik tabanlı ölçekleme */
+.nav-brand img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.nav > .container > nav {
+  justify-self: center;
+  position: relative;      /* kapsülün konum referansı */
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;      /* kapsülün konum referansı */
+}
+.nav-links a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: var(--radius-s);
+  color: var(--text-1);
+  font-size: 0.94rem;
+  font-weight: 500;
+  position: relative;      /* kapsülün altinda kalsın */
+  z-index: 1;
+}
+.nav-links a:hover {
+  color: var(--text-0);
+  background: var(--accent-soft);
+  text-decoration: none;
+}
+.nav-links a.active {
+  color: var(--text-0);
+  background: transparent;        /* zemini kapsül verir → kapsül kayabilir */
+  border-radius: 999px;
+}
+/* Kayarak hareket eden aktif kapsül (TikTok You tarzı).
+   Konum/boyut JS ile yazılır; yalnızca transform + width/height geçişleri
+   kullanılır → kapsül eski yerinden yeni yerine yumuşakça kayar, anında
+   kaybolup yeniden oluşmaz. Üstte (aktif yokken) tamamen saydamdır. */
+.nav-pill {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--border-strong);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+  transition:
+    transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.28s ease;
+}
+.nav-pill.show { opacity: 1; }
+
+.nav-actions { display: flex; align-items: center; gap: 10px; justify-self: end; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px; height: 40px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-s);
+  background: var(--bg-2);
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-1);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+.nav-toggle[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* --- Düğmeler --- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
+
+/* Mıknatıs: JS transform'u kare kare sürer; CSS transform geçişi kalkmalı ki
+   iki mekanizma çakışmasın. Yukarı kaldırma etkisi manyetik hareketle değişir. */
+.btn.is-magnetic {
+  transition: box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+.btn.is-magnetic:hover { transform: none; }
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent-deep));
+  color: #fff;
+  box-shadow: 0 8px 28px var(--btn-glow);
+}
+.btn-primary:hover {
+  box-shadow: 0 12px 36px var(--btn-glow-hi);
+  color: #fff;
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: var(--border-strong);
+  color: var(--text-0);
+}
+.btn-ghost:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text-0);
+}
+
+.btn svg { width: 18px; height: 18px; }
+
+.btn-sm { padding: 10px 20px; font-size: 0.9rem; }
+
+/* --- Kahraman (hero) bölümü ---
+   Hero ilk ekranı tamamen kaplar (100svh): tanıtım metni + uzay sahnesi
+   dikey olarak dengelenir (justify-content: center). Galeri hero'nun
+   DIŞINDA ayrı bir banttır (.gallery-band) → ilk ekranın alt kenarından
+   hiçbir pikseli görünmez; min-height yalnız alt sınırdır, içerik kısa
+   ekranlarda hero'yu doğal biçimde büyütür. */
+.hero {
+  position: relative;
+  overflow: hidden;             /* sahne öğeleri hero sınırlarını taşmaz */
+  min-height: 100vh;            /* fallback: eski tarayıcılar */
+  min-height: 100svh;           /* gerçek ekran; mobil araç çubuğu hariç */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* tanıtım içeriği dikey ortalanır */
+  padding: calc(var(--nav-h) + 90px) 0 100px;
+  text-align: center;
+}
+
+/* Uzay atmosferi: kayan ekip arkadaşları
+   Sadece transform animasyonu; drop-shadow filtresi kaldırıldı. */
+.hero-scene {
+  position: relative;
+  height: 190px;
+  margin: 56px auto 0;
+  max-width: 760px;
+}
+.hero-scene .crew {
+  position: absolute;
+  width: 62px;
+  animation: crewFloat 9s ease-in-out infinite;
+}
+.hero-scene .crew-1 { left: 6%;  top: 20px; animation-delay: 0s; }
+.hero-scene .crew-2 { left: 30%; top: 90px; width: 44px; animation-delay: -3s; opacity: 0.8; }
+.hero-scene .crew-3 { right: 28%; top: 12px; width: 50px; animation-delay: -5s; opacity: 0.85; }
+.hero-scene .crew-4 { right: 5%;  top: 78px; width: 56px; animation-delay: -7s; }
+
+@keyframes crewFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50%      { transform: translateY(-22px) rotate(2deg); }
+}
+
+.hero-scene .planet {
+  position: absolute;
+  left: 50%;
+  bottom: -30px;
+  transform: translateX(-50%);
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 28%, var(--accent-glow), var(--accent-deep) 62%, #2a0a0e 100%);
+  box-shadow: 0 0 70px rgba(225, 29, 46, 0.40), inset -14px -14px 40px rgba(0, 0, 0, 0.55);
+  opacity: 0.9;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+  font-size: 0.83rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 28px;
+}
+.hero-badge .dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 10px var(--success);
+  /* Sınırlı tekrar: sürekli dönen animasyon yok; son durum opacity:1 */
+  animation: pulse 2.6s ease-in-out 3;
+}
+/* Küçük nokta: yalnızca opacity (ucuz) */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 6.4vw, 4.4rem);
+  font-weight: 700;
+  margin-bottom: 22px;
+  /* Dar alanlarda satır kırılırsa parçalar dengelenir (ör. "oyna." yalnız kalmasın);
+     tek satırsa etkisiz, hesaplama başlıkla sınırlı → maliyet yok denecek kadar az. */
+  text-wrap: balance;
+}
+/* Among Us logosu: "Among Us" metninin yerine geçer.
+   En-boy oranı korunur (width: auto); boyut başlık fontuna göre (em)
+   ölçeklenir → dar ekranda başlık küçülürken logo da küçülür, taşma olmaz.
+   1.16em → 1.07em (%8 küçültme): başlığın etkisi korunurken metinle
+   görsel denge ve dikey hizalama korunur. */
+.hero h1 .hero-logo {
+  display: inline-block;
+  height: 1.07em;          /* logonun görsel ağırlığıyla metni dengele */
+  width: auto;             /* en-boy oranı korunur (570x155) */
+  vertical-align: -0.03em; /* logo alt kenarı taban çizgisine hizalanır, kesme oturur */
+  margin-right: 0.05em;    /* asıl metinde "Among Us'ı" bitişiktir; ince optik boşluk */
+}
+.hero h1 .gradient-text {
+  background: linear-gradient(100deg, var(--accent-glow) 8%, var(--accent) 55%, var(--accent-glow) 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero-lead {
+  max-width: 620px;
+  margin: 0 auto 38px;
+  font-size: 1.13rem;
+  color: var(--text-1);
+}
+
+.hero-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.hero-note {
+  font-size: 0.86rem;
+  color: var(--text-2);
+}
+
+/* --- Oyun içi ekran görüntüleri: dönen üçlü galeri ---
+   Merkez görsel önde ve belirgin; yan görseller arkada/küçük ama daha fazla
+   görünür (kısmi örtüşme ile tek kompozisyon hissi). Dikdörtgen panel/çerçeve
+   yok: galeri, sayfanın uzay zemininin üzerinde durur; yalnızca merkez
+   görselin dışına yumuşak gölge ve arkasında radyal kırmızı ışık uygulanır.
+   Animasyonlar yalnızca transform/opacity (compositor dostu). */
+/* Galeri bandı: ana tanıtım bölümünden SONRA ayrı akış katmanı.
+   Gizlemek için display:none / overflow:hidden / sabit yükseklik KULLANILMAZ:
+   hero 100svh doldurduğundan galeri doğal olarak fold'un altında başlar ve
+   kullanıcı aşağı kaydırdıkça görünür. Üst boşluk hero'nun alt nefesiyle
+   (100px) birlikte ferah bir geçiş verir. */
+.gallery-band {
+  padding: 0 0 92px;            /* alt boşluk: kurulum bölümüyle eski ritim */
+}
+.hero-gallery {
+  position: relative;
+  max-width: 1000px;           /* alan büyütüldü (860 → 1000) */
+  margin: 62px auto 0;
+}
+.gallery-stage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;               /* yan görseller sahne sınırında kırpılır */
+}
+/* Merkez görselin arkasında yumuşak kırmızı uzay ışığı (dikdörtgen değil) */
+.gallery-stage::before {
+  content: "";
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 74%; height: 82%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(ellipse at center, rgba(225, 29, 46, 0.26), transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+.gallery-slide {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 76%;                  /* merkez görsel ~%38 daha büyük (64% → 76%) */
+  aspect-ratio: 16 / 9;
+  margin: 0;
+  z-index: 1;
+  opacity: 0;
+  border-radius: var(--radius-m);
+  overflow: hidden;
+  transform: translate(-50%, -50%) translateX(0) scale(0.7);
+  transition: transform 0.55s ease, opacity 0.55s ease;
+  will-change: transform, opacity;
+}
+.gallery-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;              /* 16:9 görseller → kırpma olmaz, oran korunur */
+}
+.gallery-slide.is-center {
+  z-index: 3;
+  opacity: 1;
+  transform: translate(-50%, -50%) translateX(0) scale(1);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6), 0 0 55px rgba(225, 29, 46, 0.22);
+}
+.gallery-slide.is-left,
+.gallery-slide.is-right {
+  z-index: 2;
+  opacity: 0.74;
+}
+/* Yan görseller birbirine yakın: kısmi örtüşme → tek kompozisyon hissi */
+.gallery-slide.is-left  { transform: translate(-50%, -50%) translateX(-78%) scale(0.84); }
+.gallery-slide.is-right { transform: translate(-50%, -50%) translateX(78%) scale(0.84); }
+
+/* Galeri okları: sol görsel üzerinde sola, sağ görsel üzerinde sağa bakar */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  width: 56px; height: 56px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: rgba(9, 5, 8, 0.74);
+  color: var(--text-0);
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.gallery-arrow:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  transform: translateY(-50%) scale(1.06);
+}
+.gallery-arrow svg { width: 24px; height: 24px; }
+.arrow-left  { left: 5%; }
+.arrow-right { right: 5%; }
+
+/* Küçük önizleme şeridi (ana görsele tıklayınca açılır) */
+.gallery-thumbs {
+  margin-top: 16px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+}
+.gallery-thumbs.open { max-height: 220px; opacity: 1; }
+.thumbs-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.thumbs-head span { color: var(--text-2); font-size: 0.85rem; }
+.thumbs-close {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-0);
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.thumbs-close:hover { background: var(--accent-soft); border-color: var(--accent); }
+.thumbs-close svg { width: 16px; height: 16px; }
+.thumbs-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+.thumb {
+  flex: 0 0 auto;
+  width: 146px;             /* büyüyen galeriye oranlı önizleme */
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: var(--radius-s);
+  background: var(--bg-2);
+  cursor: pointer;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+.thumb img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+.thumb:hover { transform: translateY(-2px); }
+.thumb.active { border-color: var(--accent); }
+
+/* --- Büyük görüntüleme penceresi (lightbox) ---
+   Görsel ekranın mümkün olduğunca geniş alanında, en-boy oranı korunarak
+   gösterilir; arka plan hafif saydam siyah (kırmızı-siyah atmosfere uygun).
+   Kaydırmayı kilitlemek için body.lightbox-open: konum sabitlenir, kapatınca
+   eski kaydırma konumuna dönülür (bkz. main.js initGallery). */
+body.lightbox-open {
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox[hidden] { display: none; }
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 3, 5, 0.9);
+}
+.lightbox-figure {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  max-width: min(1440px, 94vw);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.lightbox-img {
+  display: block;
+  max-width: 100%;
+  max-height: 78vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;    /* en-boy oranı korunur; esnetme/kırpma yok */
+  border-radius: var(--radius-m);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.72), 0 0 70px rgba(225, 29, 46, 0.16);
+}
+.lightbox-caption {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+  font-size: 0.92rem;
+  color: var(--text-2);
+}
+.lightbox-title { color: var(--text-1); font-weight: 600; }
+.lightbox-btn {
+  position: absolute;
+  z-index: 2;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: rgba(9, 5, 8, 0.74);
+  color: var(--text-0);
+  cursor: pointer;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
+}
+.lightbox-btn:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+.lightbox-btn svg { width: 24px; height: 24px; }
+.lightbox-prev {
+  left: max(14px, 2.5vw);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lightbox-prev:hover { transform: translateY(-50%) scale(1.06); }
+.lightbox-next {
+  right: max(14px, 2.5vw);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.lightbox-next:hover { transform: translateY(-50%) scale(1.06); }
+.lightbox-close { top: 18px; right: 18px; }
+
+/* --- Bölüm başlıkları ---
+   Arka plan BİLEŞİK: bölüm zeminleri ve arka planı kesen kenarlıklar yok.
+   Tüm sayfa tek bir uzay zemininde akar (.bg-effects sabit katmanı);
+   bölümler yalnızca boşluk, tipografi ve içerik düzeniyle ayrışır. */
+.section { padding: 88px 0; }
+/* (eski .section-alt zemin/kenarlıkları kaldırıldı — bölümler arası
+   yatay çizgi ve zemin değişimi oluşturmamak için) */
+
+/* Sabit menü, bölüm başlığını örtmesin (bağlantı ile atlama) */
+section[id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
+
+.section-head {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  text-align: center;
+}
+.section-head .eyebrow {
+  display: block;
+  color: var(--accent-strong);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+.section-head h2 { font-size: clamp(1.9rem, 4vw, 2.7rem); }
+.section-head p { color: var(--text-2); font-size: 1.03rem; }
+
+/* Kurulum rehberi gibi alt başlıklar için sıkı varyant */
+.section-head-tight { margin-bottom: 34px; }
+.section-head-tight .steps-title {
+  font-size: clamp(1.35rem, 3vw, 1.75rem);
+  margin-bottom: 10px;
+}
+
+/* --- İndirme kutusu (kurulum bölümü) --- */
+.download-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 940px;
+  margin: 0 auto 64px;
+  padding: 40px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-l);
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+}
+.download-main h3 { font-size: 1.35rem; margin-bottom: 10px; }
+.download-main p { color: var(--text-2); font-size: 0.97rem; margin-bottom: 24px; }
+
+/* Devre dışı buton: tıklanamaz ve bunu görsel olarak belli eder */
+.btn-disabled,
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none;
+}
+.btn-disabled:hover,
+.btn:disabled:hover { transform: none !important; box-shadow: none; }
+
+.download-specs { margin: 0; border-top: 1px solid var(--border); }
+.download-specs > div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.93rem;
+}
+.download-specs dt { color: var(--text-2); }
+.download-specs dd { margin: 0; color: var(--text-0); }
+
+.guide-list { max-width: 780px; }
+
+/* --- Bilgi şeritleri --- */
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 20px 24px;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--border-strong);
+  background: var(--accent-soft);
+  color: var(--text-1);
+  font-size: 0.95rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+.notice svg { flex: 0 0 auto; width: 22px; height: 22px; color: var(--accent-strong); margin-top: 2px; }
+.notice strong { color: var(--text-0); }
+
+/* --- Destek formu --- */
+.contact-form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: grid;
+  gap: 20px;
+}
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.field { display: grid; gap: 7px; }
+.field label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-0);
+}
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-s);
+  background: var(--bg-2);
+  color: var(--text-0);
+  font-family: inherit;
+  font-size: 0.97rem;
+  transition: border-color 0.2s ease;
+}
+.field input::placeholder,
+.field textarea::placeholder { color: var(--text-2); }
+.field input:focus,
+.field select:focus,
+.field textarea:focus { border-color: var(--border-strong); }
+.field textarea { resize: vertical; min-height: 130px; }
+/* Select: yerel ok yerine ince özel ok (koyu temayla uyumlu) */
+.field select {
+  appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23978a8d' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  background-size: 16px;
+}
+.field .char-count {
+  justify-self: end;
+  font-size: 0.78rem;
+  color: var(--text-2);
+}
+.field-error {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--accent-strong);
+}
+.field input[aria-invalid="true"],
+.field select[aria-invalid="true"],
+.field textarea[aria-invalid="true"] { border-color: var(--accent); }
+
+/* Gönderim altyapısı yok: durum mesajı asla "başarılı" göstermez */
+.form-status {
+  margin: 0;
+  padding: 14px 18px;
+  border-radius: var(--radius-s);
+  border: 1px solid var(--border-strong);
+  background: var(--accent-soft);
+  color: var(--text-1);
+  font-size: 0.93rem;
+}
+.form-status.is-error { border-color: var(--accent); color: var(--text-0); }
+.form-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-2);
+  text-align: center;
+}
+.form-note strong { color: var(--text-1); }
+
+/* --- Bağış sayfası --- */
+.donate-wrap { max-width: 680px; margin: 0 auto; text-align: center; }
+.donate-text p { color: var(--text-1); font-size: 1.02rem; }
+.donate-card {
+  margin-top: 36px;
+  padding: 40px 34px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-l);
+  background: var(--bg-1);
+}
+.donate-card h2 { font-size: clamp(1.35rem, 3vw, 1.7rem); }
+.donate-card p { color: var(--text-2); max-width: 480px; margin: 0 auto 24px; }
+.donate-hint { margin-top: 18px; font-size: 0.85rem; color: var(--text-2); }
+
+/* --- Tıklama parçacık efekti (yalnızca tıklamada çalışır) --- */
+.click-sparks {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  pointer-events: none;
+  overflow: hidden;
+}
+.click-sparks .spark {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-strong);
+  opacity: 0;
+  animation: sparkFly 0.6s ease-out forwards;
+}
+.click-sparks .spark.flash {
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  background: radial-gradient(circle, rgba(255, 138, 138, 0.85), transparent 70%);
+  animation: sparkFlash 0.45s ease-out forwards;
+}
+@keyframes sparkFly {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--dx), var(--dy)) scale(0.3); }
+}
+@keyframes sparkFlash {
+  0%   { opacity: 0.9; transform: scale(0.4); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+
+/* --- Alt bilgi ---
+   Sayfanın sonu da aynı kesintisiz uzay zemininin üzerindedir:
+   ayrı zemin ve bölüm ayırıcısı kullanılmaz. Üst sınırındaki ince dalga
+   ayıracı footer'ın kendisine aittir (arka planı kapatmaz, yalnızca çizgi). */
+.footer {
+  position: relative;      /* dalga katmanının referansı */
+  padding: 96px 0 44px;    /* üst boşluk dalgaya yer açar (52px dalga + 44px nefes) */
+}
+
+/* Animasyonlu dalga ayıracı: footer'ın üst kenarında tüm genişlikte.
+   İki özdeş SVG kopyası yan yana; track -%50 kayınca ikinci kopya birincinin
+   yerine geçer → başlangıç/son fark edilmez (kesintiz). Yalnızca transform. */
+.footer-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 52px;
+  overflow: hidden;        /* taşan kısım kırpılır → yatay taşma olmaz */
+  pointer-events: none;
+}
+.wave-track {
+  display: flex;
+  width: 200%;             /* iki özdeş kopya */
+  height: 100%;
+  animation: waveSlide 26s linear infinite;
+  will-change: transform;
+}
+.wave-svg {
+  flex: 0 0 50%;
+  width: 50%;
+  height: 100%;
+  display: block;
+}
+.wave-line {
+  fill: none;
+  stroke: rgba(225, 29, 46, 0.34);   /* düşük opaklıklı kırmızı */
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.wave-line-soft {
+  stroke: rgba(127, 29, 29, 0.55);   /* koyu bordo, arka plandaki ince iz */
+  stroke-width: 1.5;
+}
+@keyframes waveSlide {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .wave-track { animation: none; }    /* durağan dalga çizgisi kalır */
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 38px;
+}
+.footer h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-2);
+  margin-bottom: 16px;
+}
+.footer ul { list-style: none; margin: 0; padding: 0; }
+.footer li { margin-bottom: 10px; }
+.footer a { color: var(--text-1); font-size: 0.94rem; }
+.footer a:hover { color: var(--accent-strong); }
+.footer .footer-about { color: var(--text-2); font-size: 0.92rem; max-width: 380px; }
+/* Footer logosu: bağlantı olarak, en-boy oranı korunur, footer'a uygun ölçü */
+.footer .brand-row {
+  display: inline-flex;      /* bağlantı olduğu için satır içi esnek */
+  align-items: center;
+  margin-bottom: 14px;
+  text-decoration: none;     /* bağlantı altı çizgisi kaldır */
+  color: inherit;
+  width: fit-content;
+}
+.footer .brand-row:hover { opacity: 0.85; }
+.footer .brand-row img {
+  height: 37px;
+  width: auto;
+  display: block;
+}
+.footer-bottom {
+  padding-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--text-2);
+  font-size: 0.85rem;
+}
+
+/* --- Sayfa üst başlığı (alt sayfalar) --- */
+.page-head {
+  padding: calc(var(--nav-h) + 68px) 0 54px;
+  text-align: center;
+}
+.page-head h1 { font-size: clamp(2.1rem, 5vw, 3.2rem); margin-bottom: 16px; }
+.page-head p { color: var(--text-2); max-width: 620px; margin: 0 auto; font-size: 1.05rem; }
+
+/* ==========================================================================
+   Güncelleme geçmişi — sürüm listesi + detay
+   ========================================================================== */
+.changelog-layout {
+  display: grid;
+  grid-template-columns: 292px 1fr;
+  gap: 32px;
+  align-items: start;
+  padding-bottom: 90px;
+}
+/* Ana sayfada bölüm içindeyken ek alt boşluk gerekmez */
+.changelog-in-section { padding-bottom: 0; }
+
+/* Sol sürüm listesi — ayrı, farklı renkli bir panel değil; içeriği doğrudan
+   sayfanın kesintisiz uzay zemininin üzerinde durur (TikTok You tarzı sade
+   iki sütun). Yalnızca içerik içi ayrım için ince çizgiler kullanılır. */
+.version-panel {
+  position: sticky;
+  top: calc(var(--nav-h) + 24px);
+  background: transparent;
+  border: none;
+  min-width: 0;           /* grid/flex otomatik minimumu taşmayı önlemek için */
+}
+.version-panel .panel-title {
+  padding: 0 4px 14px;
+  border-bottom: 1px solid var(--border);
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-0);
+  font-size: 0.98rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.version-list {
+  list-style: none;
+  margin: 0;
+  padding: 12px 0 0;
+  max-height: 62vh;
+  overflow-y: auto;
+  min-width: 0;           /* mobil yatay şerit genişlemesin; taşıma scroll'a gider */
+}
+.version-item { margin-bottom: 6px; }
+
+.version-btn {
+  width: 100%;
+  text-align: left;
+  display: block;
+  padding: 13px 15px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-m);
+  background: transparent;
+  color: var(--text-1);
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+.version-btn:hover { background: var(--accent-soft); }
+/* En güncel (listedeki ilk) kayıt görsel olarak ayrılır
+   (active kuralından önce tanımlı → seçili madde görünümü ezilmez) */
+.version-btn.is-latest {
+  background: rgba(225, 29, 46, 0.07);
+  border-color: rgba(225, 29, 46, 0.28);
+}
+.version-btn.is-latest::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 10px; bottom: 10px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+.version-btn.active {
+  background: var(--accent-soft);
+  border-color: var(--border-strong);
+}
+.version-btn .v-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 3px;
+}
+.version-btn .v-name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-0);
+  font-size: 0.99rem;
+}
+.version-btn.active .v-name { color: var(--accent-strong); }
+.version-btn .v-date { font-size: 0.8rem; color: var(--text-2); }
+.version-btn .v-summary {
+  font-size: 0.84rem;
+  color: var(--text-2);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.tag-draft {
+  background: rgba(251, 191, 36, 0.14);
+  color: var(--warn);
+  border-color: rgba(251, 191, 36, 0.4);
+}
+.tag-planned {
+  background: rgba(96, 165, 250, 0.14);
+  color: #93c5fd;
+  border-color: rgba(96, 165, 250, 0.4);
+}
+.tag-released {
+  background: rgba(52, 211, 153, 0.14);
+  color: var(--success);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+
+/* Detay sütunu — büyük, ayrı renkli kutu değil; içerik doğrudan sayfa
+   zemininin üzerinde. min-height korunur: seçim değişiminde yerleşim
+   sıçraması/titreme olmaz. Geçiş içeriğin hafif fade-in animasyonudur. */
+.version-detail {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+  border-radius: var(--radius-l);
+  padding: 4px 0 0;
+  min-height: 480px;
+  min-width: 0;           /* grid otomatik minimumu taşmayı önlemek için */
+}
+
+.detail-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+.detail-head h2 {
+  font-size: clamp(1.6rem, 3.4vw, 2.15rem);
+  margin: 0;
+}
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: var(--text-2);
+  font-size: 0.88rem;
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--border);
+}
+.detail-meta span { display: inline-flex; align-items: center; gap: 7px; }
+.detail-meta svg { width: 15px; height: 15px; color: var(--accent-strong); }
+
+.detail-summary {
+  color: var(--text-1);
+  font-size: 1.02rem;
+  margin-bottom: 30px;
+}
+
+.change-group { margin-bottom: 30px; }
+.change-group:last-child { margin-bottom: 0; }
+
+.change-group h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.02rem;
+  margin-bottom: 14px;
+}
+.change-group h3 .g-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; height: 30px;
+  border-radius: 9px;
+  flex: 0 0 auto;
+}
+.change-group h3 .g-icon svg { width: 16px; height: 16px; }
+
+.g-added h3 .g-icon   { background: rgba(52, 211, 153, 0.14); color: var(--success); border: 1px solid rgba(52, 211, 153, 0.35); }
+.g-fixed h3 .g-icon   { background: rgba(96, 165, 250, 0.14); color: #93c5fd; border: 1px solid rgba(96, 165, 250, 0.35); }
+.g-compat h3 .g-icon  { background: var(--accent-soft); color: var(--accent-strong); border: 1px solid var(--border-strong); }
+
+.change-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.change-list li {
+  position: relative;
+  padding: 13px 16px 13px 40px;
+  border-radius: var(--radius-s);
+  background: var(--bg-1);
+  border: 1px solid var(--border);
+  font-size: 0.94rem;
+  color: var(--text-1);
+}
+.change-list li::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 20px;
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.g-added .change-list li::before  { background: var(--success); }
+.g-fixed .change-list li::before  { background: #60a5fa; }
+.change-list li b, .change-list li strong { color: var(--text-0); }
+
+.detail-draft-note {
+  margin-top: 30px;
+  padding: 16px 20px;
+  border-radius: var(--radius-m);
+  border: 1px dashed rgba(251, 191, 36, 0.45);
+  background: rgba(251, 191, 36, 0.07);
+  color: var(--text-1);
+  font-size: 0.9rem;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.detail-draft-note svg { width: 19px; height: 19px; color: var(--warn); flex: 0 0 auto; margin-top: 2px; }
+
+/* Detay geçiş animasyonu (tek seferlik, transform+opacity) */
+.fade-in { animation: fadeIn 0.35s ease; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- SSS (akordiyon) --- */
+.faq-list { max-width: 780px; margin: 0 auto; display: grid; gap: 14px; }
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-m);
+  background: var(--bg-1);
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+.faq-item[open] { border-color: var(--border-strong); }
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 20px 24px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-0);
+  font-size: 1.02rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "";
+  flex: 0 0 auto;
+  width: 10px; height: 10px;
+  border-right: 2px solid var(--accent-strong);
+  border-bottom: 2px solid var(--accent-strong);
+  transform: rotate(45deg);
+  transition: transform 0.25s ease;
+  margin-top: -4px;
+}
+.faq-item[open] summary::after { transform: rotate(-135deg); margin-top: 4px; }
+.faq-item .faq-body {
+  padding: 0 24px 22px;
+  color: var(--text-2);
+  font-size: 0.96rem;
+}
+
+/* --- Kurulum rehberi: akordiyon (.faq-item) ile sunulur --- */
+
+/* --- Kaydırma animasyonu (reveal) --- */
+.reveal {
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Erişilebilirlik --- */
+:focus-visible {
+  outline: 2px solid var(--accent-strong);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ==========================================================================
+   Duyarlılık
+   ========================================================================== */
+@media (max-width: 960px) {
+  .download-box { grid-template-columns: 1fr; gap: 30px; padding: 30px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .changelog-layout { grid-template-columns: 1fr; }
+  .changelog-in-section .version-panel { position: static; }
+  .version-list {
+    display: flex;
+    gap: 8px;
+    max-height: none;
+    overflow-x: auto;
+    padding: 12px;
+  }
+  .version-item { margin-bottom: 0; flex: 0 0 auto; min-width: 220px; }
+  /* Mobilde sürüm seçicisi üstte (yatay kaydırılır), ayrıntılar altında */
+  .changelog-in-section .version-detail { padding-top: 22px; }
+}
+
+@media (max-width: 900px) {
+  /* 6 bağlantı sığmadan önce mobil menüye geç */
+  .nav-links {
+    position: fixed;
+    top: var(--nav-h);
+    left: 0; right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px 20px 20px;
+    background: var(--bg-1);
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-140%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+  }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a { padding: 13px 16px; font-size: 1rem; }
+  /* Mobilde kayan kapsül yerine seçili bağlantı kendi zeminini alır */
+  .nav-links a.active {
+    background: var(--accent-soft);
+    box-shadow: inset 0 0 0 1px var(--border-strong);
+  }
+  .nav-pill { display: none; }
+  .nav-toggle { display: flex; }
+}
+
+@media (max-width: 720px) {
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+  .section { padding: 64px 0; }
+  .hero { padding: calc(var(--nav-h) + 60px) 0 70px; }
+  .hero-cta .btn { width: 100%; }
+  .hero-gallery { margin-top: 44px; }
+  .gallery-band { padding-bottom: 60px; }
+  .version-detail { padding: 28px 22px; }
+  .download-box { padding: 24px 20px; }
+  .download-specs > div { grid-template-columns: 110px 1fr; }
+  .donate-card { padding: 30px 22px; }
+
+  /* Galeri: merkez görsel daha baskın, yanlar daha az görünür; taşma yok.
+     Ölçüler taşma/örtüşme hesabıyla (stage ± genişlik) doğrulandı. */
+  .gallery-slide { width: 82%; }
+  .gallery-slide.is-left  { transform: translate(-50%, -50%) translateX(-80%) scale(0.82); }
+  .gallery-slide.is-right { transform: translate(-50%, -50%) translateX(80%) scale(0.82); }
+  .gallery-arrow { width: 44px; height: 44px; }
+  .gallery-arrow svg { width: 20px; height: 20px; }
+  .arrow-left  { left: 3%; }
+  .arrow-right { right: 3%; }
+  .thumb { width: 116px; }
+
+  /* Uzay sahnesi: mobilde sahne ve gezegen küçülür */
+  .hero-scene { height: 150px; }
+  .hero-scene .planet { width: 110px; height: 110px; }
+
+  /* Büyük görüntüleme penceresi: mobilde dokunma alanı ve görüntü ölçüsü */
+  .lightbox-btn { width: 44px; height: 44px; }
+  .lightbox-btn svg { width: 20px; height: 20px; }
+  .lightbox-prev { left: 8px; }
+  .lightbox-next { right: 8px; }
+  .lightbox-close { top: 12px; right: 12px; }
+  .lightbox-img { max-height: 66vh; }
+}
+
+/* Başlık çok dar olursa logo kendi satırına geçer, metin altında ortalanır
+   (boyut da %8 küçültülmüş hâle göre ayarlandı) */
+@media (max-width: 560px) {
+  .hero h1 .hero-logo {
+    display: block;
+    margin: 0 auto 0.12em;
+    height: auto;
+    width: min(222px, 66%);
+  }
+}
+
+/* Hareket azaltma tercihi */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; }
+}

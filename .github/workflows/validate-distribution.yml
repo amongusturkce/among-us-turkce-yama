@@ -1,0 +1,67 @@
+name: Validate distribution repo
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate manifests
+        shell: pwsh
+        run: |
+          $hata = 0
+          $stable = Get-Content -LiteralPath 'website/updates/stable/latest.json' -Raw -Encoding UTF8 | ConvertFrom-Json
+          $beta = Get-Content -LiteralPath 'website/updates/beta/latest.json' -Raw -Encoding UTF8 | ConvertFrom-Json
+
+          function Kontrol([string]$ad, [bool]$kosul) {
+            if ($kosul) { Write-Host "[OK] $ad" }
+            else { Write-Host "[HATA] $ad"; $script:hata++ }
+          }
+
+          Kontrol 'Stable semasi 1' ([int]$stable.semasi -eq 1)
+          Kontrol 'Stable kilitli' ([bool]$stable.kilitli)
+          Kontrol 'Stable paket listesi bos' (@($stable.paketler).Count -eq 0)
+          Kontrol 'Stable urun etiketi v2.3' ([string]$stable.urun.surum_etiketi -eq 'v2.3')
+
+          Kontrol 'Beta semasi 1' ([int]$beta.semasi -eq 1)
+          Kontrol 'Beta urun etiketi v2.3' ([string]$beta.urun.surum_etiketi -eq 'v2.3')
+          Kontrol 'Beta teknik surum dolu' (-not [string]::IsNullOrWhiteSpace([string]$beta.yama.surum))
+
+          if (-not [bool]$beta.kilitli) {
+            Kontrol 'Beta paket listesi dolu' (@($beta.paketler).Count -gt 0)
+            foreach ($p in @($beta.paketler)) {
+              Kontrol ("Beta {0}: platform" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.platform))
+              Kontrol ("Beta {0}: dosya" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.dosya))
+              Kontrol ("Beta {0}: url" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.url))
+              Kontrol ("Beta {0}: sha256" -f $p.platform) ([string]$p.sha256 -match '^[0-9a-fA-F]{64}$')
+              Kontrol ("Beta {0}: boyut" -f $p.platform) ([long]$p.boyut -gt 0)
+              Kontrol ("Beta {0}: dosya listesi" -f $p.platform) (@($p.dosyalar).Count -gt 0)
+            }
+          }
+
+          if ($hata -gt 0) { exit 1 }
+          Write-Host 'Manifest dogrulamasi gecti.'
+
+      - name: PowerShell syntax check
+        shell: pwsh
+        run: |
+          $hata = 0
+          Get-ChildItem -Path tools/distribution/*.ps1 -File | ForEach-Object {
+            $tok = $null; $err = $null
+            $null = [System.Management.Automation.Language.Parser]::ParseFile($_.FullName, [ref]$tok, [ref]$err)
+            if ($err.Count -gt 0) {
+              $hata++
+              Write-Host "[HATA] $($_.Name)"
+              $err | ForEach-Object { Write-Host ("  satir {0}: {1}" -f $_.Extent.StartLineNumber, $_.Message) }
+            } else { Write-Host "[OK] $($_.Name)" }
+          }
+          if ($hata -gt 0) { exit 1 }
