@@ -1,0 +1,26 @@
+{
+    "semasi":  1,
+    "kanal":  "beta",
+    "surumler":  [
+                     {
+                         "etiket":  "2.4.0-beta.20261031T070329",
+                         "tarih":  "2026-10-31T07:03:29.4619055+03:00",
+                         "teknik_surum":  "2.4.0",
+                         "urun_etiketi":  "v2.3",
+                         "paketler":  [
+                                          {
+                                              "platform":  "epic",
+                                              "dosya":  "atr-yama-2.4.0-epic.zip",
+                                              "boyut":  552724038,
+                                              "sha256":  "3fdf2500fbd84eb94986c7e1090c30759fbf6e8bccd539f1d6f06b1710c7a7c0"
+                                          },
+                                          {
+                                              "platform":  "msix",
+                                              "dosya":  "atr-yama-2.4.0-msix.zip",
+                                              "boyut":  552804927,
+                                              "sha256":  "a521f5b9fd6c235dc33be9a283e8272c0736d8e1d54babd3251b66c58cbeaa02"
+                                          }
+                                      ]
+                     }
+                 ]
+}

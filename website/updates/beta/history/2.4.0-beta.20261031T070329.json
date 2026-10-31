@@ -1,0 +1,468 @@
+{
+    "semasi":  1,
+    "urun":  {
+                 "ad":  "Among Us Türkçe Yama",
+                 "surum_etiketi":  "v2.3"
+             },
+    "kanal":  "beta",
+    "kilitli":  false,
+    "yama":  {
+                 "surum":  "2.4.0",
+                 "tarih":  "2026-10-31",
+                 "notlar":  "Türkçe yama v2.4.0: rol/istek metinleri, tuş atamaları, kozmetik küp adları, evcil hayvan metinleri ve ana menü logosu düzeltmeleri dahil.",
+                 "minimum_atr":  "5.0.0"
+             },
+    "oyun":  {
+                 "surumler":  [
+                                  "2026.9.29"
+                              ]
+             },
+    "beta":  {
+                 "etiket":  "2.4.0-beta.20261031T070329",
+                 "yayin":  "2026-10-31T07:03:29.4619055+03:00"
+             },
+    "paketler":  [
+                     {
+                         "platform":  "epic",
+                         "platform_adi":  "Epic Games Store",
+                         "oyun_surumleri":  [
+                                                "2026.9.29"
+                                            ],
+                         "dosya":  "atr-yama-2.4.0-epic.zip",
+                         "url":  "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0-beta.20261031T070329/atr-yama-2.4.0-epic.zip",
+                         "boyut":  552724038,
+                         "sha256":  "3fdf2500fbd84eb94986c7e1090c30759fbf6e8bccd539f1d6f06b1710c7a7c0",
+                         "tarih":  "2026-10-31",
+                         "notlar":  "Türkçe yama v2.4.0: rol/istek metinleri, tuş atamaları, kozmetik küp adları, evcil hayvan metinleri ve ana menü logosu düzeltmeleri dahil.",
+                         "dosyalar":  [
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
+                                              "paket_yolu":  "dosyalar/00_referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
+                                              "boyut":  10934688,
+                                              "sha256":  "ba861d1c8dcb8a882057c02add0aad9fb98804e1abfda5662536e12296ed46d5",
+                                              "orijinal_sha256":  "",
+                                              "kabul":  [
+                                                            "0e9202d2621ead74c07dfe05737300c46aa3ac1a6ab9eda08e2b3ab7c4df4028",
+                                                            "0ffc1929b08f7a919a60bbaf75e8170c9a99490375754c4d49e19278bd582758",
+                                                            "23bc154d9b97f5fc3472eb43296ec0f0d56664f49aca064c691c9eec966b2e45",
+                                                            "325e1ed8424df5720215f8bf8e6d0b0c6179241566b25dd7cc09faa8d467bd93",
+                                                            "52e22c89608cf47d48a247027e3501afee7f11b32b1a41b5b8ab3ad1f233cd04",
+                                                            "69214c8189c1fcf76c8ec3314551269ac187b18551c60ad124313078e2b1e7b8",
+                                                            "95b577d5fa55c9910c044e2b6cb00ad2b435898dd2a32fc353a5884266961209",
+                                                            "cb23fc3efbcd61d3d1c318708ab56b0cc51a5b86279ae4fbfaff6810ab0e6918",
+                                                            "e1b94a285b3420c4af6abe8025fc5a9a35145e5de0f6339602153d48f1a1a25c",
+                                                            "e532a3c0e7cd6be59afb63faaec4b8bf4d363e7344dd268bf1ddde4168aa3402",
+                                                            "e7fee3cac05ad74a0ef465a88f1feb8bf0a4f6c1a20e68889547f21e2b97a94f",
+                                                            "ee88922b450efa15a4c3e70ec113022958d355d4e4534f3d2db808f000bbff8c"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/initialmaps_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/01_initialmaps_assets_all.bundle",
+                                              "boyut":  149308076,
+                                              "sha256":  "c446bac01689d2a71d84dc16e162dcaa328ee67c9dd46850eea03390abfbc3e8",
+                                              "orijinal_sha256":  "204fc4bde5ac246e7aaa223c571095cd72721511d41514b0c5f3361638407082",
+                                              "kabul":  [
+                                                            "18df41b86b52ae83cc4939fd34afa2cd7cf0b64cd53b49dfa8541c68192de682",
+                                                            "204fc4bde5ac246e7aaa223c571095cd72721511d41514b0c5f3361638407082",
+                                                            "31a673b038ef62eb458555d1999b047a089edd3f99c6ca2f47ec5c42fb58e614",
+                                                            "479a28ab51ec0711eee488938569a4fa31f7644fb72d4675200e77e4d6c76dc8",
+                                                            "5232afecd4c8bb48550951ac2d2d78d775fff05d636395d36ff58c5cebd875c4",
+                                                            "cff5a7c644489f2c43e1ea7fc058e2f2a85821cfe442db996a0f13e104906c1f",
+                                                            "ffa187a774b77cf2db309409027b8a0392e73f1cd3a2e1e68e3afb4dcb784a70"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "il2cpp_data/Metadata/global-metadata.dat",
+                                              "paket_yolu":  "dosyalar/02_global-metadata.dat",
+                                              "boyut":  16285872,
+                                              "sha256":  "bc95717290de9f80e1b9bd29edccc15b638ef30d065069e1ecbdbba262693d11",
+                                              "orijinal_sha256":  "bcc83591f047650edaed33711d78ac12efd73703fc46af1cb2c02d239acc148f",
+                                              "kabul":  [
+                                                            "50570dfbab816eb62663ebd9cf521fa236c2714ad27bfb327978bf8208c7f386",
+                                                            "6123f36f8702661307d6f94bfacb3250d256acff6e11807d510c3659fd559d8e",
+                                                            "7a78da8c59e4049c0c3ba92d70494b47746a0f09252028fe3e6f5f1fa39ca3da",
+                                                            "7f28930af103fe8090ff3e6c6b776310fc12a1fca01a235271fb2a84e0027a7b",
+                                                            "b2e219a684c18476542a716fb4779281ca532760bfef09a38b851c9d28548646",
+                                                            "bcc83591f047650edaed33711d78ac12efd73703fc46af1cb2c02d239acc148f",
+                                                            "cc2070627546ea4ed878ea4396779d3904f9b9aa1197e63888c5708abc439802",
+                                                            "d9c6f09494ba3f3f9143538f7ac1276c4929c36fa393907b45210c2be0ad8ef2"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "level2",
+                                              "paket_yolu":  "dosyalar/03_level2",
+                                              "boyut":  1897344,
+                                              "sha256":  "7f28871a9fc75feba0d9304bad866524d3275784bf948f9a6dde0791aef6d6db",
+                                              "orijinal_sha256":  "e0123a5bc597b2da80b9918084dbda4119f8076c9205030562394e0741cfc1fc",
+                                              "kabul":  [
+                                                            "b99423a8ac57fde6569a13eba611b9ba598e30c45105e63f19a2cfa1747184cc",
+                                                            "e0123a5bc597b2da80b9918084dbda4119f8076c9205030562394e0741cfc1fc"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "resources.assets",
+                                              "paket_yolu":  "dosyalar/04_resources.assets",
+                                              "boyut":  52297056,
+                                              "sha256":  "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec",
+                                              "orijinal_sha256":  "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
+                                              "kabul":  [
+                                                            "4781730f9c9c6fcefad24f275f2ecd73387d41bf90f093310ce24c869b16127c",
+                                                            "5494d7bac7ab986b0b04306acf93ba916eafab5b92111fa52d433a396fab25bc",
+                                                            "5fd019facc38177b11f5a85211e8a77defdfcd7ac3e9e9fc2b0330610af766df",
+                                                            "70a8433d3999372946c93a17b021d414bbeb17071ba457a93d0380e2b4a8ede7",
+                                                            "92dd5d5a05e90de58ec6ddb50fba4ea2f8c2ff29e9a89a7541d61c4192c628bf",
+                                                            "a2311e93b9c013ca2fd098633cde6725daecd940beea2cd36fc4ad406fe1ce49",
+                                                            "b4605dc54b1399700ec078f98a56668db0b7c3e1f812cad409ec0fd498e9f921",
+                                                            "b9edaa0a7a196ec2b529779fcb0f93ea1bf0bc4e4d7d7f0b116034516cd43fa1",
+                                                            "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
+                                                            "bf7e0dab311c8f21c4024ef33ec079e23bad915aadf685d8fbdadac9a0e49269",
+                                                            "d3239fef5885ed3a418dad220bf1ff89a076f6bb388d13b75ca3f7dab85f3c15",
+                                                            "ed501303db909fbcd3c4056a256f5b031196174bc2235129b5710c8a12c82e7a",
+                                                            "ef468c82d1bc08a92c025808b713d6347f6bc92661333dacb956486fff147ca7",
+                                                            "fb1a10a5af7fe17d2239eb2faa9affbb88e7e19b160bb8b69e75f1cdec976cdf"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "sharedassets2.assets",
+                                              "paket_yolu":  "dosyalar/05_sharedassets2.assets",
+                                              "boyut":  11696872,
+                                              "sha256":  "bb9e383d7ef92847dfb4219b30fe48823afb11d6ad6116d3163c3c5c08e4282b",
+                                              "orijinal_sha256":  "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
+                                              "kabul":  [
+                                                            "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
+                                                            "bdad1a5908a3960d2a5b5b4f7cc304e5566560ff90a235ec98478cd8228ca67d",
+                                                            "d0c63872150516e69eb4211c3c52b543a7706eff1b36ea37d6138670b5e5cffe",
+                                                            "d5c28a99057ef008322dc4e342f257df4d3e78456dba2e8669a5f5fc2ce0b966"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "sharedassets2.assets.resS",
+                                              "paket_yolu":  "dosyalar/06_sharedassets2.assets.resS",
+                                              "boyut":  207612336,
+                                              "sha256":  "cb9f6edc303c9a5f8187fb944ac4bbd78a9f580b20814a0738968ce5e5d5f703",
+                                              "orijinal_sha256":  "a331f5b80e43bc84c4ebf7e4783653b4c7b9df21126564e824ad27a0444926c6",
+                                              "kabul":  [
+                                                            "a331f5b80e43bc84c4ebf7e4783653b4c7b9df21126564e824ad27a0444926c6",
+                                                            "d876b97744eb8c93bbb2a4ab0c31a27a58e2c467155961242ec721b4ec2e8c00"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "sharedassets9.assets",
+                                              "paket_yolu":  "dosyalar/07_sharedassets9.assets",
+                                              "boyut":  1926032,
+                                              "sha256":  "0bc595db81a41b8b7e3f30b442ae955a02bfd3dc54e10875478753db62431cca",
+                                              "orijinal_sha256":  "9414590ee1c2f74762610481320ffb6859e4fa37aed0ad1b19c1b010993d2e1b",
+                                              "kabul":  [
+                                                            "9414590ee1c2f74762610481320ffb6859e4fa37aed0ad1b19c1b010993d2e1b"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/cosmica_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/08_cosmica_assets_all.bundle",
+                                              "boyut":  20267754,
+                                              "sha256":  "c0e3bcd52360670afb06023ab52be49ed443aac3e28c358c1bb705ff854909b4",
+                                              "orijinal_sha256":  "dbf40a56d8dacbd66148408a00a68d489ce1fc90bc0c2dee9958d264a148f5d4",
+                                              "kabul":  [
+                                                            "20cebf593063407e242ee44cf9a25e291705773e04a010ce409e8ce5db90df08",
+                                                            "dbf40a56d8dacbd66148408a00a68d489ce1fc90bc0c2dee9958d264a148f5d4"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/cosmicubelny24_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/09_cosmicubelny24_assets_all.bundle",
+                                              "boyut":  20614653,
+                                              "sha256":  "65d353e34cf3a56ec62acbde1112a97c2f449312b9b634b5285cc58f044397b2",
+                                              "orijinal_sha256":  "661d856ba482fa38be7e38ef7fced34938439be0f658a8da8f2700434c7dcdaf",
+                                              "kabul":  [
+                                                            "661d856ba482fa38be7e38ef7fced34938439be0f658a8da8f2700434c7dcdaf",
+                                                            "afacdcba043f12192a15e250a15b37179d42175faa61b7ca5b81dee6d89810fe"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/critrolecubeb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/10_critrolecubeb_assets_all.bundle",
+                                              "boyut":  19184500,
+                                              "sha256":  "618f40a0db591b1f4f00a718c92c48df1b6f843a2b547ae2d56426a8bfbbf9b4",
+                                              "orijinal_sha256":  "0bdbd8e50e2f7a57a3e14dc79795758a699c3410e19a33c88832cc5dee84848a",
+                                              "kabul":  [
+                                                            "0bdbd8e50e2f7a57a3e14dc79795758a699c3410e19a33c88832cc5dee84848a",
+                                                            "33c4d8e19581f537ade7c1bdce454873c37b43a18da081f4fe0807598e633cce"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/hanami_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/11_hanami_assets_all.bundle",
+                                              "boyut":  21876882,
+                                              "sha256":  "4b01860e1a294f1c3fd84d25be7df124237dbd3db579d259486ef980b6796483",
+                                              "orijinal_sha256":  "97e4a4537cd63854f592ba2cce618728d70568c8e068841b1a391c7495c8b2ca",
+                                              "kabul":  [
+                                                            "97e4a4537cd63854f592ba2cce618728d70568c8e068841b1a391c7495c8b2ca",
+                                                            "f867501faec0d70c51697946e42342ce93301e56464e6c2fd2c3e690a4182652"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/initialcosmetics_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/12_initialcosmetics_assets_all.bundle",
+                                              "boyut":  208956334,
+                                              "sha256":  "f607d6d40d83c64009115940f040bfc8ab6630db709461525076137256264e5f",
+                                              "orijinal_sha256":  "a7d4fb989bb0cb5d74c64236b02d601b100ed78bed97abcc1c88cd81052f7939",
+                                              "kabul":  [
+                                                            "4f4e8f59546f927177ed03c32e6d60cd4295b4b4aecb86fc9284a4b6b27ac864",
+                                                            "a7d4fb989bb0cb5d74c64236b02d601b100ed78bed97abcc1c88cd81052f7939"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/kamurocho_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/13_kamurocho_assets_all.bundle",
+                                              "boyut":  32844820,
+                                              "sha256":  "3e63bf1181421a2f338d9a8eb53455313063495d23c4fde452fcb5cd0ab951c2",
+                                              "orijinal_sha256":  "b0a4996c4cd46538ba22b975f6a3f99c671f6aad805ad01c99cad42a7a21d5f6",
+                                              "kabul":  [
+                                                            "91cd828ebdb8ea0790e73770cb511e2acb80b8930ef74f2e93a307c59a1b7057",
+                                                            "b0a4996c4cd46538ba22b975f6a3f99c671f6aad805ad01c99cad42a7a21d5f6"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/pawsnclaws_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/14_pawsnclaws_assets_all.bundle",
+                                              "boyut":  28591424,
+                                              "sha256":  "6b81bcff63181eea26c4982e3270b6163403314831daeccaaf7b772caa02c5bd",
+                                              "orijinal_sha256":  "bc2ea8abbc538423aedb6f68da56ff85d294be6e59fa208a19980aa06d8c900d",
+                                              "kabul":  [
+                                                            "9cc9271068ce9a13957fb37be338fdc71aa38e664847dfcee6b09c439309f99f",
+                                                            "bc2ea8abbc538423aedb6f68da56ff85d294be6e59fa208a19980aa06d8c900d"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/projectparasitecubeb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/15_projectparasitecubeb_assets_all.bundle",
+                                              "boyut":  18617547,
+                                              "sha256":  "a05fb1e14adc4287de4a85760aa229fd94bf4c73f9a94a72b7d4867cd23dcb89",
+                                              "orijinal_sha256":  "22bc28a97e5969bc1955b35806d0fefedcfd4e999c6c9d2a7e446de90cbe9594",
+                                              "kabul":  [
+                                                            "22bc28a97e5969bc1955b35806d0fefedcfd4e999c6c9d2a7e446de90cbe9594",
+                                                            "b9de2ba441fb38fd3cece6d191e4692333565a06eccc3493dbe7e83d40f3d423"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/racingcubeb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/16_racingcubeb_assets_all.bundle",
+                                              "boyut":  18370016,
+                                              "sha256":  "7d99f5d32bffd5113eca369494de11c6903458902f5574a1251400512d934fa8",
+                                              "orijinal_sha256":  "f97e995191085c5464d629fdd4b1fabab30445f86f06b8cb6cccdcb9edb94981",
+                                              "kabul":  [
+                                                            "3b29028a04e525d159ced5dd5c11e14634b9c16c6a935f2d66949f397f1f59f6",
+                                                            "f97e995191085c5464d629fdd4b1fabab30445f86f06b8cb6cccdcb9edb94981"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/EGS/StandaloneWindows/stardewb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/17_stardewb_assets_all.bundle",
+                                              "boyut":  18834534,
+                                              "sha256":  "8fbcf5971de171e8e9324d53558df024f18698935d5c1d7d8a0b12790d09d150",
+                                              "orijinal_sha256":  "8f353fcc94ad2483c89901f6c5e166d6f0dcf38bdf3a4bf01c2a7b2bc60d45d6",
+                                              "kabul":  [
+                                                            "8f353fcc94ad2483c89901f6c5e166d6f0dcf38bdf3a4bf01c2a7b2bc60d45d6",
+                                                            "a20b37376c24690e10e6515e546e95028a7da38f8588a3fff914d088721f4ec5"
+                                                        ]
+                                          }
+                                      ]
+                     },
+                     {
+                         "platform":  "msix",
+                         "platform_adi":  "Microsoft Store / Xbox (MSIX)",
+                         "oyun_surumleri":  [
+                                                "2026.9.29"
+                                            ],
+                         "dosya":  "atr-yama-2.4.0-msix.zip",
+                         "url":  "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0-beta.20261031T070329/atr-yama-2.4.0-msix.zip",
+                         "boyut":  552804927,
+                         "sha256":  "a521f5b9fd6c235dc33be9a283e8272c0736d8e1d54babd3251b66c58cbeaa02",
+                         "tarih":  "2026-10-31",
+                         "notlar":  "Türkçe yama v2.4.0: rol/istek metinleri, tuş atamaları, kozmetik küp adları, evcil hayvan metinleri ve ana menü logosu düzeltmeleri dahil.",
+                         "dosyalar":  [
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/initialmaps_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/00_initialmaps_assets_all.bundle",
+                                              "boyut":  149282861,
+                                              "sha256":  "9700a9d4239b6e718a5748e07c11bb6cb8244a46851f8cb598beed950d52274a",
+                                              "orijinal_sha256":  "f74ac2eecbd641ab4b09f4e469dd920a65178ebde76aaa4c3ab8281adc2e46c7",
+                                              "kabul":  [
+                                                            "f74ac2eecbd641ab4b09f4e469dd920a65178ebde76aaa4c3ab8281adc2e46c7"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
+                                              "paket_yolu":  "dosyalar/01_referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
+                                              "boyut":  2311549,
+                                              "sha256":  "bfcd6cdbe898ffd755260ba7fa61272e161634009a70db0c31193e1a5c7b48e0",
+                                              "orijinal_sha256":  "17eca4067beeb52a8433f3406b40aea2288dd3bc261361365f68860300422369",
+                                              "kabul":  [
+                                                            "17eca4067beeb52a8433f3406b40aea2288dd3bc261361365f68860300422369"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "il2cpp_data/Metadata/global-metadata.dat",
+                                              "paket_yolu":  "dosyalar/02_global-metadata.dat",
+                                              "boyut":  16408976,
+                                              "sha256":  "ef5dbf7befcd157662e9b32180eafa9741bebc2ce6fdd90d0bd14c9fe1e41f34",
+                                              "orijinal_sha256":  "e18913a6796940ea6d7ef92a6f3bf91e6c999567648c437d7aebbca26978e63d",
+                                              "kabul":  [
+                                                            "e18913a6796940ea6d7ef92a6f3bf91e6c999567648c437d7aebbca26978e63d"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "level2",
+                                              "paket_yolu":  "dosyalar/03_level2",
+                                              "boyut":  1897344,
+                                              "sha256":  "7f28871a9fc75feba0d9304bad866524d3275784bf948f9a6dde0791aef6d6db",
+                                              "orijinal_sha256":  "e0123a5bc597b2da80b9918084dbda4119f8076c9205030562394e0741cfc1fc",
+                                              "kabul":  [
+                                                            "e0123a5bc597b2da80b9918084dbda4119f8076c9205030562394e0741cfc1fc"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "resources.assets",
+                                              "paket_yolu":  "dosyalar/04_resources.assets",
+                                              "boyut":  52297056,
+                                              "sha256":  "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec",
+                                              "orijinal_sha256":  "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
+                                              "kabul":  [
+                                                            "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "sharedassets2.assets",
+                                              "paket_yolu":  "dosyalar/05_sharedassets2.assets",
+                                              "boyut":  11696872,
+                                              "sha256":  "bb9e383d7ef92847dfb4219b30fe48823afb11d6ad6116d3163c3c5c08e4282b",
+                                              "orijinal_sha256":  "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
+                                              "kabul":  [
+                                                            "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "sharedassets2.assets.resS",
+                                              "paket_yolu":  "dosyalar/06_sharedassets2.assets.resS",
+                                              "boyut":  207612336,
+                                              "sha256":  "cb9f6edc303c9a5f8187fb944ac4bbd78a9f580b20814a0738968ce5e5d5f703",
+                                              "orijinal_sha256":  "a331f5b80e43bc84c4ebf7e4783653b4c7b9df21126564e824ad27a0444926c6",
+                                              "kabul":  [
+                                                            "a331f5b80e43bc84c4ebf7e4783653b4c7b9df21126564e824ad27a0444926c6"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "sharedassets9.assets",
+                                              "paket_yolu":  "dosyalar/07_sharedassets9.assets",
+                                              "boyut":  1926032,
+                                              "sha256":  "0bc595db81a41b8b7e3f30b442ae955a02bfd3dc54e10875478753db62431cca",
+                                              "orijinal_sha256":  "9414590ee1c2f74762610481320ffb6859e4fa37aed0ad1b19c1b010993d2e1b",
+                                              "kabul":  [
+                                                            "9414590ee1c2f74762610481320ffb6859e4fa37aed0ad1b19c1b010993d2e1b"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/cosmica_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/08_cosmica_assets_all.bundle",
+                                              "boyut":  20267755,
+                                              "sha256":  "1c4270a0df8175ff5cafea51bf9a8783bb8335482d151f2f6183b79e00ba134a",
+                                              "orijinal_sha256":  "da30fc2b73215057f2eca10fae590160b0c02b698ca59f47fcf533bd2cc7274e",
+                                              "kabul":  [
+                                                            "da30fc2b73215057f2eca10fae590160b0c02b698ca59f47fcf533bd2cc7274e"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/cosmicubelny24_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/09_cosmicubelny24_assets_all.bundle",
+                                              "boyut":  20614654,
+                                              "sha256":  "e989d3da0fd085b915ff6f817cf6ab4a4848580f063f5a5112dc0e8f2ae22aa0",
+                                              "orijinal_sha256":  "a1cd56a3a939421c55f92eab499e46b6f88f669142487c2cae1016646f6dcf4b",
+                                              "kabul":  [
+                                                            "a1cd56a3a939421c55f92eab499e46b6f88f669142487c2cae1016646f6dcf4b"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/critrolecubeb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/10_critrolecubeb_assets_all.bundle",
+                                              "boyut":  19184501,
+                                              "sha256":  "08469dfaabd3904e250461b4fa5ce29c0dfa823ca70e72db69d84a42cfdb1861",
+                                              "orijinal_sha256":  "2cec47938c849494a62df2bd383289d551e1b5995aa3721b485cb004fa9e2d62",
+                                              "kabul":  [
+                                                            "2cec47938c849494a62df2bd383289d551e1b5995aa3721b485cb004fa9e2d62"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/hanami_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/11_hanami_assets_all.bundle",
+                                              "boyut":  21876883,
+                                              "sha256":  "cb24c3135f22b9a37f37383bba757244fd12f541555c970b0dfbfaf3d1dabee2",
+                                              "orijinal_sha256":  "4afdfa4de4101b00059a09ea7e4a84d9e0f88d23a4fadb55e372e2eaff7636ed",
+                                              "kabul":  [
+                                                            "4afdfa4de4101b00059a09ea7e4a84d9e0f88d23a4fadb55e372e2eaff7636ed"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/initialcosmetics_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/12_initialcosmetics_assets_all.bundle",
+                                              "boyut":  208956320,
+                                              "sha256":  "b2c784db0f8bc02952f7642dc8b747399ae72150190e628fbb2801b873688eda",
+                                              "orijinal_sha256":  "57325f1514d0d434276d7c8456c18a5e14edcb8aaf0d26c79962855d36cd545a",
+                                              "kabul":  [
+                                                            "57325f1514d0d434276d7c8456c18a5e14edcb8aaf0d26c79962855d36cd545a"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/kamurocho_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/13_kamurocho_assets_all.bundle",
+                                              "boyut":  32844821,
+                                              "sha256":  "d7b5beba38dbbb171bf766b1ad4a9468792070a98f14eb8b31a5a1220863cd47",
+                                              "orijinal_sha256":  "bc191c5c03ca2581558dd880482709de939eedac2d491a5b68310307854a1236",
+                                              "kabul":  [
+                                                            "bc191c5c03ca2581558dd880482709de939eedac2d491a5b68310307854a1236"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/pawsnclaws_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/14_pawsnclaws_assets_all.bundle",
+                                              "boyut":  28591425,
+                                              "sha256":  "4d244bf1a97b4ae9517d2b569d50a6d593065f64c6acaf2a0707ad31a317dd77",
+                                              "orijinal_sha256":  "07f6342edd9f3b08020e5c647382ea3956225dafe409f7cfcb939036dbe4c552",
+                                              "kabul":  [
+                                                            "07f6342edd9f3b08020e5c647382ea3956225dafe409f7cfcb939036dbe4c552"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/projectparasitecubeb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/15_projectparasitecubeb_assets_all.bundle",
+                                              "boyut":  18617548,
+                                              "sha256":  "4321c845fae65fc4327fd78c47869d27b45fc54856f9ee5e5690466964cdc6eb",
+                                              "orijinal_sha256":  "fa08edc711c2acfa78789aff759ae900fd13f42bc437edbbf138e3b8a32ac83b",
+                                              "kabul":  [
+                                                            "fa08edc711c2acfa78789aff759ae900fd13f42bc437edbbf138e3b8a32ac83b"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/racingcubeb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/16_racingcubeb_assets_all.bundle",
+                                              "boyut":  18370017,
+                                              "sha256":  "0b92ed539d8e531e84e913df11993f5698650ebe9f03de3d75d1244844b43c4b",
+                                              "orijinal_sha256":  "4c2d386b2fd5e8ea3e117525b5b525bad6c2683261a959df41b379f485e4240c",
+                                              "kabul":  [
+                                                            "4c2d386b2fd5e8ea3e117525b5b525bad6c2683261a959df41b379f485e4240c"
+                                                        ]
+                                          },
+                                          {
+                                              "hedef":  "StreamingAssets/aa/Win10/StandaloneWindows64/stardewb_assets_all.bundle",
+                                              "paket_yolu":  "dosyalar/17_stardewb_assets_all.bundle",
+                                              "boyut":  18834535,
+                                              "sha256":  "831ac1a66838b1ae9ca8335ba557b479601149117c3b34493537957a066df4eb",
+                                              "orijinal_sha256":  "1f4b7ac57be9d39bd72ee6e259cdb00570440a376ec122873afd793435706a48",
+                                              "kabul":  [
+                                                            "1f4b7ac57be9d39bd72ee6e259cdb00570440a376ec122873afd793435706a48"
+                                                        ]
+                                          }
+                                      ]
+                     }
+                 ]
+}

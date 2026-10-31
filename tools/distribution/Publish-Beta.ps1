@@ -249,12 +249,22 @@ if ($GitHub) {
     if (-not $owner -or -not $repo) {
         Fail 'GitHub deposu yapilandirilmamis (config/distribution.json -> github.owner/repo).'
     }
-    & gh auth status *> $null
-    if ($LASTEXITCODE -ne 0) {
+    # gh, basarisiz kontrollerde stderr'e yazar; bu normaldir ve hata sayilmamali.
+    $eap = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+        & gh auth status *> $null
+        $authOk = ($LASTEXITCODE -eq 0)
+        $etiketVar = $false
+        if ($authOk) {
+            & gh release view $etiket --repo "$owner/$repo" *> $null
+            $etiketVar = ($LASTEXITCODE -eq 0)
+        }
+    } finally { $ErrorActionPreference = $eap }
+    if (-not $authOk) {
         Fail 'gh CLI oturumu yok. Once "gh auth login" calistirin.'
     }
-    & gh release view $etiket --repo "$owner/$repo" *> $null
-    if ($LASTEXITCODE -eq 0) { Fail "Bu etiket GitHub'da zaten var: $etiket" }
+    if ($etiketVar) { Fail "Bu etiket GitHub'da zaten var: $etiket" }
 }
 
 # ------------------------------------------------------------------ manifest
@@ -364,7 +374,9 @@ try {
             '--prerelease', '--title', "$urunAd $urunEtiket ($etiket)", '--notes-file', $notDosyasi)
         foreach ($p in $yeniPaketler) { $argumanlar += $p.yol }
         Yaz '  [..] GitHub Release olusturuluyor ve paketler yukleniyor...'
-        & gh @argumanlar
+        $eap = $ErrorActionPreference
+        $ErrorActionPreference = 'Continue'
+        try { & gh @argumanlar } finally { $ErrorActionPreference = $eap }
         if ($LASTEXITCODE -ne 0) { throw "GitHub Release olusturulamadi (gh kodu $LASTEXITCODE)." }
 
         if ($HataEnjeksiyonu -eq 'yukleme') { throw 'Hata enjeksiyonu: yukleme asamasi.' }
@@ -374,7 +386,11 @@ try {
         $null = New-Item -ItemType Directory -Force -Path $dogrulamaKok
         $tempDosyalar += $dogrulamaKok
         foreach ($p in $yeniPaketler) {
-            & gh release download $etiket --repo "$($ayar.github.owner)/$($ayar.github.repo)" --dir $dogrulamaKok --pattern $p.dosya --clobber
+            $eap = $ErrorActionPreference
+            $ErrorActionPreference = 'Continue'
+            try {
+                & gh release download $etiket --repo "$($ayar.github.owner)/$($ayar.github.repo)" --dir $dogrulamaKok --pattern $p.dosya --clobber
+            } finally { $ErrorActionPreference = $eap }
             if ($LASTEXITCODE -ne 0) { throw "Release varligi indirilemedi: $($p.dosya)" }
             $in = Join-Path $dogrulamaKok $p.dosya
             if ((Get-Item -LiteralPath $in).Length -ne $p.boyut) { throw "Indirilen boyut uyusmuyor: $($p.dosya)" }
