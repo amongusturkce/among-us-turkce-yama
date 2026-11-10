@@ -15,41 +15,55 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Validate manifests
+      - name: Validate stable and beta manifests
         shell: pwsh
         run: |
           $hata = 0
           $stable = Get-Content -LiteralPath 'website/updates/stable/latest.json' -Raw -Encoding UTF8 | ConvertFrom-Json
           $beta = Get-Content -LiteralPath 'website/updates/beta/latest.json' -Raw -Encoding UTF8 | ConvertFrom-Json
-
           function Kontrol([string]$ad, [bool]$kosul) {
             if ($kosul) { Write-Host "[OK] $ad" }
             else { Write-Host "[HATA] $ad"; $script:hata++ }
           }
 
           Kontrol 'Stable semasi 1' ([int]$stable.semasi -eq 1)
-          Kontrol 'Stable kilitli' ([bool]$stable.kilitli)
-          Kontrol 'Stable paket listesi bos' (@($stable.paketler).Count -eq 0)
+          Kontrol 'Stable kanali' ([string]$stable.kanal -eq 'stable')
+          Kontrol 'Stable kilidi acik' (-not [bool]$stable.kilitli)
           Kontrol 'Stable urun etiketi v2.3' ([string]$stable.urun.surum_etiketi -eq 'v2.3')
+          Kontrol 'Stable teknik surum 2.4.0' ([string]$stable.yama.surum -eq '2.4.0')
+          Kontrol 'Stable oyun yapisi 2026.9.29' (@($stable.oyun.surumler) -contains '2026.9.29')
+          Kontrol 'Stable uc paket var' (@($stable.paketler).Count -eq 3)
+          $platformlar = @($stable.paketler | ForEach-Object { [string]$_.platform } | Sort-Object -Unique)
+          Kontrol 'Stable Steam Epic MSIX kapsami' (@($platformlar | Where-Object { $_ -notin @('epic', 'steam', 'msix') }).Count -eq 0 -and $platformlar.Count -eq 3)
+          foreach ($p in @($stable.paketler)) {
+            Kontrol ("Stable {0}: alanlar" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.dosya) -and -not [string]::IsNullOrWhiteSpace([string]$p.url) -and [string]$p.sha256 -match '^[0-9a-fA-F]{64}$' -and [long]$p.boyut -gt 0 -and @($p.dosyalar).Count -gt 0)
+            Kontrol ("Stable {0}: oyun yapisi" -f $p.platform) (@($p.oyun_surumleri) -contains '2026.9.29')
+            if ([string]$p.platform -eq 'msix') {
+              Kontrol 'MSIX BepInEx eki yok' ($null -eq $p.ekler)
+            } else {
+              Kontrol ("Stable {0}: BepInEx" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.ekler.bepinex.url) -and [string]$p.ekler.bepinex.sha256 -match '^[0-9a-fA-F]{64}$' -and @($p.ekler.eklentiler).Count -gt 0)
+            }
+          }
 
           Kontrol 'Beta semasi 1' ([int]$beta.semasi -eq 1)
           Kontrol 'Beta urun etiketi v2.3' ([string]$beta.urun.surum_etiketi -eq 'v2.3')
           Kontrol 'Beta teknik surum dolu' (-not [string]::IsNullOrWhiteSpace([string]$beta.yama.surum))
-
           if (-not [bool]$beta.kilitli) {
             Kontrol 'Beta paket listesi dolu' (@($beta.paketler).Count -gt 0)
             foreach ($p in @($beta.paketler)) {
-              Kontrol ("Beta {0}: platform" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.platform))
-              Kontrol ("Beta {0}: dosya" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.dosya))
-              Kontrol ("Beta {0}: url" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.url))
-              Kontrol ("Beta {0}: sha256" -f $p.platform) ([string]$p.sha256 -match '^[0-9a-fA-F]{64}$')
-              Kontrol ("Beta {0}: boyut" -f $p.platform) ([long]$p.boyut -gt 0)
-              Kontrol ("Beta {0}: dosya listesi" -f $p.platform) (@($p.dosyalar).Count -gt 0)
+              Kontrol ("Beta {0}: alanlar" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.platform) -and -not [string]::IsNullOrWhiteSpace([string]$p.dosya) -and -not [string]::IsNullOrWhiteSpace([string]$p.url) -and [string]$p.sha256 -match '^[0-9a-fA-F]{64}$' -and [long]$p.boyut -gt 0 -and @($p.dosyalar).Count -gt 0)
             }
           }
 
+          $appPath = 'website/updates/application/stable/latest.json'
+          if (Test-Path -LiteralPath $appPath) {
+            $app = Get-Content -LiteralPath $appPath -Raw -Encoding UTF8 | ConvertFrom-Json
+            Kontrol 'Uygulama guncelleme surumu 1.0.1' ([string]$app.version -eq '1.0.1')
+            Kontrol 'Uygulama guncelleme hash/url' ([string]$app.sha256 -match '^[0-9a-fA-F]{64}$' -and [string]$app.download_url -match 'https://')
+          }
+
           if ($hata -gt 0) { exit 1 }
-          Write-Host 'Manifest dogrulamasi gecti.'
+          Write-Host 'Stable ve beta manifest dogrulamasi gecti.'
 
       - name: PowerShell syntax check
         shell: pwsh
