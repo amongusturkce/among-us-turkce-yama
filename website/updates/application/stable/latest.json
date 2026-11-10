@@ -1,7 +1,7 @@
 {
-  "version": "1.0.1",
-  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.1/Among-Us-Turkce-Yama-1.0.1-Online-Setup.exe",
-  "sha256": "8348e57fb7fce8e3669b6f81337a3b08d81e43084ba308fd9fdcdb11aa11efde",
-  "release_notes": "Çevrimiçi kurulum. Yama, seçilen Steam/Epic/MSIX platformu ve desteklenen oyun sürümüne göre sunucudan indirilir.",
+  "version": "1.0.2",
+  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.2/Among-Us-Turkce-Yama-1.0.2-Online-Setup.exe",
+  "sha256": "2bdda0e687b03eed97ca5466e2d33373ed0727d8f1af7c9957e7d144573113b2",
+  "release_notes": "10 Kasım arayüz güncellemesi: yeni uygulama güncellemesi sağ üstteki Güncelle düğmesinde gösterilir. Çevrimiçi kurulum; yama seçilen Steam/Epic/MSIX platformuna göre sunucudan indirilir.",
   "published_at": "2026-11-10"
 }
