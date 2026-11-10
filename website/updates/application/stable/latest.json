@@ -1,7 +1,7 @@
 {
-  "version": "1.0.3",
-  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.3/AU-Turkce-Ceviri-1.0.3-Setup.exe",
-  "sha256": "cd946bee9e5493b938d80e74513e9536c6655421d020774aa627798abb0b8e8f",
-  "release_notes": "Güncelleme düğmesi sağ üstteki kişi ve ayar simgelerinin solunda gösterilir. Çevrimiçi kurulum; yama seçilen Steam/Epic/MSIX platformuna göre sunucudan indirilir.",
+  "version": "1.0.4",
+  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.4/AU-Turkce-Ceviri-1.0.4-Setup.exe",
+  "sha256": "1fce9010d000555235e253377da1acac0c29e3c9531ccca3f5483ce54e8531fb",
+  "release_notes": "Güncelleme sırasında açık uygulama kapatılır ve yalnızca tek arayüz açılır. Kurulum sihirbazındaki açıklama sadeleştirildi. Çevrimiçi kurulum; yama seçilen Steam/Epic/MSIX platformuna göre sunucudan indirilir.",
   "published_at": "2026-11-10"
 }
