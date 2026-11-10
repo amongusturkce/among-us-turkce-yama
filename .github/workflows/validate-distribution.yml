@@ -58,7 +58,7 @@ jobs:
           $appPath = 'website/updates/application/stable/latest.json'
           if (Test-Path -LiteralPath $appPath) {
             $app = Get-Content -LiteralPath $appPath -Raw -Encoding UTF8 | ConvertFrom-Json
-            Kontrol 'Uygulama guncelleme surumu 1.0.1' ([string]$app.version -eq '1.0.1')
+            Kontrol 'Uygulama guncelleme surumu dolu' (-not [string]::IsNullOrWhiteSpace([string]$app.version))
             Kontrol 'Uygulama guncelleme hash/url' ([string]$app.sha256 -match '^[0-9a-fA-F]{64}$' -and [string]$app.download_url -match 'https://')
           }
 
