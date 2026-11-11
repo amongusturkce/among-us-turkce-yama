@@ -1,7 +1,7 @@
 {
-  "version": "1.0.4",
-  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.4/AU-Turkce-Ceviri-1.0.4-Setup.exe",
-  "sha256": "1fce9010d000555235e253377da1acac0c29e3c9531ccca3f5483ce54e8531fb",
-  "release_notes": "Güncelleme sırasında açık uygulama kapatılır ve yalnızca tek arayüz açılır. Kurulum sihirbazındaki açıklama sadeleştirildi. Çevrimiçi kurulum; yama seçilen Steam/Epic/MSIX platformuna göre sunucudan indirilir.",
-  "published_at": "2026-11-10"
+  "version": "1.0.5",
+  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.5/AU-Turkce-Ceviri-1.0.5-Setup.exe",
+  "sha256": "f5638faa90208f4dbb71222089b38f67a71113c20fbadc718e3429d7c222a83e",
+  "release_notes": "Yama kurulumu çok daha hızlı: indirme hızı sorunu giderildi ve yama paketi yaklaşık 4 kat küçüldü (uygun olduğunda 527 MB yerine ~122 MB). Kurulum ve kaldırma ekranında artık yüzde, indirme hızı ve kalan süre gösteriliyor. Güncelleme düğmesi sağ üste taşındı.",
+  "published_at": "2026-11-12"
 }
