@@ -30,7 +30,7 @@ jobs:
           Kontrol 'Stable kanali' ([string]$stable.kanal -eq 'stable')
           Kontrol 'Stable kilidi acik' (-not [bool]$stable.kilitli)
           Kontrol 'Stable urun etiketi v2.3' ([string]$stable.urun.surum_etiketi -eq 'v2.3')
-          Kontrol 'Stable teknik surum 2.4.0' ([string]$stable.yama.surum -eq '2.4.0')
+          Kontrol 'Stable teknik surum 2.4.1' ([string]$stable.yama.surum -eq '2.4.1')
           Kontrol 'Stable oyun yapisi 2026.9.29' (@($stable.oyun.surumler) -contains '2026.9.29')
           Kontrol 'Stable uc paket var' (@($stable.paketler).Count -eq 3)
           $platformlar = @($stable.paketler | ForEach-Object { [string]$_.platform } | Sort-Object -Unique)

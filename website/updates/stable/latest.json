@@ -7,7 +7,7 @@
     "kanal": "stable",
     "kilitli": false,
     "yama": {
-        "surum": "2.4.0",
+        "surum": "2.4.1",
         "tarih": "2026-11-10",
         "notlar": "10 KasÄ±m 2026 yayÄ±nÄ±. Among Us TÃ¼rkÃ§e Yama v2.3 â€” teknik paket 2.4.0. Desteklenen oyun yapÄ±sÄ±: 2026.9.29. Epic Games, Steam ve Microsoft Store/Xbox MSIX paketleri ayrÄ± ayrÄ± sunulur; indirici seÃ§ili platform iÃ§in yalnÄ±zca ilgili paketi alÄ±r. Epic/Steam iÃ§in BepInEx ve mod damgasÄ± bileÅŸenleri ayrÄ±ca doÄŸrulanÄ±r. Ãœcretsiz topluluk projesidir; InnerSloth ile baÄŸlantÄ±lÄ± deÄŸildir.",
         "minimum_atr": "5.0.0"
@@ -26,8 +26,8 @@
             ],
             "dosya": "atr-yama-2.4.0-epic-kore-damga.zip",
             "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-epic-kore-damga.zip",
-            "boyut": 552732034,
-            "sha256": "aa51f3f09ac836191da505386b62dc13c7765b396eb30593743e1bf9dbcdc3ad",
+            "boyut": 552745596,
+            "sha256": "716f868f58ab5d043e5eeefb50b22f3d872723141bcc1729a76b850eb7c0acfc",
             "tarih": "2026-11-10",
             "notlar": "Epic kendi orijinallerinden bagimsiz uretim; Turkce ceviri + Korece blok orijinaline donus + mod damgasi (BepInEx).",
             "dosyalar": [
@@ -264,6 +264,17 @@
                     "kabul": [
                         "cc2070627546ea4ed878ea4396779d3904f9b9aa1197e63888c5708abc439802"
                     ]
+                },
+                {
+                    "hedef": "level6",
+                    "paket_yolu": "dosyalar/19_level6",
+                    "boyut": 59968,
+                    "sha256": "c5ddb84cc05e54297c5fcef237f6b05528fcdb2d1a5dbebbde4112f16a12e01c",
+                    "orijinal_sha256": "0acfbe41046220038a7fe85c51ad4cd1a33c914011d881637d87bda2f6fb1dc1",
+                    "orijinal_boyut": 59956,
+                    "degisti": true,
+                    "gerekce": "Oyun sonu ekrani: sol dugme \"MENUYE DON\" (ana menudeki Oyundan Cik ayri kalir).",
+                    "kabul": []
                 }
             ],
             "ekler": {
@@ -1439,6 +1450,12 @@
                         "paket_yolu": "ek/00_AutModDamga.dll",
                         "sha256": "4a91707fc587a3fc8453a259044a9c665393b87a78ed52427cf40c38b4c58fdc",
                         "boyut": 6144
+                    },
+                    {
+                        "hedef": "BepInEx/plugins/AutCeviriDuzeltme.dll",
+                        "paket_yolu": "ek/01_AutCeviriDuzeltme.dll",
+                        "sha256": "399644372c7b4a0a0ae702bf8d9564501728b0b46a4cbbd4fc1be0187d37d8bc",
+                        "boyut": 7680
                     }
                 ],
                 "konsol": {
@@ -1462,8 +1479,8 @@
                 },
                 "dosya": "atr-yama-2.4.0-epic-delta.zip",
                 "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-epic-delta.zip",
-                "boyut": 127563426,
-                "sha256": "451e91818584027fc4b9bfa5526a9cece432cebfb69aea19fb9a7b75d1fde16d",
+                "boyut": 127567379,
+                "sha256": "4dee03bf5452174827722d4b3e4d42ce20c7feb5c08db3bf8563402d67328241",
                 "dosyalar": [
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/cosmica_assets_all.bundle",
@@ -1644,6 +1661,16 @@
                         "orijinal_boyut": 16285872,
                         "boyut": 16285872,
                         "sha256": "b6de21c55e03a93b94e8dbc4860d0b331e720889972015397b8ead478e703f20"
+                    },
+                    {
+                        "hedef": "level6",
+                        "delta_yolu": "delta/18.xdelta",
+                        "delta_sha256": "96602b37e72960c9f0fd8fadf4230bc61a8ee9cb0c2945ed4ff39e23fa0217bb",
+                        "delta_boyut": 570,
+                        "orijinal_sha256": "0acfbe41046220038a7fe85c51ad4cd1a33c914011d881637d87bda2f6fb1dc1",
+                        "orijinal_boyut": 59956,
+                        "boyut": 59968,
+                        "sha256": "c5ddb84cc05e54297c5fcef237f6b05528fcdb2d1a5dbebbde4112f16a12e01c"
                     }
                 ]
             }
@@ -1656,8 +1683,8 @@
             ],
             "dosya": "atr-yama-2.4.0-steam-kore-damga.zip",
             "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-steam-kore-damga.zip",
-            "boyut": 552856703,
-            "sha256": "32519846c0ce388c7f21e2faa16bd0e35fe4a94791371f70460cf7de8312a165",
+            "boyut": 552870265,
+            "sha256": "52687fe9140031772eed72672ff5e12bbcdf32ea058d5ae52c08779c582bbf9f",
             "tarih": "2026-11-10",
             "notlar": "Steam bagimsiz uretim; Turkce ceviri + Korece blok orijinaline donus + mod damgasi (BepInEx).",
             "dosyalar": [
@@ -1894,6 +1921,17 @@
                     "kabul": [
                         "b840d45186788e683e42b6687d66f4147281903458ae1d842f7c01fd78543cb6"
                     ]
+                },
+                {
+                    "hedef": "level6",
+                    "paket_yolu": "dosyalar/19_level6",
+                    "boyut": 59968,
+                    "sha256": "c5ddb84cc05e54297c5fcef237f6b05528fcdb2d1a5dbebbde4112f16a12e01c",
+                    "orijinal_sha256": "0acfbe41046220038a7fe85c51ad4cd1a33c914011d881637d87bda2f6fb1dc1",
+                    "orijinal_boyut": 59956,
+                    "degisti": true,
+                    "gerekce": "Oyun sonu ekrani: sol dugme \"MENUYE DON\" (ana menudeki Oyundan Cik ayri kalir).",
+                    "kabul": []
                 }
             ],
             "ekler": {
@@ -3069,6 +3107,12 @@
                         "paket_yolu": "ek/00_AutModDamga.dll",
                         "sha256": "4a91707fc587a3fc8453a259044a9c665393b87a78ed52427cf40c38b4c58fdc",
                         "boyut": 6144
+                    },
+                    {
+                        "hedef": "BepInEx/plugins/AutCeviriDuzeltme.dll",
+                        "paket_yolu": "ek/01_AutCeviriDuzeltme.dll",
+                        "sha256": "399644372c7b4a0a0ae702bf8d9564501728b0b46a4cbbd4fc1be0187d37d8bc",
+                        "boyut": 7680
                     }
                 ],
                 "konsol": {
@@ -3092,8 +3136,8 @@
                 },
                 "dosya": "atr-yama-2.4.0-steam-delta.zip",
                 "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-steam-delta.zip",
-                "boyut": 127563711,
-                "sha256": "318500eed7e149e60c77e13ee7e06057047cb3249958b4b309c3a195ec516f0f",
+                "boyut": 127567664,
+                "sha256": "44af1b60320f844168d58d7c038e9c0620ec654f68a1a288aca044875b6f3803",
                 "dosyalar": [
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/cosmica_assets_all.bundle",
@@ -3274,6 +3318,16 @@
                         "orijinal_boyut": 16748028,
                         "boyut": 16748028,
                         "sha256": "d75ff7c1526ffae914484a7a32907fba10f36f0793fe3ff0de77aa26c7bb7a06"
+                    },
+                    {
+                        "hedef": "level6",
+                        "delta_yolu": "delta/18.xdelta",
+                        "delta_sha256": "96602b37e72960c9f0fd8fadf4230bc61a8ee9cb0c2945ed4ff39e23fa0217bb",
+                        "delta_boyut": 570,
+                        "orijinal_sha256": "0acfbe41046220038a7fe85c51ad4cd1a33c914011d881637d87bda2f6fb1dc1",
+                        "orijinal_boyut": 59956,
+                        "boyut": 59968,
+                        "sha256": "c5ddb84cc05e54297c5fcef237f6b05528fcdb2d1a5dbebbde4112f16a12e01c"
                     }
                 ]
             }
@@ -3286,8 +3340,8 @@
             ],
             "dosya": "atr-yama-2.4.0-msix.zip",
             "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-msix.zip",
-            "boyut": 552804927,
-            "sha256": "a521f5b9fd6c235dc33be9a283e8272c0736d8e1d54babd3251b66c58cbeaa02",
+            "boyut": 552815182,
+            "sha256": "e40ed35d636d4f9a5706e526370b7a849cb8efb36f69a9f0f58de5cd1ac15190",
             "tarih": "2026-11-10",
             "notlar": "Türkçe yama v2.4.0: rol/istek metinleri, tuş atamaları, kozmetik küp adları, evcil hayvan metinleri ve ana menü logosu düzeltmeleri dahil.",
             "dosyalar": [
@@ -3470,6 +3524,17 @@
                     "kabul": [
                         "1f4b7ac57be9d39bd72ee6e259cdb00570440a376ec122873afd793435706a48"
                     ]
+                },
+                {
+                    "hedef": "level6",
+                    "paket_yolu": "dosyalar/19_level6",
+                    "boyut": 59968,
+                    "sha256": "c5ddb84cc05e54297c5fcef237f6b05528fcdb2d1a5dbebbde4112f16a12e01c",
+                    "orijinal_sha256": "0acfbe41046220038a7fe85c51ad4cd1a33c914011d881637d87bda2f6fb1dc1",
+                    "orijinal_boyut": 59956,
+                    "degisti": true,
+                    "gerekce": "Oyun sonu ekrani: sol dugme \"MENUYE DON\" (ana menudeki Oyundan Cik ayri kalir).",
+                    "kabul": []
                 }
             ],
             "ekler": null,
@@ -3484,8 +3549,8 @@
                 },
                 "dosya": "atr-yama-2.4.0-msix-delta.zip",
                 "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-msix-delta.zip",
-                "boyut": 126660194,
-                "sha256": "fb34161f3eead0b675ada9c9d7d713120ffc0b947e2f086041188019eb6e9d8c",
+                "boyut": 126660840,
+                "sha256": "0e9afad19c897db03e92ad466c4d070af256fcd630ee1eb1a2bb3468cf76f35e",
                 "dosyalar": [
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/initialmaps_assets_all.bundle",
@@ -3666,6 +3731,16 @@
                         "orijinal_boyut": 18809197,
                         "boyut": 18834535,
                         "sha256": "831ac1a66838b1ae9ca8335ba557b479601149117c3b34493537957a066df4eb"
+                    },
+                    {
+                        "hedef": "level6",
+                        "delta_yolu": "delta/18.xdelta",
+                        "delta_sha256": "96602b37e72960c9f0fd8fadf4230bc61a8ee9cb0c2945ed4ff39e23fa0217bb",
+                        "delta_boyut": 570,
+                        "orijinal_sha256": "0acfbe41046220038a7fe85c51ad4cd1a33c914011d881637d87bda2f6fb1dc1",
+                        "orijinal_boyut": 59956,
+                        "boyut": 59968,
+                        "sha256": "c5ddb84cc05e54297c5fcef237f6b05528fcdb2d1a5dbebbde4112f16a12e01c"
                     }
                 ]
             }
