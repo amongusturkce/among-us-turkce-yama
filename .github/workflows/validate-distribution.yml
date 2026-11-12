@@ -30,7 +30,7 @@ jobs:
           Kontrol 'Stable kanali' ([string]$stable.kanal -eq 'stable')
           Kontrol 'Stable kilidi acik' (-not [bool]$stable.kilitli)
           Kontrol 'Stable urun etiketi v2.3' ([string]$stable.urun.surum_etiketi -eq 'v2.3')
-          Kontrol 'Stable teknik surum 2.4.1' ([string]$stable.yama.surum -eq '2.4.1')
+          Kontrol 'Stable teknik surum 2.4.2' ([string]$stable.yama.surum -eq '2.4.2')
           Kontrol 'Stable oyun yapisi 2026.9.29' (@($stable.oyun.surumler) -contains '2026.9.29')
           Kontrol 'Stable uc paket var' (@($stable.paketler).Count -eq 3)
           $platformlar = @($stable.paketler | ForEach-Object { [string]$_.platform } | Sort-Object -Unique)
@@ -38,11 +38,7 @@ jobs:
           foreach ($p in @($stable.paketler)) {
             Kontrol ("Stable {0}: alanlar" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.dosya) -and -not [string]::IsNullOrWhiteSpace([string]$p.url) -and [string]$p.sha256 -match '^[0-9a-fA-F]{64}$' -and [long]$p.boyut -gt 0 -and @($p.dosyalar).Count -gt 0)
             Kontrol ("Stable {0}: oyun yapisi" -f $p.platform) (@($p.oyun_surumleri) -contains '2026.9.29')
-            if ([string]$p.platform -eq 'msix') {
-              Kontrol 'MSIX BepInEx eki yok' ($null -eq $p.ekler)
-            } else {
-              Kontrol ("Stable {0}: BepInEx" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.ekler.bepinex.url) -and [string]$p.ekler.bepinex.sha256 -match '^[0-9a-fA-F]{64}$' -and @($p.ekler.eklentiler).Count -gt 0)
-            }
+            Kontrol ("Stable {0}: BepInEx" -f $p.platform) (-not [string]::IsNullOrWhiteSpace([string]$p.ekler.bepinex.url) -and [string]$p.ekler.bepinex.sha256 -match '^[0-9a-fA-F]{64}$' -and @($p.ekler.eklentiler).Count -gt 0)
           }
 
           Kontrol 'Beta semasi 1' ([int]$beta.semasi -eq 1)

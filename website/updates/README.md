@@ -14,7 +14,7 @@ Bu klasör ATR'nin okuduğu sürüm manifestlerini barındırır.
   yalnızca kullanıcı etkinleştirdiğinde (`--kanal beta`) kontrol eder.
 - `packages/` altındaki büyük ZIP'ler depoya commit edilmez (`.gitignore`);
   gerçek dağıtımda GitHub Releases kullanılır.
-- BepInEx ekleri Epic/Steam paketlerine özeldir; MSIX'e uygulanmaz.
+- BepInEx ekleri (mod damgası + çeviri düzeltmeleri) Epic, Steam ve MSIX paketlerinin üçünde de vardır.
 - Uygulama kurucusu güncellemeleri `/updates/application/stable/latest.json`
   üzerinden sunulur.
 
