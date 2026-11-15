@@ -2,14 +2,14 @@
     "semasi": 1,
     "urun": {
         "ad": "Among Us Türkçe Yama",
-        "surum_etiketi": "v2.3"
+        "surum_etiketi": "v2.4"
     },
     "kanal": "stable",
     "kilitli": false,
     "yama": {
-        "surum": "2.4.2",
-        "tarih": "2026-11-10",
-        "notlar": "10 KasÄ±m 2026 yayÄ±nÄ±. Among Us TÃ¼rkÃ§e Yama v2.3 â€” teknik paket 2.4.0. Desteklenen oyun yapÄ±sÄ±: 2026.9.29. Epic Games, Steam ve Microsoft Store/Xbox MSIX paketleri ayrÄ± ayrÄ± sunulur; indirici seÃ§ili platform iÃ§in yalnÄ±zca ilgili paketi alÄ±r. Epic/Steam iÃ§in BepInEx ve mod damgasÄ± bileÅŸenleri ayrÄ±ca doÄŸrulanÄ±r. Ãœcretsiz topluluk projesidir; InnerSloth ile baÄŸlantÄ±lÄ± deÄŸildir.",
+        "surum": "2.5.0",
+        "tarih": "2026-11-15",
+        "notlar": "15 Kasım 2026 yayını. Among Us Türkçe Yama v2.4 — teknik paket 2.5.0. Desteklenen oyun yapısı: 2026.9.29. Yenilikler: Türkçe harfler tüm yazı tiplerinde yeniden çizildi; oyun içi Haberler sekmesi Türkçe; oyun sonu ödül ekranı Türkçe; Kozmik Küp adları düzgün Türkçe yazıldı; çevirilerde büyük/küçük harf ve noktalama düzeltmeleri; hızlı sohbette kalan İngilizce ifadeler Türkçeleştirildi. Oyundaki İngilizce görseller (ACİL DURUM, ÇEK/TUT, Görev Test Aracı) Türkçe; Ayarlar > Veri sekmesinde Telegram ve web sitesi butonları. Epic Games, Steam ve Microsoft Store/Xbox paketleri ayrı ayrı sunulur. Ücretsiz topluluk projesidir; InnerSloth ile bağlantılı değildir.",
         "minimum_atr": "5.0.0"
     },
     "oyun": {
@@ -24,18 +24,18 @@
             "oyun_surumleri": [
                 "2026.9.29"
             ],
-            "dosya": "atr-yama-2.4.0-epic-kore-damga.zip",
-            "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-epic-kore-damga.zip",
-            "boyut": 552745596,
-            "sha256": "716f868f58ab5d043e5eeefb50b22f3d872723141bcc1729a76b850eb7c0acfc",
-            "tarih": "2026-11-10",
-            "notlar": "Epic kendi orijinallerinden bagimsiz uretim; Turkce ceviri + Korece blok orijinaline donus + mod damgasi (BepInEx).",
+            "dosya": "atr-yama-2.5.0-epic.zip",
+            "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.5.0/atr-yama-2.5.0-epic.zip",
+            "boyut": 553539293,
+            "sha256": "26a94ee0e12bc726f5be1ee65c27424982f30e6992a6bf064cf18239d046d3af",
+            "tarih": "2026-11-15",
+            "notlar": "Türkçe yama v2.4: Türkçe harfler tüm yazı tiplerinde yeniden çizildi, oyun içi Haberler sekmesi Türkçe, oyun sonu ödül ekranı, Kozmik Küp adları düzgün Türkçe, çeviri büyük/küçük harf ve noktalama düzeltmeleri. Oyundaki İngilizce görseller (ACİL DURUM, ÇEK/TUT, Görev Test Aracı) Türkçe; Ayarlar > Veri sekmesinde Telegram ve web sitesi butonları.",
             "dosyalar": [
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/cosmica_assets_all.bundle",
                     "paket_yolu": "dosyalar/01_cosmica_assets_all.bundle",
                     "boyut": 20267754,
-                    "sha256": "c0e3bcd52360670afb06023ab52be49ed443aac3e28c358c1bb705ff854909b4",
+                    "sha256": "47f5fbc4ceafc829e84b72d6d9fd3a604fd243bddfa97e5adc638b8cc25a34ad",
                     "orijinal_sha256": "dbf40a56d8dacbd66148408a00a68d489ce1fc90bc0c2dee9958d264a148f5d4",
                     "orijinal_boyut": 20227997,
                     "degisti": true,
@@ -47,8 +47,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/cosmicubelny24_assets_all.bundle",
                     "paket_yolu": "dosyalar/02_cosmicubelny24_assets_all.bundle",
-                    "boyut": 20614653,
-                    "sha256": "65d353e34cf3a56ec62acbde1112a97c2f449312b9b634b5285cc58f044397b2",
+                    "boyut": 20614654,
+                    "sha256": "d2acc5c7d061d2885e3313fb207a1fa7c8e4e0f67a6f8fd1892c9717a2e3f7e2",
                     "orijinal_sha256": "661d856ba482fa38be7e38ef7fced34938439be0f658a8da8f2700434c7dcdaf",
                     "orijinal_boyut": 20576612,
                     "degisti": true,
@@ -60,8 +60,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/critrolecubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/03_critrolecubeb_assets_all.bundle",
-                    "boyut": 19184500,
-                    "sha256": "618f40a0db591b1f4f00a718c92c48df1b6f843a2b547ae2d56426a8bfbbf9b4",
+                    "boyut": 19184512,
+                    "sha256": "d6a9cac5f00001676dd944643c92318e9a36ba48a852bad95ea6f79039bd4963",
                     "orijinal_sha256": "0bdbd8e50e2f7a57a3e14dc79795758a699c3410e19a33c88832cc5dee84848a",
                     "orijinal_boyut": 19157025,
                     "degisti": true,
@@ -73,8 +73,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/hanami_assets_all.bundle",
                     "paket_yolu": "dosyalar/04_hanami_assets_all.bundle",
-                    "boyut": 21876882,
-                    "sha256": "4b01860e1a294f1c3fd84d25be7df124237dbd3db579d259486ef980b6796483",
+                    "boyut": 21876879,
+                    "sha256": "e629b465c6fb48232173cefe6c406385c10e53bc13b26085e131620a01b4fa98",
                     "orijinal_sha256": "97e4a4537cd63854f592ba2cce618728d70568c8e068841b1a391c7495c8b2ca",
                     "orijinal_boyut": 21830252,
                     "degisti": true,
@@ -86,8 +86,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/initialcosmetics_assets_all.bundle",
                     "paket_yolu": "dosyalar/05_initialcosmetics_assets_all.bundle",
-                    "boyut": 208956334,
-                    "sha256": "f607d6d40d83c64009115940f040bfc8ab6630db709461525076137256264e5f",
+                    "boyut": 208955612,
+                    "sha256": "db96d3bbcdbad356e69b4cac5f136ab34959804f08e67daac0e7d8a10fbdb9db",
                     "orijinal_sha256": "a7d4fb989bb0cb5d74c64236b02d601b100ed78bed97abcc1c88cd81052f7939",
                     "orijinal_boyut": 207653284,
                     "degisti": true,
@@ -99,8 +99,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/initialmaps_assets_all.bundle",
                     "paket_yolu": "dosyalar/06_initialmaps_assets_all.bundle",
-                    "boyut": 149282860,
-                    "sha256": "619ebcc3f1084a62b576b01271e0b9946f6111e89a1a89d6c3c5cae405439d3a",
+                    "boyut": 149749993,
+                    "sha256": "9e3f71069eb5a48de925b9bd7246ad76a65e00607ed0fae6116d96f90979c0dc",
                     "orijinal_sha256": "204fc4bde5ac246e7aaa223c571095cd72721511d41514b0c5f3361638407082",
                     "orijinal_boyut": 148565768,
                     "degisti": true,
@@ -112,8 +112,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/kamurocho_assets_all.bundle",
                     "paket_yolu": "dosyalar/07_kamurocho_assets_all.bundle",
-                    "boyut": 32844820,
-                    "sha256": "3e63bf1181421a2f338d9a8eb53455313063495d23c4fde452fcb5cd0ab951c2",
+                    "boyut": 32844812,
+                    "sha256": "ec014be8282618b8d5af7603727e07dea415c788dfb08eec296b4182b58312da",
                     "orijinal_sha256": "b0a4996c4cd46538ba22b975f6a3f99c671f6aad805ad01c99cad42a7a21d5f6",
                     "orijinal_boyut": 32729790,
                     "degisti": true,
@@ -126,7 +126,7 @@
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/pawsnclaws_assets_all.bundle",
                     "paket_yolu": "dosyalar/08_pawsnclaws_assets_all.bundle",
                     "boyut": 28591424,
-                    "sha256": "6b81bcff63181eea26c4982e3270b6163403314831daeccaaf7b772caa02c5bd",
+                    "sha256": "d27e02360989fa22ecafcd7a3d01f66c3386ed26e89b32b1a747baea9b61e43f",
                     "orijinal_sha256": "bc2ea8abbc538423aedb6f68da56ff85d294be6e59fa208a19980aa06d8c900d",
                     "orijinal_boyut": 28493197,
                     "degisti": true,
@@ -138,8 +138,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/projectparasitecubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/09_projectparasitecubeb_assets_all.bundle",
-                    "boyut": 18617547,
-                    "sha256": "a05fb1e14adc4287de4a85760aa229fd94bf4c73f9a94a72b7d4867cd23dcb89",
+                    "boyut": 18617549,
+                    "sha256": "ab1110ca491b9c6b0c3e9496467a28df3c60460356ee7c92addd6e0693e0689c",
                     "orijinal_sha256": "22bc28a97e5969bc1955b35806d0fefedcfd4e999c6c9d2a7e446de90cbe9594",
                     "orijinal_boyut": 18593227,
                     "degisti": true,
@@ -152,7 +152,7 @@
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/racingcubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/10_racingcubeb_assets_all.bundle",
                     "boyut": 18370016,
-                    "sha256": "7d99f5d32bffd5113eca369494de11c6903458902f5574a1251400512d934fa8",
+                    "sha256": "609f26c17570de6199e2c7ad2427d8cc80aabff01a64c8dfe7d4b06f600e876d",
                     "orijinal_sha256": "f97e995191085c5464d629fdd4b1fabab30445f86f06b8cb6cccdcb9edb94981",
                     "orijinal_boyut": 18346733,
                     "degisti": true,
@@ -164,8 +164,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/stardewb_assets_all.bundle",
                     "paket_yolu": "dosyalar/11_stardewb_assets_all.bundle",
-                    "boyut": 18834534,
-                    "sha256": "8fbcf5971de171e8e9324d53558df024f18698935d5c1d7d8a0b12790d09d150",
+                    "boyut": 18834529,
+                    "sha256": "57bbad303e48258bd83361b0c0d1845d44216cdf41d6a204a01e7fe2b22f9bb4",
                     "orijinal_sha256": "8f353fcc94ad2483c89901f6c5e166d6f0dcf38bdf3a4bf01c2a7b2bc60d45d6",
                     "orijinal_boyut": 18809212,
                     "degisti": true,
@@ -177,8 +177,8 @@
                 {
                     "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
                     "paket_yolu": "dosyalar/12_referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
-                    "boyut": 10954649,
-                    "sha256": "f7e7b6e0a120217f954f60d4bcd473f32907a80ff36e264e6ff6d47a1a21c18b",
+                    "boyut": 10954745,
+                    "sha256": "73f5b5105eb5ccbd1614e2ebe90b658711a19492744e9f52b28e2788cef7572b",
                     "orijinal_sha256": "08fc5f3149e94f3ad0ef9cb1c77b29772ab02a9af6d7e5ae62bb4a557302efc7",
                     "orijinal_boyut": 2288712,
                     "degisti": true,
@@ -203,8 +203,8 @@
                 {
                     "hedef": "resources.assets",
                     "paket_yolu": "dosyalar/14_resources.assets",
-                    "boyut": 52297056,
-                    "sha256": "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec",
+                    "boyut": 52823496,
+                    "sha256": "2a34d6aa46ba71444c9ac4f51e4ad5d9b5ac6bf5196c9995538831f380e3c9f9",
                     "orijinal_sha256": "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
                     "orijinal_boyut": 26851984,
                     "degisti": true,
@@ -216,8 +216,8 @@
                 {
                     "hedef": "sharedassets2.assets",
                     "paket_yolu": "dosyalar/15_sharedassets2.assets",
-                    "boyut": 11696872,
-                    "sha256": "bb9e383d7ef92847dfb4219b30fe48823afb11d6ad6116d3163c3c5c08e4282b",
+                    "boyut": 11762384,
+                    "sha256": "bb3c90fa5eb045d8e6cddcce7b0bb12b9d413332382906f41e581e9bc493ea0f",
                     "orijinal_sha256": "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
                     "orijinal_boyut": 11697828,
                     "degisti": true,
@@ -256,7 +256,7 @@
                     "hedef": "il2cpp_data/Metadata/global-metadata.dat",
                     "paket_yolu": "dosyalar/18_global-metadata.dat",
                     "boyut": 16285872,
-                    "sha256": "b6de21c55e03a93b94e8dbc4860d0b331e720889972015397b8ead478e703f20",
+                    "sha256": "7ef0beea027365fd18e16e2a74adfbf3f8ccd670471b7bf0b9b8357e5eabc7e3",
                     "orijinal_sha256": "cc2070627546ea4ed878ea4396779d3904f9b9aa1197e63888c5708abc439802",
                     "orijinal_boyut": 16285872,
                     "degisti": true,
@@ -1454,8 +1454,8 @@
                     {
                         "hedef": "BepInEx/plugins/AutCeviriDuzeltme.dll",
                         "paket_yolu": "ek/01_AutCeviriDuzeltme.dll",
-                        "sha256": "399644372c7b4a0a0ae702bf8d9564501728b0b46a4cbbd4fc1be0187d37d8bc",
-                        "boyut": 7680
+                        "sha256": "4af857ca68dce9b0c4961debdc36b70558a81b0129ea5b74186b577da016b326",
+                        "boyut": 24064
                     }
                 ],
                 "konsol": {
@@ -1477,130 +1477,130 @@
                     "yol": "arac/xdelta3.exe",
                     "sha256": "732980d52f9220dc81817ccdd0c295eadce8a0048a24c2a771a73f791ac824e9"
                 },
-                "dosya": "atr-yama-2.4.0-epic-delta.zip",
-                "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-epic-delta.zip",
-                "boyut": 127567379,
-                "sha256": "4dee03bf5452174827722d4b3e4d42ce20c7feb5c08db3bf8563402d67328241",
+                "dosya": "atr-yama-2.5.0-epic-delta.zip",
+                "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.5.0/atr-yama-2.5.0-epic-delta.zip",
+                "boyut": 127858466,
+                "sha256": "933cb04e425b6abff7a8c2a290d3b684d903b99abfd2f638189a09309ae2d7e8",
                 "dosyalar": [
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/cosmica_assets_all.bundle",
                         "delta_yolu": "delta/00.xdelta",
-                        "delta_sha256": "b3974c20ce677614200a5d5f513c6ed0cc22b2de79603c03d437cdb4fc276c7f",
+                        "delta_sha256": "87deaa25dfd2ec7c73184bf1b2dc3684aeb5fc7f0620271cb2a0f1b8549b8c02",
                         "delta_boyut": 2337033,
                         "orijinal_sha256": "dbf40a56d8dacbd66148408a00a68d489ce1fc90bc0c2dee9958d264a148f5d4",
                         "orijinal_boyut": 20227997,
                         "boyut": 20267754,
-                        "sha256": "c0e3bcd52360670afb06023ab52be49ed443aac3e28c358c1bb705ff854909b4"
+                        "sha256": "47f5fbc4ceafc829e84b72d6d9fd3a604fd243bddfa97e5adc638b8cc25a34ad"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/cosmicubelny24_assets_all.bundle",
                         "delta_yolu": "delta/01.xdelta",
-                        "delta_sha256": "a9bf19ddd08d5aacaa5e1c8e32fdf1d22a57daae7ed8bf064cdd3d5383ee1857",
-                        "delta_boyut": 2206784,
+                        "delta_sha256": "8c517b299b7c2d63ddfdb0e642010a81ffb6e802e899aaee241e3f2b0464fbaf",
+                        "delta_boyut": 2206768,
                         "orijinal_sha256": "661d856ba482fa38be7e38ef7fced34938439be0f658a8da8f2700434c7dcdaf",
                         "orijinal_boyut": 20576612,
-                        "boyut": 20614653,
-                        "sha256": "65d353e34cf3a56ec62acbde1112a97c2f449312b9b634b5285cc58f044397b2"
+                        "boyut": 20614654,
+                        "sha256": "d2acc5c7d061d2885e3313fb207a1fa7c8e4e0f67a6f8fd1892c9717a2e3f7e2"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/critrolecubeb_assets_all.bundle",
                         "delta_yolu": "delta/02.xdelta",
-                        "delta_sha256": "9b1cd3b5e1b28e0c6a2e5d628a52e7bb3fcd624e1fe20c1fccad159860b202c9",
-                        "delta_boyut": 1560598,
+                        "delta_sha256": "bc1e491f73098ccec6a2cb465d3b451405ead7642d8a6f461ca13e4a6e4d32df",
+                        "delta_boyut": 1560711,
                         "orijinal_sha256": "0bdbd8e50e2f7a57a3e14dc79795758a699c3410e19a33c88832cc5dee84848a",
                         "orijinal_boyut": 19157025,
-                        "boyut": 19184500,
-                        "sha256": "618f40a0db591b1f4f00a718c92c48df1b6f843a2b547ae2d56426a8bfbbf9b4"
+                        "boyut": 19184512,
+                        "sha256": "d6a9cac5f00001676dd944643c92318e9a36ba48a852bad95ea6f79039bd4963"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/hanami_assets_all.bundle",
                         "delta_yolu": "delta/03.xdelta",
-                        "delta_sha256": "410d7dd681bc66249fee9e7d424d6bca46bdcd8da3fb1051d9c5bfcd65cebf2b",
-                        "delta_boyut": 2973398,
+                        "delta_sha256": "dec7ecad675198a7f0427056723401ce23f8c60a17cfd0122bc9f8fe529d0f16",
+                        "delta_boyut": 2973392,
                         "orijinal_sha256": "97e4a4537cd63854f592ba2cce618728d70568c8e068841b1a391c7495c8b2ca",
                         "orijinal_boyut": 21830252,
-                        "boyut": 21876882,
-                        "sha256": "4b01860e1a294f1c3fd84d25be7df124237dbd3db579d259486ef980b6796483"
+                        "boyut": 21876879,
+                        "sha256": "e629b465c6fb48232173cefe6c406385c10e53bc13b26085e131620a01b4fa98"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/initialcosmetics_assets_all.bundle",
                         "delta_yolu": "delta/04.xdelta",
-                        "delta_sha256": "2ffec90fba678fbf47505822ee6b77ff8e11cb273f5e38f1e1e6332b9f62bebc",
-                        "delta_boyut": 64222646,
+                        "delta_sha256": "96e494e0edbe81d4aefecf63e25fdeaad8795df63df552791748f8c9c9497055",
+                        "delta_boyut": 63363554,
                         "orijinal_sha256": "a7d4fb989bb0cb5d74c64236b02d601b100ed78bed97abcc1c88cd81052f7939",
                         "orijinal_boyut": 207653284,
-                        "boyut": 208956334,
-                        "sha256": "f607d6d40d83c64009115940f040bfc8ab6630db709461525076137256264e5f"
+                        "boyut": 208955612,
+                        "sha256": "db96d3bbcdbad356e69b4cac5f136ab34959804f08e67daac0e7d8a10fbdb9db"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/initialmaps_assets_all.bundle",
                         "delta_yolu": "delta/05.xdelta",
-                        "delta_sha256": "6feb79255511712dcf5d65f400707891db0c2422e49a915950e394e345bd5e49",
-                        "delta_boyut": 35803813,
+                        "delta_sha256": "5a1be343e2d6cbd1b72752eab9f0ba780af46ffc03d0646e577eed403c1b7ca1",
+                        "delta_boyut": 36726521,
                         "orijinal_sha256": "204fc4bde5ac246e7aaa223c571095cd72721511d41514b0c5f3361638407082",
                         "orijinal_boyut": 148565768,
-                        "boyut": 149282860,
-                        "sha256": "619ebcc3f1084a62b576b01271e0b9946f6111e89a1a89d6c3c5cae405439d3a"
+                        "boyut": 149749993,
+                        "sha256": "9e3f71069eb5a48de925b9bd7246ad76a65e00607ed0fae6116d96f90979c0dc"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/kamurocho_assets_all.bundle",
                         "delta_yolu": "delta/06.xdelta",
-                        "delta_sha256": "e3f823d1d09acf759e63f844a85ba6ccb530b9da4ac739d989ae536cf978b00f",
-                        "delta_boyut": 6530700,
+                        "delta_sha256": "bc7c1d1dbf4844ce920040da1abcf8250d4feafc4385d94886967c43a74b2b84",
+                        "delta_boyut": 6530673,
                         "orijinal_sha256": "b0a4996c4cd46538ba22b975f6a3f99c671f6aad805ad01c99cad42a7a21d5f6",
                         "orijinal_boyut": 32729790,
-                        "boyut": 32844820,
-                        "sha256": "3e63bf1181421a2f338d9a8eb53455313063495d23c4fde452fcb5cd0ab951c2"
+                        "boyut": 32844812,
+                        "sha256": "ec014be8282618b8d5af7603727e07dea415c788dfb08eec296b4182b58312da"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/pawsnclaws_assets_all.bundle",
                         "delta_yolu": "delta/07.xdelta",
-                        "delta_sha256": "1965312600a60f4fa0491e2089ba0125f008d795472c5d583a12625d8f7b0d48",
-                        "delta_boyut": 5123559,
+                        "delta_sha256": "d08c7cf616035ecd496ba2e0e24c36ebe5ef29450c21bccfc03009b29354c3d5",
+                        "delta_boyut": 5123558,
                         "orijinal_sha256": "bc2ea8abbc538423aedb6f68da56ff85d294be6e59fa208a19980aa06d8c900d",
                         "orijinal_boyut": 28493197,
                         "boyut": 28591424,
-                        "sha256": "6b81bcff63181eea26c4982e3270b6163403314831daeccaaf7b772caa02c5bd"
+                        "sha256": "d27e02360989fa22ecafcd7a3d01f66c3386ed26e89b32b1a747baea9b61e43f"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/projectparasitecubeb_assets_all.bundle",
                         "delta_yolu": "delta/08.xdelta",
-                        "delta_sha256": "3c459144f84c1e90487422fd88a8c06c8aa159734e6f02ab0206dc3446947509",
-                        "delta_boyut": 1456073,
+                        "delta_sha256": "57f576b128989a1e5435f87f7a8e3778d1db34fb3378ec0c7a9a5b7f2e7dcc7b",
+                        "delta_boyut": 1456148,
                         "orijinal_sha256": "22bc28a97e5969bc1955b35806d0fefedcfd4e999c6c9d2a7e446de90cbe9594",
                         "orijinal_boyut": 18593227,
-                        "boyut": 18617547,
-                        "sha256": "a05fb1e14adc4287de4a85760aa229fd94bf4c73f9a94a72b7d4867cd23dcb89"
+                        "boyut": 18617549,
+                        "sha256": "ab1110ca491b9c6b0c3e9496467a28df3c60460356ee7c92addd6e0693e0689c"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/racingcubeb_assets_all.bundle",
                         "delta_yolu": "delta/09.xdelta",
-                        "delta_sha256": "e9815e23c2ca71accd0a584955f756f869d2207d8f2c512340f4fc744df95bd9",
-                        "delta_boyut": 1391071,
+                        "delta_sha256": "dcf2b5cfaf83e1767677dc8245828df3de15d4f0a92b36ee4d414384481b0063",
+                        "delta_boyut": 1391074,
                         "orijinal_sha256": "f97e995191085c5464d629fdd4b1fabab30445f86f06b8cb6cccdcb9edb94981",
                         "orijinal_boyut": 18346733,
                         "boyut": 18370016,
-                        "sha256": "7d99f5d32bffd5113eca369494de11c6903458902f5574a1251400512d934fa8"
+                        "sha256": "609f26c17570de6199e2c7ad2427d8cc80aabff01a64c8dfe7d4b06f600e876d"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/stardewb_assets_all.bundle",
                         "delta_yolu": "delta/10.xdelta",
-                        "delta_sha256": "5c322a4b80352944a55e4139649d333d3967ca20a9ae8c63737a0ab7c8fa5881",
-                        "delta_boyut": 1510101,
+                        "delta_sha256": "178f0d1be95c08ff95a1523a59b2021f61cdad1b2c78e9983a5dd95484d0f913",
+                        "delta_boyut": 1510110,
                         "orijinal_sha256": "8f353fcc94ad2483c89901f6c5e166d6f0dcf38bdf3a4bf01c2a7b2bc60d45d6",
                         "orijinal_boyut": 18809212,
-                        "boyut": 18834534,
-                        "sha256": "8fbcf5971de171e8e9324d53558df024f18698935d5c1d7d8a0b12790d09d150"
+                        "boyut": 18834529,
+                        "sha256": "57bbad303e48258bd83361b0c0d1845d44216cdf41d6a204a01e7fe2b22f9bb4"
                     },
                     {
                         "hedef": "StreamingAssets/aa/EGS/StandaloneWindows/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
                         "delta_yolu": "delta/11.xdelta",
-                        "delta_sha256": "075eb5351b9e23394b04ef26a48b56da8624613c788be266927a0424347d292e",
-                        "delta_boyut": 1950153,
+                        "delta_sha256": "9532ba93582fb16ab0d6d32e3474d13365044dc0147abe703fa355e49d696826",
+                        "delta_boyut": 1950002,
                         "orijinal_sha256": "08fc5f3149e94f3ad0ef9cb1c77b29772ab02a9af6d7e5ae62bb4a557302efc7",
                         "orijinal_boyut": 2288712,
-                        "boyut": 10954649,
-                        "sha256": "f7e7b6e0a120217f954f60d4bcd473f32907a80ff36e264e6ff6d47a1a21c18b"
+                        "boyut": 10954745,
+                        "sha256": "73f5b5105eb5ccbd1614e2ebe90b658711a19492744e9f52b28e2788cef7572b"
                     },
                     {
                         "hedef": "level2",
@@ -1615,22 +1615,22 @@
                     {
                         "hedef": "resources.assets",
                         "delta_yolu": "delta/13.xdelta",
-                        "delta_sha256": "a3224c18b9b78904f28747f77ecff709b4f8ae1aa46a3944eab4725aa53ba1a3",
-                        "delta_boyut": 169241,
+                        "delta_sha256": "22c30e5a636450f5d416177f03e766640df9d13ca8cae39ab8934f2f5f44d529",
+                        "delta_boyut": 367146,
                         "orijinal_sha256": "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
                         "orijinal_boyut": 26851984,
-                        "boyut": 52297056,
-                        "sha256": "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec"
+                        "boyut": 52823496,
+                        "sha256": "2a34d6aa46ba71444c9ac4f51e4ad5d9b5ac6bf5196c9995538831f380e3c9f9"
                     },
                     {
                         "hedef": "sharedassets2.assets",
                         "delta_yolu": "delta/14.xdelta",
-                        "delta_sha256": "ca3301e6c9aa0ce0df14d41ac282835c812da93ef74e5237d7afb6e1b98a8468",
-                        "delta_boyut": 22855,
+                        "delta_sha256": "0436e5bd9ff0f22c73293730b52b55fad1acac20e0417267b384238ded45cfcb",
+                        "delta_boyut": 42831,
                         "orijinal_sha256": "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
                         "orijinal_boyut": 11697828,
-                        "boyut": 11696872,
-                        "sha256": "bb9e383d7ef92847dfb4219b30fe48823afb11d6ad6116d3163c3c5c08e4282b"
+                        "boyut": 11762384,
+                        "sha256": "bb3c90fa5eb045d8e6cddcce7b0bb12b9d413332382906f41e581e9bc493ea0f"
                     },
                     {
                         "hedef": "sharedassets2.assets.resS",
@@ -1655,12 +1655,12 @@
                     {
                         "hedef": "il2cpp_data/Metadata/global-metadata.dat",
                         "delta_yolu": "delta/17.xdelta",
-                        "delta_sha256": "2e272b1fb763fcafbc276f6d23707dc5a52e31ea73c69ef439afc42f9fa1b2fe",
+                        "delta_sha256": "185d501e1c9d7980da55d5dd4b8cdb3e1ce8deafb3b0423bc8bf4c5276f49009",
                         "delta_boyut": 63443,
                         "orijinal_sha256": "cc2070627546ea4ed878ea4396779d3904f9b9aa1197e63888c5708abc439802",
                         "orijinal_boyut": 16285872,
                         "boyut": 16285872,
-                        "sha256": "b6de21c55e03a93b94e8dbc4860d0b331e720889972015397b8ead478e703f20"
+                        "sha256": "7ef0beea027365fd18e16e2a74adfbf3f8ccd670471b7bf0b9b8357e5eabc7e3"
                     },
                     {
                         "hedef": "level6",
@@ -1681,18 +1681,18 @@
             "oyun_surumleri": [
                 "2026.9.29"
             ],
-            "dosya": "atr-yama-2.4.0-steam-kore-damga.zip",
-            "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-steam-kore-damga.zip",
-            "boyut": 552870265,
-            "sha256": "52687fe9140031772eed72672ff5e12bbcdf32ea058d5ae52c08779c582bbf9f",
-            "tarih": "2026-11-10",
-            "notlar": "Steam bagimsiz uretim; Turkce ceviri + Korece blok orijinaline donus + mod damgasi (BepInEx).",
+            "dosya": "atr-yama-2.5.0-steam.zip",
+            "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.5.0/atr-yama-2.5.0-steam.zip",
+            "boyut": 553663962,
+            "sha256": "4a5a4e69ff9c63414ee8fbb504df7ef6643c205d666b41f032fcb1d0be4532b8",
+            "tarih": "2026-11-15",
+            "notlar": "Türkçe yama v2.4: Türkçe harfler tüm yazı tiplerinde yeniden çizildi, oyun içi Haberler sekmesi Türkçe, oyun sonu ödül ekranı, Kozmik Küp adları düzgün Türkçe, çeviri büyük/küçük harf ve noktalama düzeltmeleri. Oyundaki İngilizce görseller (ACİL DURUM, ÇEK/TUT, Görev Test Aracı) Türkçe; Ayarlar > Veri sekmesinde Telegram ve web sitesi butonları.",
             "dosyalar": [
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/cosmica_assets_all.bundle",
                     "paket_yolu": "dosyalar/01_cosmica_assets_all.bundle",
                     "boyut": 20267754,
-                    "sha256": "c0e3bcd52360670afb06023ab52be49ed443aac3e28c358c1bb705ff854909b4",
+                    "sha256": "47f5fbc4ceafc829e84b72d6d9fd3a604fd243bddfa97e5adc638b8cc25a34ad",
                     "orijinal_sha256": "dbf40a56d8dacbd66148408a00a68d489ce1fc90bc0c2dee9958d264a148f5d4",
                     "orijinal_boyut": 20227997,
                     "degisti": true,
@@ -1704,8 +1704,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/cosmicubelny24_assets_all.bundle",
                     "paket_yolu": "dosyalar/02_cosmicubelny24_assets_all.bundle",
-                    "boyut": 20614653,
-                    "sha256": "65d353e34cf3a56ec62acbde1112a97c2f449312b9b634b5285cc58f044397b2",
+                    "boyut": 20614654,
+                    "sha256": "d2acc5c7d061d2885e3313fb207a1fa7c8e4e0f67a6f8fd1892c9717a2e3f7e2",
                     "orijinal_sha256": "661d856ba482fa38be7e38ef7fced34938439be0f658a8da8f2700434c7dcdaf",
                     "orijinal_boyut": 20576612,
                     "degisti": true,
@@ -1717,8 +1717,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/critrolecubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/03_critrolecubeb_assets_all.bundle",
-                    "boyut": 19184500,
-                    "sha256": "618f40a0db591b1f4f00a718c92c48df1b6f843a2b547ae2d56426a8bfbbf9b4",
+                    "boyut": 19184512,
+                    "sha256": "d6a9cac5f00001676dd944643c92318e9a36ba48a852bad95ea6f79039bd4963",
                     "orijinal_sha256": "0bdbd8e50e2f7a57a3e14dc79795758a699c3410e19a33c88832cc5dee84848a",
                     "orijinal_boyut": 19157025,
                     "degisti": true,
@@ -1730,8 +1730,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/hanami_assets_all.bundle",
                     "paket_yolu": "dosyalar/04_hanami_assets_all.bundle",
-                    "boyut": 21876882,
-                    "sha256": "4b01860e1a294f1c3fd84d25be7df124237dbd3db579d259486ef980b6796483",
+                    "boyut": 21876879,
+                    "sha256": "e629b465c6fb48232173cefe6c406385c10e53bc13b26085e131620a01b4fa98",
                     "orijinal_sha256": "97e4a4537cd63854f592ba2cce618728d70568c8e068841b1a391c7495c8b2ca",
                     "orijinal_boyut": 21830252,
                     "degisti": true,
@@ -1743,8 +1743,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/initialcosmetics_assets_all.bundle",
                     "paket_yolu": "dosyalar/05_initialcosmetics_assets_all.bundle",
-                    "boyut": 208956334,
-                    "sha256": "f607d6d40d83c64009115940f040bfc8ab6630db709461525076137256264e5f",
+                    "boyut": 208955612,
+                    "sha256": "db96d3bbcdbad356e69b4cac5f136ab34959804f08e67daac0e7d8a10fbdb9db",
                     "orijinal_sha256": "a7d4fb989bb0cb5d74c64236b02d601b100ed78bed97abcc1c88cd81052f7939",
                     "orijinal_boyut": 207653284,
                     "degisti": true,
@@ -1756,8 +1756,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/initialmaps_assets_all.bundle",
                     "paket_yolu": "dosyalar/06_initialmaps_assets_all.bundle",
-                    "boyut": 149282860,
-                    "sha256": "619ebcc3f1084a62b576b01271e0b9946f6111e89a1a89d6c3c5cae405439d3a",
+                    "boyut": 149749993,
+                    "sha256": "9e3f71069eb5a48de925b9bd7246ad76a65e00607ed0fae6116d96f90979c0dc",
                     "orijinal_sha256": "204fc4bde5ac246e7aaa223c571095cd72721511d41514b0c5f3361638407082",
                     "orijinal_boyut": 148565768,
                     "degisti": true,
@@ -1769,8 +1769,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/kamurocho_assets_all.bundle",
                     "paket_yolu": "dosyalar/07_kamurocho_assets_all.bundle",
-                    "boyut": 32844820,
-                    "sha256": "3e63bf1181421a2f338d9a8eb53455313063495d23c4fde452fcb5cd0ab951c2",
+                    "boyut": 32844812,
+                    "sha256": "ec014be8282618b8d5af7603727e07dea415c788dfb08eec296b4182b58312da",
                     "orijinal_sha256": "b0a4996c4cd46538ba22b975f6a3f99c671f6aad805ad01c99cad42a7a21d5f6",
                     "orijinal_boyut": 32729790,
                     "degisti": true,
@@ -1783,7 +1783,7 @@
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/pawsnclaws_assets_all.bundle",
                     "paket_yolu": "dosyalar/08_pawsnclaws_assets_all.bundle",
                     "boyut": 28591424,
-                    "sha256": "6b81bcff63181eea26c4982e3270b6163403314831daeccaaf7b772caa02c5bd",
+                    "sha256": "d27e02360989fa22ecafcd7a3d01f66c3386ed26e89b32b1a747baea9b61e43f",
                     "orijinal_sha256": "bc2ea8abbc538423aedb6f68da56ff85d294be6e59fa208a19980aa06d8c900d",
                     "orijinal_boyut": 28493197,
                     "degisti": true,
@@ -1795,8 +1795,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/projectparasitecubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/09_projectparasitecubeb_assets_all.bundle",
-                    "boyut": 18617547,
-                    "sha256": "a05fb1e14adc4287de4a85760aa229fd94bf4c73f9a94a72b7d4867cd23dcb89",
+                    "boyut": 18617549,
+                    "sha256": "ab1110ca491b9c6b0c3e9496467a28df3c60460356ee7c92addd6e0693e0689c",
                     "orijinal_sha256": "22bc28a97e5969bc1955b35806d0fefedcfd4e999c6c9d2a7e446de90cbe9594",
                     "orijinal_boyut": 18593227,
                     "degisti": true,
@@ -1809,7 +1809,7 @@
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/racingcubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/10_racingcubeb_assets_all.bundle",
                     "boyut": 18370016,
-                    "sha256": "7d99f5d32bffd5113eca369494de11c6903458902f5574a1251400512d934fa8",
+                    "sha256": "609f26c17570de6199e2c7ad2427d8cc80aabff01a64c8dfe7d4b06f600e876d",
                     "orijinal_sha256": "f97e995191085c5464d629fdd4b1fabab30445f86f06b8cb6cccdcb9edb94981",
                     "orijinal_boyut": 18346733,
                     "degisti": true,
@@ -1821,8 +1821,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/stardewb_assets_all.bundle",
                     "paket_yolu": "dosyalar/11_stardewb_assets_all.bundle",
-                    "boyut": 18834534,
-                    "sha256": "8fbcf5971de171e8e9324d53558df024f18698935d5c1d7d8a0b12790d09d150",
+                    "boyut": 18834529,
+                    "sha256": "57bbad303e48258bd83361b0c0d1845d44216cdf41d6a204a01e7fe2b22f9bb4",
                     "orijinal_sha256": "8f353fcc94ad2483c89901f6c5e166d6f0dcf38bdf3a4bf01c2a7b2bc60d45d6",
                     "orijinal_boyut": 18809212,
                     "degisti": true,
@@ -1834,8 +1834,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
                     "paket_yolu": "dosyalar/12_referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
-                    "boyut": 10954649,
-                    "sha256": "f7e7b6e0a120217f954f60d4bcd473f32907a80ff36e264e6ff6d47a1a21c18b",
+                    "boyut": 10954745,
+                    "sha256": "73f5b5105eb5ccbd1614e2ebe90b658711a19492744e9f52b28e2788cef7572b",
                     "orijinal_sha256": "08fc5f3149e94f3ad0ef9cb1c77b29772ab02a9af6d7e5ae62bb4a557302efc7",
                     "orijinal_boyut": 2288712,
                     "degisti": true,
@@ -1860,8 +1860,8 @@
                 {
                     "hedef": "resources.assets",
                     "paket_yolu": "dosyalar/14_resources.assets",
-                    "boyut": 52297056,
-                    "sha256": "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec",
+                    "boyut": 52823496,
+                    "sha256": "2a34d6aa46ba71444c9ac4f51e4ad5d9b5ac6bf5196c9995538831f380e3c9f9",
                     "orijinal_sha256": "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
                     "orijinal_boyut": 26851984,
                     "degisti": true,
@@ -1873,8 +1873,8 @@
                 {
                     "hedef": "sharedassets2.assets",
                     "paket_yolu": "dosyalar/15_sharedassets2.assets",
-                    "boyut": 11696872,
-                    "sha256": "d888e51a814cf9b0debc168ed27959661b5c2dbbb62c0c937de885145d67ca86",
+                    "boyut": 11762384,
+                    "sha256": "dc403d72234265074b2c8912f8e592dcbe4ecd73d16a748cee3620571920995a",
                     "orijinal_sha256": "3fe90a4026015848507edf890341ba49e27b0975d6b347974319cd1ec374d47c",
                     "orijinal_boyut": 11697828,
                     "degisti": true,
@@ -1913,7 +1913,7 @@
                     "hedef": "il2cpp_data/Metadata/global-metadata.dat",
                     "paket_yolu": "dosyalar/18_global-metadata.dat",
                     "boyut": 16748028,
-                    "sha256": "d75ff7c1526ffae914484a7a32907fba10f36f0793fe3ff0de77aa26c7bb7a06",
+                    "sha256": "f201e372a1cd5bd2eff99a47b3ea33672f71c7feade4fdb96dffbf001b647c70",
                     "orijinal_sha256": "b840d45186788e683e42b6687d66f4147281903458ae1d842f7c01fd78543cb6",
                     "orijinal_boyut": 16748028,
                     "degisti": true,
@@ -3111,8 +3111,8 @@
                     {
                         "hedef": "BepInEx/plugins/AutCeviriDuzeltme.dll",
                         "paket_yolu": "ek/01_AutCeviriDuzeltme.dll",
-                        "sha256": "399644372c7b4a0a0ae702bf8d9564501728b0b46a4cbbd4fc1be0187d37d8bc",
-                        "boyut": 7680
+                        "sha256": "4af857ca68dce9b0c4961debdc36b70558a81b0129ea5b74186b577da016b326",
+                        "boyut": 24064
                     }
                 ],
                 "konsol": {
@@ -3134,130 +3134,130 @@
                     "yol": "arac/xdelta3.exe",
                     "sha256": "732980d52f9220dc81817ccdd0c295eadce8a0048a24c2a771a73f791ac824e9"
                 },
-                "dosya": "atr-yama-2.4.0-steam-delta.zip",
-                "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-steam-delta.zip",
-                "boyut": 127567664,
-                "sha256": "44af1b60320f844168d58d7c038e9c0620ec654f68a1a288aca044875b6f3803",
+                "dosya": "atr-yama-2.5.0-steam-delta.zip",
+                "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.5.0/atr-yama-2.5.0-steam-delta.zip",
+                "boyut": 127858809,
+                "sha256": "5fd695a0fc021c235d1fec1df9ee33c66fda9aba02228a59324775137940d60d",
                 "dosyalar": [
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/cosmica_assets_all.bundle",
                         "delta_yolu": "delta/00.xdelta",
-                        "delta_sha256": "b3974c20ce677614200a5d5f513c6ed0cc22b2de79603c03d437cdb4fc276c7f",
+                        "delta_sha256": "87deaa25dfd2ec7c73184bf1b2dc3684aeb5fc7f0620271cb2a0f1b8549b8c02",
                         "delta_boyut": 2337033,
                         "orijinal_sha256": "dbf40a56d8dacbd66148408a00a68d489ce1fc90bc0c2dee9958d264a148f5d4",
                         "orijinal_boyut": 20227997,
                         "boyut": 20267754,
-                        "sha256": "c0e3bcd52360670afb06023ab52be49ed443aac3e28c358c1bb705ff854909b4"
+                        "sha256": "47f5fbc4ceafc829e84b72d6d9fd3a604fd243bddfa97e5adc638b8cc25a34ad"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/cosmicubelny24_assets_all.bundle",
                         "delta_yolu": "delta/01.xdelta",
-                        "delta_sha256": "a9bf19ddd08d5aacaa5e1c8e32fdf1d22a57daae7ed8bf064cdd3d5383ee1857",
-                        "delta_boyut": 2206784,
+                        "delta_sha256": "8c517b299b7c2d63ddfdb0e642010a81ffb6e802e899aaee241e3f2b0464fbaf",
+                        "delta_boyut": 2206768,
                         "orijinal_sha256": "661d856ba482fa38be7e38ef7fced34938439be0f658a8da8f2700434c7dcdaf",
                         "orijinal_boyut": 20576612,
-                        "boyut": 20614653,
-                        "sha256": "65d353e34cf3a56ec62acbde1112a97c2f449312b9b634b5285cc58f044397b2"
+                        "boyut": 20614654,
+                        "sha256": "d2acc5c7d061d2885e3313fb207a1fa7c8e4e0f67a6f8fd1892c9717a2e3f7e2"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/critrolecubeb_assets_all.bundle",
                         "delta_yolu": "delta/02.xdelta",
-                        "delta_sha256": "9b1cd3b5e1b28e0c6a2e5d628a52e7bb3fcd624e1fe20c1fccad159860b202c9",
-                        "delta_boyut": 1560598,
+                        "delta_sha256": "bc1e491f73098ccec6a2cb465d3b451405ead7642d8a6f461ca13e4a6e4d32df",
+                        "delta_boyut": 1560711,
                         "orijinal_sha256": "0bdbd8e50e2f7a57a3e14dc79795758a699c3410e19a33c88832cc5dee84848a",
                         "orijinal_boyut": 19157025,
-                        "boyut": 19184500,
-                        "sha256": "618f40a0db591b1f4f00a718c92c48df1b6f843a2b547ae2d56426a8bfbbf9b4"
+                        "boyut": 19184512,
+                        "sha256": "d6a9cac5f00001676dd944643c92318e9a36ba48a852bad95ea6f79039bd4963"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/hanami_assets_all.bundle",
                         "delta_yolu": "delta/03.xdelta",
-                        "delta_sha256": "410d7dd681bc66249fee9e7d424d6bca46bdcd8da3fb1051d9c5bfcd65cebf2b",
-                        "delta_boyut": 2973398,
+                        "delta_sha256": "dec7ecad675198a7f0427056723401ce23f8c60a17cfd0122bc9f8fe529d0f16",
+                        "delta_boyut": 2973392,
                         "orijinal_sha256": "97e4a4537cd63854f592ba2cce618728d70568c8e068841b1a391c7495c8b2ca",
                         "orijinal_boyut": 21830252,
-                        "boyut": 21876882,
-                        "sha256": "4b01860e1a294f1c3fd84d25be7df124237dbd3db579d259486ef980b6796483"
+                        "boyut": 21876879,
+                        "sha256": "e629b465c6fb48232173cefe6c406385c10e53bc13b26085e131620a01b4fa98"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/initialcosmetics_assets_all.bundle",
                         "delta_yolu": "delta/04.xdelta",
-                        "delta_sha256": "2ffec90fba678fbf47505822ee6b77ff8e11cb273f5e38f1e1e6332b9f62bebc",
-                        "delta_boyut": 64222646,
+                        "delta_sha256": "96e494e0edbe81d4aefecf63e25fdeaad8795df63df552791748f8c9c9497055",
+                        "delta_boyut": 63363554,
                         "orijinal_sha256": "a7d4fb989bb0cb5d74c64236b02d601b100ed78bed97abcc1c88cd81052f7939",
                         "orijinal_boyut": 207653284,
-                        "boyut": 208956334,
-                        "sha256": "f607d6d40d83c64009115940f040bfc8ab6630db709461525076137256264e5f"
+                        "boyut": 208955612,
+                        "sha256": "db96d3bbcdbad356e69b4cac5f136ab34959804f08e67daac0e7d8a10fbdb9db"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/initialmaps_assets_all.bundle",
                         "delta_yolu": "delta/05.xdelta",
-                        "delta_sha256": "6feb79255511712dcf5d65f400707891db0c2422e49a915950e394e345bd5e49",
-                        "delta_boyut": 35803813,
+                        "delta_sha256": "5a1be343e2d6cbd1b72752eab9f0ba780af46ffc03d0646e577eed403c1b7ca1",
+                        "delta_boyut": 36726521,
                         "orijinal_sha256": "204fc4bde5ac246e7aaa223c571095cd72721511d41514b0c5f3361638407082",
                         "orijinal_boyut": 148565768,
-                        "boyut": 149282860,
-                        "sha256": "619ebcc3f1084a62b576b01271e0b9946f6111e89a1a89d6c3c5cae405439d3a"
+                        "boyut": 149749993,
+                        "sha256": "9e3f71069eb5a48de925b9bd7246ad76a65e00607ed0fae6116d96f90979c0dc"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/kamurocho_assets_all.bundle",
                         "delta_yolu": "delta/06.xdelta",
-                        "delta_sha256": "e3f823d1d09acf759e63f844a85ba6ccb530b9da4ac739d989ae536cf978b00f",
-                        "delta_boyut": 6530700,
+                        "delta_sha256": "bc7c1d1dbf4844ce920040da1abcf8250d4feafc4385d94886967c43a74b2b84",
+                        "delta_boyut": 6530673,
                         "orijinal_sha256": "b0a4996c4cd46538ba22b975f6a3f99c671f6aad805ad01c99cad42a7a21d5f6",
                         "orijinal_boyut": 32729790,
-                        "boyut": 32844820,
-                        "sha256": "3e63bf1181421a2f338d9a8eb53455313063495d23c4fde452fcb5cd0ab951c2"
+                        "boyut": 32844812,
+                        "sha256": "ec014be8282618b8d5af7603727e07dea415c788dfb08eec296b4182b58312da"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/pawsnclaws_assets_all.bundle",
                         "delta_yolu": "delta/07.xdelta",
-                        "delta_sha256": "1965312600a60f4fa0491e2089ba0125f008d795472c5d583a12625d8f7b0d48",
-                        "delta_boyut": 5123559,
+                        "delta_sha256": "d08c7cf616035ecd496ba2e0e24c36ebe5ef29450c21bccfc03009b29354c3d5",
+                        "delta_boyut": 5123558,
                         "orijinal_sha256": "bc2ea8abbc538423aedb6f68da56ff85d294be6e59fa208a19980aa06d8c900d",
                         "orijinal_boyut": 28493197,
                         "boyut": 28591424,
-                        "sha256": "6b81bcff63181eea26c4982e3270b6163403314831daeccaaf7b772caa02c5bd"
+                        "sha256": "d27e02360989fa22ecafcd7a3d01f66c3386ed26e89b32b1a747baea9b61e43f"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/projectparasitecubeb_assets_all.bundle",
                         "delta_yolu": "delta/08.xdelta",
-                        "delta_sha256": "3c459144f84c1e90487422fd88a8c06c8aa159734e6f02ab0206dc3446947509",
-                        "delta_boyut": 1456073,
+                        "delta_sha256": "57f576b128989a1e5435f87f7a8e3778d1db34fb3378ec0c7a9a5b7f2e7dcc7b",
+                        "delta_boyut": 1456148,
                         "orijinal_sha256": "22bc28a97e5969bc1955b35806d0fefedcfd4e999c6c9d2a7e446de90cbe9594",
                         "orijinal_boyut": 18593227,
-                        "boyut": 18617547,
-                        "sha256": "a05fb1e14adc4287de4a85760aa229fd94bf4c73f9a94a72b7d4867cd23dcb89"
+                        "boyut": 18617549,
+                        "sha256": "ab1110ca491b9c6b0c3e9496467a28df3c60460356ee7c92addd6e0693e0689c"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/racingcubeb_assets_all.bundle",
                         "delta_yolu": "delta/09.xdelta",
-                        "delta_sha256": "e9815e23c2ca71accd0a584955f756f869d2207d8f2c512340f4fc744df95bd9",
-                        "delta_boyut": 1391071,
+                        "delta_sha256": "dcf2b5cfaf83e1767677dc8245828df3de15d4f0a92b36ee4d414384481b0063",
+                        "delta_boyut": 1391074,
                         "orijinal_sha256": "f97e995191085c5464d629fdd4b1fabab30445f86f06b8cb6cccdcb9edb94981",
                         "orijinal_boyut": 18346733,
                         "boyut": 18370016,
-                        "sha256": "7d99f5d32bffd5113eca369494de11c6903458902f5574a1251400512d934fa8"
+                        "sha256": "609f26c17570de6199e2c7ad2427d8cc80aabff01a64c8dfe7d4b06f600e876d"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/stardewb_assets_all.bundle",
                         "delta_yolu": "delta/10.xdelta",
-                        "delta_sha256": "5c322a4b80352944a55e4139649d333d3967ca20a9ae8c63737a0ab7c8fa5881",
-                        "delta_boyut": 1510101,
+                        "delta_sha256": "178f0d1be95c08ff95a1523a59b2021f61cdad1b2c78e9983a5dd95484d0f913",
+                        "delta_boyut": 1510110,
                         "orijinal_sha256": "8f353fcc94ad2483c89901f6c5e166d6f0dcf38bdf3a4bf01c2a7b2bc60d45d6",
                         "orijinal_boyut": 18809212,
-                        "boyut": 18834534,
-                        "sha256": "8fbcf5971de171e8e9324d53558df024f18698935d5c1d7d8a0b12790d09d150"
+                        "boyut": 18834529,
+                        "sha256": "57bbad303e48258bd83361b0c0d1845d44216cdf41d6a204a01e7fe2b22f9bb4"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Steam/StandaloneWindows/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
                         "delta_yolu": "delta/11.xdelta",
-                        "delta_sha256": "075eb5351b9e23394b04ef26a48b56da8624613c788be266927a0424347d292e",
-                        "delta_boyut": 1950153,
+                        "delta_sha256": "9532ba93582fb16ab0d6d32e3474d13365044dc0147abe703fa355e49d696826",
+                        "delta_boyut": 1950002,
                         "orijinal_sha256": "08fc5f3149e94f3ad0ef9cb1c77b29772ab02a9af6d7e5ae62bb4a557302efc7",
                         "orijinal_boyut": 2288712,
-                        "boyut": 10954649,
-                        "sha256": "f7e7b6e0a120217f954f60d4bcd473f32907a80ff36e264e6ff6d47a1a21c18b"
+                        "boyut": 10954745,
+                        "sha256": "73f5b5105eb5ccbd1614e2ebe90b658711a19492744e9f52b28e2788cef7572b"
                     },
                     {
                         "hedef": "level2",
@@ -3272,22 +3272,22 @@
                     {
                         "hedef": "resources.assets",
                         "delta_yolu": "delta/13.xdelta",
-                        "delta_sha256": "a3224c18b9b78904f28747f77ecff709b4f8ae1aa46a3944eab4725aa53ba1a3",
-                        "delta_boyut": 169241,
+                        "delta_sha256": "22c30e5a636450f5d416177f03e766640df9d13ca8cae39ab8934f2f5f44d529",
+                        "delta_boyut": 367146,
                         "orijinal_sha256": "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
                         "orijinal_boyut": 26851984,
-                        "boyut": 52297056,
-                        "sha256": "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec"
+                        "boyut": 52823496,
+                        "sha256": "2a34d6aa46ba71444c9ac4f51e4ad5d9b5ac6bf5196c9995538831f380e3c9f9"
                     },
                     {
                         "hedef": "sharedassets2.assets",
                         "delta_yolu": "delta/14.xdelta",
-                        "delta_sha256": "2f241c887d2c0c1e7e75b28a399e4d34d07b64f0163c3bb0f3769bf7f4aeb646",
-                        "delta_boyut": 22855,
+                        "delta_sha256": "557cfd2646f439984aaa1f7fe7739ecffdd1de7a93af29e71c89afa0b74e771b",
+                        "delta_boyut": 42889,
                         "orijinal_sha256": "3fe90a4026015848507edf890341ba49e27b0975d6b347974319cd1ec374d47c",
                         "orijinal_boyut": 11697828,
-                        "boyut": 11696872,
-                        "sha256": "d888e51a814cf9b0debc168ed27959661b5c2dbbb62c0c937de885145d67ca86"
+                        "boyut": 11762384,
+                        "sha256": "dc403d72234265074b2c8912f8e592dcbe4ecd73d16a748cee3620571920995a"
                     },
                     {
                         "hedef": "sharedassets2.assets.resS",
@@ -3312,12 +3312,12 @@
                     {
                         "hedef": "il2cpp_data/Metadata/global-metadata.dat",
                         "delta_yolu": "delta/17.xdelta",
-                        "delta_sha256": "0413f7203a63eb67706075072bee275714db1efaed079a2f0129caf770e1fb34",
+                        "delta_sha256": "9f587984369a6961da48355704ed914b81c1f8f41babc5a3e03ecfb12ed2cf89",
                         "delta_boyut": 63728,
                         "orijinal_sha256": "b840d45186788e683e42b6687d66f4147281903458ae1d842f7c01fd78543cb6",
                         "orijinal_boyut": 16748028,
                         "boyut": 16748028,
-                        "sha256": "d75ff7c1526ffae914484a7a32907fba10f36f0793fe3ff0de77aa26c7bb7a06"
+                        "sha256": "f201e372a1cd5bd2eff99a47b3ea33672f71c7feade4fdb96dffbf001b647c70"
                     },
                     {
                         "hedef": "level6",
@@ -3338,18 +3338,18 @@
             "oyun_surumleri": [
                 "2026.9.29"
             ],
-            "dosya": "atr-yama-2.4.0-msix-ek.zip",
-            "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-msix-ek.zip",
-            "boyut": 552821408,
-            "sha256": "3f8ea60430842996df12bc352bf80919847ad70091369048985cf36cad093b73",
-            "tarih": "2026-11-10",
-            "notlar": "Türkçe yama v2.4.0: rol/istek metinleri, tuş atamaları, kozmetik küp adları, evcil hayvan metinleri ve ana menü logosu düzeltmeleri dahil.",
+            "dosya": "atr-yama-2.5.0-msix.zip",
+            "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.5.0/atr-yama-2.5.0-msix.zip",
+            "boyut": 553615097,
+            "sha256": "0a6e3bc79b0d25fcfa147a508ab2b2eba52071fdd1790a3ff91651e2eaa6331d",
+            "tarih": "2026-11-15",
+            "notlar": "Türkçe yama v2.4: Türkçe harfler tüm yazı tiplerinde yeniden çizildi, oyun içi Haberler sekmesi Türkçe, oyun sonu ödül ekranı, Kozmik Küp adları düzgün Türkçe, çeviri büyük/küçük harf ve noktalama düzeltmeleri. Oyundaki İngilizce görseller (ACİL DURUM, ÇEK/TUT, Görev Test Aracı) Türkçe; Ayarlar > Veri sekmesinde Telegram ve web sitesi butonları.",
             "dosyalar": [
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/initialmaps_assets_all.bundle",
                     "paket_yolu": "dosyalar/00_initialmaps_assets_all.bundle",
-                    "boyut": 149282861,
-                    "sha256": "9700a9d4239b6e718a5748e07c11bb6cb8244a46851f8cb598beed950d52274a",
+                    "boyut": 149749994,
+                    "sha256": "3ecca4c8597b7a71bbdc766f0c0d3d4addc3e8d80d8d2c498cc0482f4bf05a9a",
                     "orijinal_sha256": "f74ac2eecbd641ab4b09f4e469dd920a65178ebde76aaa4c3ab8281adc2e46c7",
                     "kabul": [
                         "f74ac2eecbd641ab4b09f4e469dd920a65178ebde76aaa4c3ab8281adc2e46c7"
@@ -3358,8 +3358,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
                     "paket_yolu": "dosyalar/01_referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
-                    "boyut": 2311549,
-                    "sha256": "bfcd6cdbe898ffd755260ba7fa61272e161634009a70db0c31193e1a5c7b48e0",
+                    "boyut": 2311511,
+                    "sha256": "6b88a7f74ba672ee44a923091054a5c227f42973ffaaddceaaa08d02b32c8ef0",
                     "orijinal_sha256": "17eca4067beeb52a8433f3406b40aea2288dd3bc261361365f68860300422369",
                     "kabul": [
                         "17eca4067beeb52a8433f3406b40aea2288dd3bc261361365f68860300422369"
@@ -3369,7 +3369,7 @@
                     "hedef": "il2cpp_data/Metadata/global-metadata.dat",
                     "paket_yolu": "dosyalar/02_global-metadata.dat",
                     "boyut": 16408976,
-                    "sha256": "ef5dbf7befcd157662e9b32180eafa9741bebc2ce6fdd90d0bd14c9fe1e41f34",
+                    "sha256": "1733575a298ab2d032ffd41d765b9d6dd74dce89847a26e98b036bc1f414a514",
                     "orijinal_sha256": "e18913a6796940ea6d7ef92a6f3bf91e6c999567648c437d7aebbca26978e63d",
                     "kabul": [
                         "e18913a6796940ea6d7ef92a6f3bf91e6c999567648c437d7aebbca26978e63d"
@@ -3388,8 +3388,8 @@
                 {
                     "hedef": "resources.assets",
                     "paket_yolu": "dosyalar/04_resources.assets",
-                    "boyut": 52297056,
-                    "sha256": "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec",
+                    "boyut": 52823496,
+                    "sha256": "2a34d6aa46ba71444c9ac4f51e4ad5d9b5ac6bf5196c9995538831f380e3c9f9",
                     "orijinal_sha256": "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
                     "kabul": [
                         "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642"
@@ -3398,8 +3398,8 @@
                 {
                     "hedef": "sharedassets2.assets",
                     "paket_yolu": "dosyalar/05_sharedassets2.assets",
-                    "boyut": 11696872,
-                    "sha256": "bb9e383d7ef92847dfb4219b30fe48823afb11d6ad6116d3163c3c5c08e4282b",
+                    "boyut": 11762384,
+                    "sha256": "bb3c90fa5eb045d8e6cddcce7b0bb12b9d413332382906f41e581e9bc493ea0f",
                     "orijinal_sha256": "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
                     "kabul": [
                         "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893"
@@ -3429,7 +3429,7 @@
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/cosmica_assets_all.bundle",
                     "paket_yolu": "dosyalar/08_cosmica_assets_all.bundle",
                     "boyut": 20267755,
-                    "sha256": "1c4270a0df8175ff5cafea51bf9a8783bb8335482d151f2f6183b79e00ba134a",
+                    "sha256": "668e5710e2c3e95c4c7e78c4ef86c5b243e4eafbe7ec43fc19d539dc5458456c",
                     "orijinal_sha256": "da30fc2b73215057f2eca10fae590160b0c02b698ca59f47fcf533bd2cc7274e",
                     "kabul": [
                         "da30fc2b73215057f2eca10fae590160b0c02b698ca59f47fcf533bd2cc7274e"
@@ -3438,8 +3438,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/cosmicubelny24_assets_all.bundle",
                     "paket_yolu": "dosyalar/09_cosmicubelny24_assets_all.bundle",
-                    "boyut": 20614654,
-                    "sha256": "e989d3da0fd085b915ff6f817cf6ab4a4848580f063f5a5112dc0e8f2ae22aa0",
+                    "boyut": 20614655,
+                    "sha256": "d3a0e6bd951dcecd5304e44a629df1420e2a452518cf3f032e6a3212cd06147e",
                     "orijinal_sha256": "a1cd56a3a939421c55f92eab499e46b6f88f669142487c2cae1016646f6dcf4b",
                     "kabul": [
                         "a1cd56a3a939421c55f92eab499e46b6f88f669142487c2cae1016646f6dcf4b"
@@ -3448,8 +3448,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/critrolecubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/10_critrolecubeb_assets_all.bundle",
-                    "boyut": 19184501,
-                    "sha256": "08469dfaabd3904e250461b4fa5ce29c0dfa823ca70e72db69d84a42cfdb1861",
+                    "boyut": 19184513,
+                    "sha256": "b560f49192a7e6c6f7f6fe9781912b999f26f1da22d5f66e837579756e5d4d39",
                     "orijinal_sha256": "2cec47938c849494a62df2bd383289d551e1b5995aa3721b485cb004fa9e2d62",
                     "kabul": [
                         "2cec47938c849494a62df2bd383289d551e1b5995aa3721b485cb004fa9e2d62"
@@ -3458,8 +3458,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/hanami_assets_all.bundle",
                     "paket_yolu": "dosyalar/11_hanami_assets_all.bundle",
-                    "boyut": 21876883,
-                    "sha256": "cb24c3135f22b9a37f37383bba757244fd12f541555c970b0dfbfaf3d1dabee2",
+                    "boyut": 21876880,
+                    "sha256": "6e7c78edac62a249623bc8679363f332a3a5469cbba48d8ed5d112e1aa14a801",
                     "orijinal_sha256": "4afdfa4de4101b00059a09ea7e4a84d9e0f88d23a4fadb55e372e2eaff7636ed",
                     "kabul": [
                         "4afdfa4de4101b00059a09ea7e4a84d9e0f88d23a4fadb55e372e2eaff7636ed"
@@ -3468,8 +3468,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/initialcosmetics_assets_all.bundle",
                     "paket_yolu": "dosyalar/12_initialcosmetics_assets_all.bundle",
-                    "boyut": 208956320,
-                    "sha256": "b2c784db0f8bc02952f7642dc8b747399ae72150190e628fbb2801b873688eda",
+                    "boyut": 208955614,
+                    "sha256": "7b0ae471a9cfb4d29977681fefd3146517568666b64068e1b6333a13f88924c2",
                     "orijinal_sha256": "57325f1514d0d434276d7c8456c18a5e14edcb8aaf0d26c79962855d36cd545a",
                     "kabul": [
                         "57325f1514d0d434276d7c8456c18a5e14edcb8aaf0d26c79962855d36cd545a"
@@ -3478,8 +3478,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/kamurocho_assets_all.bundle",
                     "paket_yolu": "dosyalar/13_kamurocho_assets_all.bundle",
-                    "boyut": 32844821,
-                    "sha256": "d7b5beba38dbbb171bf766b1ad4a9468792070a98f14eb8b31a5a1220863cd47",
+                    "boyut": 32844813,
+                    "sha256": "3cd655de39176c60ba6f1fa579ab1b5599a5ae4e6e3aa1c9e085f974d1306fb5",
                     "orijinal_sha256": "bc191c5c03ca2581558dd880482709de939eedac2d491a5b68310307854a1236",
                     "kabul": [
                         "bc191c5c03ca2581558dd880482709de939eedac2d491a5b68310307854a1236"
@@ -3489,7 +3489,7 @@
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/pawsnclaws_assets_all.bundle",
                     "paket_yolu": "dosyalar/14_pawsnclaws_assets_all.bundle",
                     "boyut": 28591425,
-                    "sha256": "4d244bf1a97b4ae9517d2b569d50a6d593065f64c6acaf2a0707ad31a317dd77",
+                    "sha256": "37983795e97876d58ba6ae259b7c76ad53eeafbd042eec8a074a67fcc36fe0be",
                     "orijinal_sha256": "07f6342edd9f3b08020e5c647382ea3956225dafe409f7cfcb939036dbe4c552",
                     "kabul": [
                         "07f6342edd9f3b08020e5c647382ea3956225dafe409f7cfcb939036dbe4c552"
@@ -3498,8 +3498,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/projectparasitecubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/15_projectparasitecubeb_assets_all.bundle",
-                    "boyut": 18617548,
-                    "sha256": "4321c845fae65fc4327fd78c47869d27b45fc54856f9ee5e5690466964cdc6eb",
+                    "boyut": 18617550,
+                    "sha256": "91152b0a9dd7f71b8a991970669b403e779b217dfb784a660c8a7351ae26768e",
                     "orijinal_sha256": "fa08edc711c2acfa78789aff759ae900fd13f42bc437edbbf138e3b8a32ac83b",
                     "kabul": [
                         "fa08edc711c2acfa78789aff759ae900fd13f42bc437edbbf138e3b8a32ac83b"
@@ -3509,7 +3509,7 @@
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/racingcubeb_assets_all.bundle",
                     "paket_yolu": "dosyalar/16_racingcubeb_assets_all.bundle",
                     "boyut": 18370017,
-                    "sha256": "0b92ed539d8e531e84e913df11993f5698650ebe9f03de3d75d1244844b43c4b",
+                    "sha256": "cbd413a060b01b8cbc9e105e08f5c217f27c61bd46debde02d697e0c751a3e37",
                     "orijinal_sha256": "4c2d386b2fd5e8ea3e117525b5b525bad6c2683261a959df41b379f485e4240c",
                     "kabul": [
                         "4c2d386b2fd5e8ea3e117525b5b525bad6c2683261a959df41b379f485e4240c"
@@ -3518,8 +3518,8 @@
                 {
                     "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/stardewb_assets_all.bundle",
                     "paket_yolu": "dosyalar/17_stardewb_assets_all.bundle",
-                    "boyut": 18834535,
-                    "sha256": "831ac1a66838b1ae9ca8335ba557b479601149117c3b34493537957a066df4eb",
+                    "boyut": 18834530,
+                    "sha256": "da66625932c36c9f89d9634f55a42387b46db25afcf76c8d1cad12f29c79d606",
                     "orijinal_sha256": "1f4b7ac57be9d39bd72ee6e259cdb00570440a376ec122873afd793435706a48",
                     "kabul": [
                         "1f4b7ac57be9d39bd72ee6e259cdb00570440a376ec122873afd793435706a48"
@@ -4714,8 +4714,8 @@
                     {
                         "hedef": "BepInEx/plugins/AutCeviriDuzeltme.dll",
                         "paket_yolu": "ek/01_AutCeviriDuzeltme.dll",
-                        "sha256": "399644372c7b4a0a0ae702bf8d9564501728b0b46a4cbbd4fc1be0187d37d8bc",
-                        "boyut": 7680
+                        "sha256": "4af857ca68dce9b0c4961debdc36b70558a81b0129ea5b74186b577da016b326",
+                        "boyut": 24064
                     }
                 ],
                 "konsol": {
@@ -4737,40 +4737,40 @@
                     "yol": "arac/xdelta3.exe",
                     "sha256": "732980d52f9220dc81817ccdd0c295eadce8a0048a24c2a771a73f791ac824e9"
                 },
-                "dosya": "atr-yama-2.4.0-msix-ek-delta.zip",
-                "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.4.0/atr-yama-2.4.0-msix-ek-delta.zip",
-                "boyut": 126667066,
-                "sha256": "1ce72112f8d848bb9d15492a049320d8494246f69ceeaf671decc05a4e1117bb",
+                "dosya": "atr-yama-2.5.0-msix-delta.zip",
+                "url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/2.5.0/atr-yama-2.5.0-msix-delta.zip",
+                "boyut": 126959164,
+                "sha256": "a72e206dacb65d437d150431d7bb477cfcab338d17cb687d633956b63c834091",
                 "dosyalar": [
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/initialmaps_assets_all.bundle",
                         "delta_yolu": "delta/00.xdelta",
-                        "delta_sha256": "98de5f64e07ea431100b87e4c66d429d28bf6d056a5a78ad90288a7ec94f94a1",
-                        "delta_boyut": 35804341,
+                        "delta_sha256": "e2740fb046c73bd34d68a7ce112e02675c1e479b0b29391440daa6b3f5705f01",
+                        "delta_boyut": 36726347,
                         "orijinal_sha256": "f74ac2eecbd641ab4b09f4e469dd920a65178ebde76aaa4c3ab8281adc2e46c7",
                         "orijinal_boyut": 148565769,
-                        "boyut": 149282861,
-                        "sha256": "9700a9d4239b6e718a5748e07c11bb6cb8244a46851f8cb598beed950d52274a"
+                        "boyut": 149749994,
+                        "sha256": "3ecca4c8597b7a71bbdc766f0c0d3d4addc3e8d80d8d2c498cc0482f4bf05a9a"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/referencedatagroup_assets_all_320c85f5292e8c3d98eff4ef6c218ef3.bundle",
                         "delta_yolu": "delta/01.xdelta",
-                        "delta_sha256": "c3712e74a3a609084da6b4c21607ea8276e28dcd8c058f99037b0056e0120548",
-                        "delta_boyut": 1048670,
+                        "delta_sha256": "f7acbc98eced41476b1236512ad88bb7c8c5e948ae1270edd2c3b850de50f187",
+                        "delta_boyut": 1050067,
                         "orijinal_sha256": "17eca4067beeb52a8433f3406b40aea2288dd3bc261361365f68860300422369",
                         "orijinal_boyut": 2288711,
-                        "boyut": 2311549,
-                        "sha256": "bfcd6cdbe898ffd755260ba7fa61272e161634009a70db0c31193e1a5c7b48e0"
+                        "boyut": 2311511,
+                        "sha256": "6b88a7f74ba672ee44a923091054a5c227f42973ffaaddceaaa08d02b32c8ef0"
                     },
                     {
                         "hedef": "il2cpp_data/Metadata/global-metadata.dat",
                         "delta_yolu": "delta/02.xdelta",
-                        "delta_sha256": "9ff3d7b8456868cd9c3aa95d3b3556a2ecb01974f56722a45c45c938028c676c",
+                        "delta_sha256": "69a17b76e049539b35fc9ffa2cb0a54516f1211e6ea714b2b05713ec4bacd1a8",
                         "delta_boyut": 64026,
                         "orijinal_sha256": "e18913a6796940ea6d7ef92a6f3bf91e6c999567648c437d7aebbca26978e63d",
                         "orijinal_boyut": 16408976,
                         "boyut": 16408976,
-                        "sha256": "ef5dbf7befcd157662e9b32180eafa9741bebc2ce6fdd90d0bd14c9fe1e41f34"
+                        "sha256": "1733575a298ab2d032ffd41d765b9d6dd74dce89847a26e98b036bc1f414a514"
                     },
                     {
                         "hedef": "level2",
@@ -4785,22 +4785,22 @@
                     {
                         "hedef": "resources.assets",
                         "delta_yolu": "delta/04.xdelta",
-                        "delta_sha256": "9bddf43b85ff41eb7b4946e3281f057a6a8eba06aa4519d64b1ebe696410d841",
-                        "delta_boyut": 169241,
+                        "delta_sha256": "daaaeeae2a45d5b08a577e92eac0e1ace77e4bedeca0e874dc9604a5d0ef4250",
+                        "delta_boyut": 367146,
                         "orijinal_sha256": "bc62750eae6f37eceee92155cac49431cce4ed31daf54897066382cd95bcc642",
                         "orijinal_boyut": 26851984,
-                        "boyut": 52297056,
-                        "sha256": "f2344a95e80e15b12d8ce13c710e9ae67c5ba0b9215bf321153ea94dc47e83ec"
+                        "boyut": 52823496,
+                        "sha256": "2a34d6aa46ba71444c9ac4f51e4ad5d9b5ac6bf5196c9995538831f380e3c9f9"
                     },
                     {
                         "hedef": "sharedassets2.assets",
                         "delta_yolu": "delta/05.xdelta",
-                        "delta_sha256": "c19d5b87c554ae3a28d39fc62af7c3c663f010e257954b002133799b853b5fc1",
-                        "delta_boyut": 22855,
+                        "delta_sha256": "e1b9e3b926224095c6fc79a30beadc333ab70343c26661ed8470cfcac6b5e62d",
+                        "delta_boyut": 42831,
                         "orijinal_sha256": "40301f1568a84664566b4d548e2904ddffc9145b5ee5a5c796e9021ebb881893",
                         "orijinal_boyut": 11697828,
-                        "boyut": 11696872,
-                        "sha256": "bb9e383d7ef92847dfb4219b30fe48823afb11d6ad6116d3163c3c5c08e4282b"
+                        "boyut": 11762384,
+                        "sha256": "bb3c90fa5eb045d8e6cddcce7b0bb12b9d413332382906f41e581e9bc493ea0f"
                     },
                     {
                         "hedef": "sharedassets2.assets.resS",
@@ -4825,102 +4825,102 @@
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/cosmica_assets_all.bundle",
                         "delta_yolu": "delta/08.xdelta",
-                        "delta_sha256": "29ffe6019cef3f9347c7d637fa7dfcb5556fef004081a2553d66097033954e35",
-                        "delta_boyut": 2336980,
+                        "delta_sha256": "0dded745c083ed028c5bfbfff69f10742d00eee2cc99b31ff6c1956d2f074c4e",
+                        "delta_boyut": 2336979,
                         "orijinal_sha256": "da30fc2b73215057f2eca10fae590160b0c02b698ca59f47fcf533bd2cc7274e",
                         "orijinal_boyut": 20227998,
                         "boyut": 20267755,
-                        "sha256": "1c4270a0df8175ff5cafea51bf9a8783bb8335482d151f2f6183b79e00ba134a"
+                        "sha256": "668e5710e2c3e95c4c7e78c4ef86c5b243e4eafbe7ec43fc19d539dc5458456c"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/cosmicubelny24_assets_all.bundle",
                         "delta_yolu": "delta/09.xdelta",
-                        "delta_sha256": "fe1e7daf2b7df46e00ea173bd3e9c38b904cc63c2fe21c9916255f9e7f17ec8a",
+                        "delta_sha256": "efed6114fb92a0e66faa71dfd581fe4fad24733bfc13cda0f92d3379aa059228",
                         "delta_boyut": 2206554,
                         "orijinal_sha256": "a1cd56a3a939421c55f92eab499e46b6f88f669142487c2cae1016646f6dcf4b",
                         "orijinal_boyut": 20576613,
-                        "boyut": 20614654,
-                        "sha256": "e989d3da0fd085b915ff6f817cf6ab4a4848580f063f5a5112dc0e8f2ae22aa0"
+                        "boyut": 20614655,
+                        "sha256": "d3a0e6bd951dcecd5304e44a629df1420e2a452518cf3f032e6a3212cd06147e"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/critrolecubeb_assets_all.bundle",
                         "delta_yolu": "delta/10.xdelta",
-                        "delta_sha256": "89680660ba018e5aaa5ef4a451e59a5813fdc72e40f2964626e423912bfae321",
-                        "delta_boyut": 1560856,
+                        "delta_sha256": "b298c4fe08584589ee8a20a256d0e276413725883ea9016d19495c6a41f9b698",
+                        "delta_boyut": 1560824,
                         "orijinal_sha256": "2cec47938c849494a62df2bd383289d551e1b5995aa3721b485cb004fa9e2d62",
                         "orijinal_boyut": 19157026,
-                        "boyut": 19184501,
-                        "sha256": "08469dfaabd3904e250461b4fa5ce29c0dfa823ca70e72db69d84a42cfdb1861"
+                        "boyut": 19184513,
+                        "sha256": "b560f49192a7e6c6f7f6fe9781912b999f26f1da22d5f66e837579756e5d4d39"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/hanami_assets_all.bundle",
                         "delta_yolu": "delta/11.xdelta",
-                        "delta_sha256": "9256d6a08edc617765b769b696baf33684de836e51fe5805dd735ca5ed916a13",
-                        "delta_boyut": 2973382,
+                        "delta_sha256": "08fce1629d1edc41bb04db834db88fba9cfa015b8c0eb5b5cc6f034fdc3fd96b",
+                        "delta_boyut": 2973386,
                         "orijinal_sha256": "4afdfa4de4101b00059a09ea7e4a84d9e0f88d23a4fadb55e372e2eaff7636ed",
                         "orijinal_boyut": 21830253,
-                        "boyut": 21876883,
-                        "sha256": "cb24c3135f22b9a37f37383bba757244fd12f541555c970b0dfbfaf3d1dabee2"
+                        "boyut": 21876880,
+                        "sha256": "6e7c78edac62a249623bc8679363f332a3a5469cbba48d8ed5d112e1aa14a801"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/initialcosmetics_assets_all.bundle",
                         "delta_yolu": "delta/12.xdelta",
-                        "delta_sha256": "a38d9cf6e7ddafc2d851d07d051df3ef0f538f339ca44d264d03a78980056cbb",
-                        "delta_boyut": 64222607,
+                        "delta_sha256": "683eef5bc304d126f799cfcf9289be48bab18d59db6176e954859a7cd19ee729",
+                        "delta_boyut": 63363733,
                         "orijinal_sha256": "57325f1514d0d434276d7c8456c18a5e14edcb8aaf0d26c79962855d36cd545a",
                         "orijinal_boyut": 207653285,
-                        "boyut": 208956320,
-                        "sha256": "b2c784db0f8bc02952f7642dc8b747399ae72150190e628fbb2801b873688eda"
+                        "boyut": 208955614,
+                        "sha256": "7b0ae471a9cfb4d29977681fefd3146517568666b64068e1b6333a13f88924c2"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/kamurocho_assets_all.bundle",
                         "delta_yolu": "delta/13.xdelta",
-                        "delta_sha256": "5c4a3b717f6b87cfb18381641386a6e64046c97985f490b748d84f5c50f2c68e",
-                        "delta_boyut": 6530609,
+                        "delta_sha256": "cc8d1ca4a26d43942a6546976a9fdce40a42dcd68c8fad03f2ac1cd6c93cb7b2",
+                        "delta_boyut": 6530624,
                         "orijinal_sha256": "bc191c5c03ca2581558dd880482709de939eedac2d491a5b68310307854a1236",
                         "orijinal_boyut": 32729791,
-                        "boyut": 32844821,
-                        "sha256": "d7b5beba38dbbb171bf766b1ad4a9468792070a98f14eb8b31a5a1220863cd47"
+                        "boyut": 32844813,
+                        "sha256": "3cd655de39176c60ba6f1fa579ab1b5599a5ae4e6e3aa1c9e085f974d1306fb5"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/pawsnclaws_assets_all.bundle",
                         "delta_yolu": "delta/14.xdelta",
-                        "delta_sha256": "583acf21c68a450dae716edd6bc81fc45d2799e0435c50049c3268e8baa5f06c",
-                        "delta_boyut": 5124036,
+                        "delta_sha256": "d6bb2db0c18cbaea8ef12578a4d2bb244788e49c4c95c96819ac878223d43fc8",
+                        "delta_boyut": 5123979,
                         "orijinal_sha256": "07f6342edd9f3b08020e5c647382ea3956225dafe409f7cfcb939036dbe4c552",
                         "orijinal_boyut": 28493182,
                         "boyut": 28591425,
-                        "sha256": "4d244bf1a97b4ae9517d2b569d50a6d593065f64c6acaf2a0707ad31a317dd77"
+                        "sha256": "37983795e97876d58ba6ae259b7c76ad53eeafbd042eec8a074a67fcc36fe0be"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/projectparasitecubeb_assets_all.bundle",
                         "delta_yolu": "delta/15.xdelta",
-                        "delta_sha256": "9f28a647c2cde2fd47e267746a86e64efa6fa3f83b2e1cc11bf3eb79f27cc996",
-                        "delta_boyut": 1456029,
+                        "delta_sha256": "3d82c47175164375f0e1a0fe1d13e1c863543b7e57f9c9c1bd6bf81ed3f4ea70",
+                        "delta_boyut": 1456165,
                         "orijinal_sha256": "fa08edc711c2acfa78789aff759ae900fd13f42bc437edbbf138e3b8a32ac83b",
                         "orijinal_boyut": 18593228,
-                        "boyut": 18617548,
-                        "sha256": "4321c845fae65fc4327fd78c47869d27b45fc54856f9ee5e5690466964cdc6eb"
+                        "boyut": 18617550,
+                        "sha256": "91152b0a9dd7f71b8a991970669b403e779b217dfb784a660c8a7351ae26768e"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/racingcubeb_assets_all.bundle",
                         "delta_yolu": "delta/16.xdelta",
-                        "delta_sha256": "bbbcdf3fd100d5c3c9decae1252e129d967cdf441f75d72484ec126ee7c15a49",
-                        "delta_boyut": 1391158,
+                        "delta_sha256": "81da516f62ad718f24e86dbb76609d5ac228688462bc817d8f322270df86cf80",
+                        "delta_boyut": 1391161,
                         "orijinal_sha256": "4c2d386b2fd5e8ea3e117525b5b525bad6c2683261a959df41b379f485e4240c",
                         "orijinal_boyut": 18346734,
                         "boyut": 18370017,
-                        "sha256": "0b92ed539d8e531e84e913df11993f5698650ebe9f03de3d75d1244844b43c4b"
+                        "sha256": "cbd413a060b01b8cbc9e105e08f5c217f27c61bd46debde02d697e0c751a3e37"
                     },
                     {
                         "hedef": "StreamingAssets/aa/Win10/StandaloneWindows64/stardewb_assets_all.bundle",
                         "delta_yolu": "delta/17.xdelta",
-                        "delta_sha256": "0073648904e53b8eb93bb6831b5cb7e89e1d82de2e6f4bb5538dab2893ec73ff",
-                        "delta_boyut": 1510109,
+                        "delta_sha256": "5164bbc39ce8a1c934dacdfb96f53672b2382d7ad9352cadfbbbc1e99aa3eadd",
+                        "delta_boyut": 1510115,
                         "orijinal_sha256": "1f4b7ac57be9d39bd72ee6e259cdb00570440a376ec122873afd793435706a48",
                         "orijinal_boyut": 18809197,
-                        "boyut": 18834535,
-                        "sha256": "831ac1a66838b1ae9ca8335ba557b479601149117c3b34493537957a066df4eb"
+                        "boyut": 18834530,
+                        "sha256": "da66625932c36c9f89d9634f55a42387b46db25afcf76c8d1cad12f29c79d606"
                     },
                     {
                         "hedef": "level6",
