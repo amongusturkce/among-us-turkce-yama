@@ -1,7 +1,7 @@
 {
-  "version": "1.0.6",
-  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.6/AU-Turkce-Ceviri-1.0.6-Setup.exe",
-  "sha256": "4f49a768eae3afe0c62f9b01fad118ff7005a8baac0004e108e1cfa44995f8f2",
-  "release_notes": "Küçük düzeltme: üst kısımdaki yama sürümü bilgisi artık doğru gösteriliyor.",
+  "version": "1.0.7",
+  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.7/AU-Turkce-Ceviri-1.0.7-Setup.exe",
+  "sha256": "53627090cd98ae7858137f76327ad8781eca440ed998d03f8b9b24ec9baa72c5",
+  "release_notes": "Küçük düzeltmeler: yama sürümü bilgisi doğru gösteriliyor, bağlantı hatası mesajı Türkçeleştirildi, sağdaki kaydırma çubuğu gizlendi.",
   "published_at": "2026-11-16"
 }
