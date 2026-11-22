@@ -1,7 +1,7 @@
 {
-  "version": "1.0.8",
-  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.8/AU-Turkce-Ceviri-1.0.8-Setup.exe",
-  "sha256": "5d1b452381ced8db6b3ddefcb496c9b8bfefbe66cfcf8375c8cd3b8a42f6bbad",
-  "release_notes": "Tasarım iyileştirmeleri. Yama kurulduktan sonra oyunu tek tıkla açan \"Oyunu Oyna\" düğmesi eklendi. Yeni sürümler artık bir pencereyle haber veriliyor ve güncelleme indirilince kurulum kendiliğinden açılıyor.",
-  "published_at": "2026-11-18"
-}
+  "version": "1.0.9",
+  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.9/AU-Turkce-Ceviri-1.0.9-Setup.exe",
+  "sha256": "31e256e1214da08888382e7774259e5c2c6cdd0d43eeae6fba5509a6bae996bb",
+  "release_notes": "v2.5 yaması uygulamanın içinde geliyor, internet olmadan da kurulabiliyor. Güncelle artık yamalı bütün platformları birlikte güncelliyor. Yeni tema geçişi, daha okunur bir arayüz ve Hakkında'da web sitesi bağlantısı. Kurulum ve güncelleme sırasında görülen hatalar giderildi.",
+  "published_at": "2026-11-23"
+}

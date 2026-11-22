@@ -29,8 +29,8 @@ jobs:
           Kontrol 'Stable semasi 1' ([int]$stable.semasi -eq 1)
           Kontrol 'Stable kanali' ([string]$stable.kanal -eq 'stable')
           Kontrol 'Stable kilidi acik' (-not [bool]$stable.kilitli)
-          Kontrol 'Stable urun etiketi v2.4' ([string]$stable.urun.surum_etiketi -eq 'v2.4')
-          Kontrol 'Stable teknik surum 2.5.0' ([string]$stable.yama.surum -eq '2.5.0')
+          Kontrol 'Stable urun etiketi v2.5' ([string]$stable.urun.surum_etiketi -eq 'v2.5')
+          Kontrol 'Stable teknik surum 2.6.0' ([string]$stable.yama.surum -eq '2.6.0')
           Kontrol 'Stable oyun yapisi 2026.9.29' (@($stable.oyun.surumler) -contains '2026.9.29')
           Kontrol 'Stable uc paket var' (@($stable.paketler).Count -eq 3)
           $platformlar = @($stable.paketler | ForEach-Object { [string]$_.platform } | Sort-Object -Unique)
@@ -42,7 +42,7 @@ jobs:
           }
 
           Kontrol 'Beta semasi 1' ([int]$beta.semasi -eq 1)
-          Kontrol 'Beta urun etiketi v2.4' ([string]$beta.urun.surum_etiketi -eq 'v2.4')
+          Kontrol 'Beta urun etiketi v2.5' ([string]$beta.urun.surum_etiketi -eq 'v2.5')
           Kontrol 'Beta teknik surum dolu' (-not [string]::IsNullOrWhiteSpace([string]$beta.yama.surum))
           if (-not [bool]$beta.kilitli) {
             Kontrol 'Beta paket listesi dolu' (@($beta.paketler).Count -gt 0)
