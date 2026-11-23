@@ -1,7 +1,7 @@
 {
-  "version": "1.0.9",
-  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.9/AU-Turkce-Ceviri-1.0.9-Setup.exe",
-  "sha256": "31e256e1214da08888382e7774259e5c2c6cdd0d43eeae6fba5509a6bae996bb",
-  "release_notes": "v2.5 yaması uygulamanın içinde geliyor, internet olmadan da kurulabiliyor. Güncelle artık yamalı bütün platformları birlikte güncelliyor. Yeni tema geçişi, daha okunur bir arayüz ve Hakkında'da web sitesi bağlantısı. Kurulum ve güncelleme sırasında görülen hatalar giderildi.",
+  "version": "1.0.10",
+  "download_url": "https://github.com/amongusturkce/among-us-turkce-yama/releases/download/app-v1.0.10/AU-Turkce-Ceviri-1.0.10-Setup.exe",
+  "sha256": "b5ccdf6e19e5f77b6169f6bd9c5a5e481413776643f90ece3444b193e5b29951",
+  "release_notes": "Güncelle artık tek tuş: uygulama ve yama birlikte, kurulum ekranı açılmadan güncellenir. Güncelleme olduğunda pencere açılmaz; sağ üstte Güncelle görünür ve ilerleme butonun üstünde izlenir. Uygulama güncellenince kendiliğinden yeniden açılır.",
   "published_at": "2026-11-23"
 }
